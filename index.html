@@ -1,86 +1,55 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Code for Denver</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+title: Code for Denver
+---
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<h1>Check out the Jekyll Posts!!!</h1>
+<ul class="posts">
+  {% for post in site.posts %}
+  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<h2>Projects</h2>
+<ul>
+    <li>
+        CutePetsDenver
+        <a href="https://twitter.com/CutePetsDenver">Twitter</a>
+        <a href="https://github.com/codeforamerica/CutePetsDenver">Source</a>
+    </li>
+    <li>
+        Denver Street Sweeping
 
-        <h1>Code for Denver Site, yo!</h1>
+    </li>
 
-        <h2>Projects</h2>
+</ul>
+<h3>Non-Profit Partnerships</h3>
+<ul>
+    <li>
+        SparkRelief
         <ul>
             <li>
-                CutePetsDenver
-                <a href="https://twitter.com/CutePetsDenver">Twitter</a>
-                <a href="https://github.com/codeforamerica/CutePetsDenver">Source</a>
+                <a href="https://sparkhelp.org">SparkHelp</a>
             </li>
             <li>
-                Denver Street Sweeping
-
+                <a href="http://sparktime.org">SparkTime</a>
             </li>
-
-        </ul>
-        <h3>Non-Profit Partnerships</h3>
-        <ul>
             <li>
-                SparkRelief
-                <ul>
-                    <li>
-                        <a href="https://sparkhelp.org">SparkHelp</a>
-                    </li>
-                    <li>
-                        <a href="http://sparktime.org">SparkTime</a>
-                    </li>
-                    <li>
-                        SparkFund
-                    </li>
-                </ul>
+                SparkFund
             </li>
         </ul>
+    </li>
+</ul>
 
-        <h2>Data Resources</h2>
-        <ul>
-            <li><a href="http://opencolorado.org" target="_blank">OpenColorado</a></li>
-            <li><a href="https://bouldercolorado.gov/open-data" target="_blank">City of Boulder Open Data Catalog</a></li>
-            <li><a href="https://www.bouldercounty.org/gov/data/pages/gisdldata.aspx" target="_blank">Boulder County GIS Data</a></li>
-            <li><a href="http://codataengine.org/" target="_blank">Colorado Data Engine</a></li>
-        </ul>
+<h2>Data Resources</h2>
+<ul>
+    <li><a href="http://opencolorado.org" target="_blank">OpenColorado</a></li>
+    <li><a href="https://bouldercolorado.gov/open-data" target="_blank">City of Boulder Open Data Catalog</a></li>
+    <li><a href="https://www.bouldercounty.org/gov/data/pages/gisdldata.aspx" target="_blank">Boulder County GIS Data</a></li>
+    <li><a href="http://codataengine.org/" target="_blank">Colorado Data Engine</a></li>
+</ul>
 
-        <h2>Meetups</h2>
-        <p>
-            We meet often. Come join us! View our Meetups <a href="http://www.meetup.com/Colorado-Code-for-Communities/">here</a>
-        </p>
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-    </body>
-</html>
+<h2>Meetups</h2>
+<p>
+    We meet often. Come join us! View our Meetups <a href="http://www.meetup.com/Colorado-Code-for-Communities/">here</a>
+</p>
