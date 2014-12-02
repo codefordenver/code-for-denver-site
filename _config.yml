@@ -1,0 +1,4 @@
+name: Code for Denver
+baseurl: /code-for-denver-site
+markdown: redcarpet
+pygments: true
