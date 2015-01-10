@@ -153,12 +153,16 @@ a:focus {
     .code-across .navbar-custom.top-nav-collapse {
         border-bottom: 1px solid rgba(255,255,255,.3);
     }
+
+    .intro .intro-body {
+        padding-top: 90px;
+    }
 }
 
 .intro {
     display: table;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 100px 0;
     text-align: center;
     color: #fff;
@@ -178,7 +182,6 @@ a:focus {
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
-    padding-top: 90px;
 }
 
 .intro .intro-body .brand-heading {
@@ -382,6 +385,35 @@ body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
+.upcoming {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+}
+
+.upcoming h4 {
+    margin-bottom: 10px;
+}
+
+.upcoming h2 {
+    margin-bottom: 0;
+}
+.upcoming a:hover {
+    color: #6EC3D5;
+}
+
+@media(max-width:767px) {
+    .upcoming {
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        background-color: #111;
+    }
+}
 
 /*
 * CodeAcross specific styles
