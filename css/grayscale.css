@@ -69,6 +69,10 @@ a:focus {
     background-color: #fff;
 }
 
+.code-across .navbar-custom {
+    background-color: #000;
+}
+
 .navbar-custom .navbar-brand {
     font-weight: 700;
 }
@@ -83,6 +87,10 @@ a:focus {
     color: #000;
 }
 
+.code-across .navbar-toggle {
+    color: #fff;
+}
+
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
     outline: 0;
@@ -90,6 +98,10 @@ a:focus {
 
 .navbar-custom a {
     color: #000;
+}
+
+.code-across .navbar-custom a {
+    color: #fff;
 }
 
 .navbar-custom .nav li.active {
@@ -121,12 +133,24 @@ a:focus {
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 
+    .code-across .navbar {
+        background: 0 0;
+    }
+
     .top-nav-collapse {
         padding: 0;
         background-color: #fff;
     }
 
+    .code-across .top-nav-collapse {
+        background-color: #000;
+    }
+
     .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid rgba(0,0,0,.3);
+    }
+
+    .code-across .navbar-custom.top-nav-collapse {
         border-bottom: 1px solid rgba(255,255,255,.3);
     }
 }
@@ -138,7 +162,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/Denver-Skyline.jpg) no-repeat top center scroll;
+    background: url(../img/Denver-Skyline.jpg) no-repeat center center fixed;
     background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -146,9 +170,15 @@ a:focus {
     -o-background-size: cover;
 }
 
+.code-across .intro {
+    background-image: url(../img/denvernight-bw.jpg);
+    background-color: #000;
+}
+
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
+    padding-top: 90px;
 }
 
 .intro .intro-body .brand-heading {
@@ -267,7 +297,7 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 150px;
     }
 
     .download-section {
@@ -350,4 +380,41 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+
+/*
+* CodeAcross specific styles
+*/
+.title {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.headline {
+    font-family: "Gotham","Open Sans", sans-serif;
+    font-size: 5em;
+    text-transform: none;
+    color: #fff;
+}
+
+.blue {
+    color: #399fd3;
+}
+
+.date {
+    margin-top: 10px;
+    color: #d3d3d3;
+}
+
+.grey {
+    color: #a3a3a3;
+}
+
+ul.alt li {
+    list-style-type: none;
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+    margin: 0 0 -1px 0;
+    font-size: 1.4em;
+    padding-top: 15px;
 }
