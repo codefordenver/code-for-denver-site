@@ -97,12 +97,37 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#meetups-container ul {
+  list-style: none;
+  overflow: hidden;
+}
 
+#meetups-container ul li {
+  width: 230px;
+  padding: 15px;
+  margin-left: 25px;
+  height: 255px;
+  border-radius: 4px;
+  background-color: #efefef;
+  text-align: center;
+  overflow: hidden;
+  float: left;
+}
 
+#meetups-container ul li div.event-name{
+  margin: 10px 0px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
 
+#meetups-container ul li img{
+  margin-top: 10px;
+  width: 90%;
+}
 
-
-
+#meetups-container ul li a p{
+  font-size: 0.9em;
+}
 
 
 
