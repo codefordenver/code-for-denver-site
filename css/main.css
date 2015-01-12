@@ -100,13 +100,15 @@ textarea {
 #meetups-container ul {
   list-style: none;
   overflow: hidden;
+  margin-left: none;
+  padding-left: none;
 }
 
 #meetups-container ul li {
   width: 230px;
   padding: 15px;
   margin-left: 25px;
-  height: 255px;
+  height: 265px;
   border-radius: 4px;
   background-color: #efefef;
   text-align: center;

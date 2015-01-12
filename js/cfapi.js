@@ -7,13 +7,22 @@
 (function($, window) {
   $.getJSON( "http://codeforamerica.org/api/organizations/Code-for-Denver", function( data ) {
     var events = [];
-    $.each( data, function( key, val ) {
-      events.push("<li class='event'>" + val + "</li>");
+
+    $(data.current_events).each( function() {
+      var mEvent = this, name, time, image, link, linkText, tile;
+      name = "<div class='event-name'>" + mEvent.name + "</div>";
+      time = "<time datetime="+mEvent.start_time+">" + mEvent.start_time + "</time>";
+      image = "<img src='img/meetup-icon.png'/>";
+      linkText = "<p>view on meetup.com</p>";
+      link = "<a href=" + mEvent.event_url + " >" + image + linkText + "</a>";
+      tile = name + time + link;
+      events.push("<li class='event'>" + tile + "</li>");
     });
-    console.log(data.current_events);
+
     $( "<ul/>", {
       "class": "my-new-list",
       html: events.join("")
-    });//.appendTo("div#meetups-container");
+    }).appendTo("div#meetups-container");
+
   });
 })($, window);
