@@ -11,7 +11,7 @@
     $(data.current_events).each( function() {
       var mEvent = this, name, time, image, link, linkText, tile;
       name = "<div class='event-name'>" + mEvent.name + "</div>";
-      time = "<time datetime="+mEvent.start_time+">" + mEvent.start_time + "</time>";
+      time = "<time datetime="+mEvent.start_time+">" + (function(){ return new Date(mEvent.start_time).toLocaleString();})() + "</time>";
       image = "<img src='img/meetup-icon.png'/>";
       linkText = "<p>view on meetup.com</p>";
       link = "<a href=" + mEvent.event_url + " >" + image + linkText + "</a>";
