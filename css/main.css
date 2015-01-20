@@ -330,12 +330,9 @@ textarea {
     }
 }
 
-.gallery {
-    vertical-align: middle;
-}
 
 .gallery img {
-    padding-right: 30px;
+    padding-right: 20px;
     padding-top: 30px;
 }
 
