@@ -131,14 +131,36 @@ textarea {
   font-size: 0.9em;
 }
 
+.gallery {
+    vertical-align: middle;
+}
 
+.gallery img {
+    padding-right: 30px;
+    padding-top: 30px;
+}
 
+.location {
+    padding-top: 40px;
+}
 
+#nonprofits {
+    margin-top: -100px;
+}
 
+#sponsors {
+    margin-top: -40px;
+    padding-bottom: 100px;
+}
 
+#get-involved span#underline{
+    background: RGB(234, 232, 233);
+    color : RGB(71, 72, 67);
+}
 
-
-
+#get-involved #is-this-you {
+    display: inline-block;
+}
 
 /* ==========================================================================
    Helper classes
@@ -329,26 +351,3 @@ textarea {
         page-break-after: avoid;
     }
 }
-
-.gallery {
-    vertical-align: middle;
-}
-
-.gallery img {
-    padding-right: 30px;
-    padding-top: 30px;
-}
-
-.location {
-    padding-top: 40px;
-}
-
-#nonprofits {
-    margin-top: -100px;
-}
-
-#sponsors {
-    margin-top: -40px;
-    padding-bottom: 100px;
-}
-
