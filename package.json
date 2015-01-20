@@ -1,0 +1,11 @@
+{
+  "jspm": {
+    "name": "code-for-denver-site",
+    "directories": {
+      "lib": "js"
+    },
+    "dependencies": {
+      "snabbt.js": "github:daniel-lundin/snabbt.js@^0.3.0"
+    }
+  }
+}
