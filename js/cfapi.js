@@ -12,16 +12,10 @@
       return new Date(context).toLocaleString();
     });
 
-    var meetupTemplate = "<ul>{{#current_events}}<li class='event'>"+
-      "<div class='event-name'>{{name}}</div>"+
-      "<time datetime={{start_time}}>{{dateFormat start_time}}</time>" +
-      "<a href='{{event_url}}'><img src='img/meetup-icon.png'/><p>view on meetup.com</p></a>" +
-      "</li>{{/current_events}}</ul>";
-    var template = Handlebars.compile(meetupTemplate);
+    var template = Handlebars.templates['events.hbs'],
+        meetups  = template(data);
 
-    var result = template(data);
-
-    $(result).appendTo("div#meetups-container");
+    $('div#meetups-container').append(meetups);
 
   });
 })($, window);
