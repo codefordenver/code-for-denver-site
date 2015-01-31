@@ -19,6 +19,8 @@
     <!-- grayscale bootstrap theme -->
     <link href="css/grayscale.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/animations.css">
+
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -140,8 +142,35 @@
 
     <section id="get-involved" class="container content-section">
         <h1>Get Involved</h1>
-        <iframe src="http://codeforamerica.org/geeks/civicissues/widget?organization_name=Code-for-Denver&number=12" width="100%" height="600" frameBorder="0"></iframe>
+            <div class="row">
+                <div class="container">
+                    <h1 class="sliding-thing">
+                        <span>Are you </span>
+                        <div id="pt-main" class="pt-perspective">
+                            <div class="pt-page">an Artist?</div>
+                            <div class="pt-page">a Writer?</div>
+                            <div class="pt-page">a Designer?</div>
+                            <div class="pt-page">a Community Organizer?</div>
+                            <div class="pt-page">a Developer?</div>
+                            <div class="pt-page">a Community Organizer?</div>
+                            <div class="pt-page">a Graphic Designer?</div>
+                            <div class="pt-page">a Facilitator?</div>
+                            <div class="pt-page">a Project Manager?</div>
+                            <div class="pt-page">a Government Representative?</div>
+                            <div class="pt-page">a Student?</div>
+                            <div class="pt-page">an Ally?</div>
+                            <div class="pt-page">Curious about Code For Denver?</div>
+                        </div>
+                    </h1>
+                    <p>Contact <a href="mailto:codefordenver@gmail.com">codefordenver@gmail.com</a> about how you can get involved</p>
+                    <p>Follow us on <a href="https://github.com/codefordenver">Github</a></p>
+                </div>
+            </div>
+        <p>Here are some ways our volunteers are already getting involved:</p>
+        <iframe src="http://codeforamerica.org/geeks/civicissues/widget?organization_name=Code-for-Denver&number=6" width="100%" height="600" frameBorder="0"></iframe>
     </section>
+
+
 
     <section id="partnerships" class="container content-section">
         <h3>Non-Profit Partnerships</h3>
@@ -192,8 +221,8 @@
     <script src="js/handlebars.runtime-v2.0.0.js"></script>
     <script src="templates/projects.hbs.js"></script>
     <script src="templates/events.hbs.js"></script>
-
     <script src="js/cfapi.js"></script>
+    <script src="js/pageTransitions.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

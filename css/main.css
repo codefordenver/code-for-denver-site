@@ -131,14 +131,63 @@ textarea {
   font-size: 0.9em;
 }
 
+#get-involved #is-this-you {
+    display: inline-block;
 
+}
 
+.sliding-thing {
+  overflow: hidden;
+}
 
+.pt-perspective {
+  height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  perspective: 1200px;
+}
 
+@media(max-width:767px) {
+  .pt-perspective {
+    display: block;
+    overflow: hidden;
+  }
+}
 
+.pt-perspective > div {
+  background-color: #eee;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 2px;
+  position: absolute;
+  white-space: nowrap;
+}
 
+.pt-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
 
-
+.pt-page-current,
+.no-js .pt-page {
+  visibility: visible;
+  z-index: 1;
+}
 
 /* ==========================================================================
    Helper classes
