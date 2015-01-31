@@ -1,0 +1,40 @@
+{
+  "name": "snabbt.js",
+  "main": "snabbt.min.js",
+  "version": "0.3.0",
+  "authors": [
+    "daniel-lundin <daniel.t.lundin@gmail.com>"
+  ],
+  "description": "Fast animations with javascript and CSS-transforms",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "animations",
+    "fast",
+    "lightweight",
+    "transform"
+  ],
+  "license": "MIT",
+  "homepage": "http://daniel-lundin.github.io/snabbt.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "docs",
+    "test",
+    "tests"
+  ],
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "7f9f194c8e373ed9b4dfe10f0c94afa79b164b14"
+  },
+  "_source": "git://github.com/daniel-lundin/snabbt.js.git",
+  "_target": "~0.3.0",
+  "_originalSource": "snabbt.js",
+  "_direct": true
+}
