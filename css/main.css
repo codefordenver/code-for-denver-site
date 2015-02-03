@@ -97,10 +97,15 @@ textarea {
    Author's custom styles
    ========================================================================== */
 .registerBtn{
-    background-color: #399fd3;
+    background-color: RGBA(57,159,211,0.8);
+    border: 2px solid white;
     padding: 1em;
     font-size: 2em;
-    color: white;
+    color: #ffffff;
+}
+.registerBtn:hover{
+    background-color: #399fd3 ;
+    color: #ffffff;
 }
 
 #meetups-container ul {
