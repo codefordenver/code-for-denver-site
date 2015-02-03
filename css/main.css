@@ -96,6 +96,12 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.registerBtn{
+    background-color: #399fd3;
+    padding: 1em;
+    font-size: 2em;
+    color: white;
+}
 
 #meetups-container ul {
   list-style: none;
