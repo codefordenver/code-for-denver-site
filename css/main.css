@@ -97,6 +97,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.registerBtn{
+    background-color: RGBA(57,159,211,0.8);
+    border: 2px solid white;
+    padding: 1em;
+    font-size: 2em;
+    color: #ffffff;
+}
+.registerBtn:hover{
+    background-color: #399fd3 ;
+    color: #ffffff;
+}
+
 #meetups-container ul {
   list-style: none;
   overflow: hidden;
@@ -189,6 +201,10 @@ textarea {
   z-index: 1;
 }
 
+.agenda-time {
+    display: inline-block;
+    width: 7em;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
