@@ -33,26 +33,26 @@ Yes! As long as you are willing to collaborate and engage there are numerous way
 
 Luckily, there are numerous resources to choose from. Here’s a list of a few online educational sites and resources, sorted by general cost:
 
-|                  Site                 |    Cost   |   Languages/Frameworks   |             Additional Info                  |
-| ------------------------------------- | --------- | ------------------------ | -------------------------------------------- |
-| [Codecademy](codecademy.com)          | Free      | Various                  |                                              |
-| [The Odin Project](theodinproject.com)| Free      | Various                  |                                              |
-| [Ruby Monk](rubymonk.com)             | Free      | Ruby                     | Interactive tutorials                        |
-| [Ruby Koans](rubykoans.com)           | Free      | Ruby                     | The path to Ruby enlightenment               |
-| [CodeWars](codewars.com)              | Free      | Various                  | Coding exercises or 'katas'                  |
-| [CoderByte](coderbyte.com)            | Free      | Ruby                     | Challenges and competitions                  |
-| [Gibbon](gibbon.co)                   | Free      | Various                  | User-created learning paths                  |
-| [Project Euler](projecteuler.net)     | Free      | Content Cell             | [Practice coding via math problems] (http://www.theatlantic.com/technology/archive/2011/06/how-i-failed-failed-and-finally-succeeded-at-learning-how-to-code/239855/)  |
-| [Learn Ruby the Hard Way](ruby.learncodethehardway.org/book/)| Free | Ruby   | Book   |
-| [CodeSchool](codeschool.com)          | Free/$25+ | Various                  | Video tutorials and in-browser practice      |
-| [Treehouse](teamtreehouse.com)        | $25+      | Various                  | Video tutorials and in-browser practice      |
-| [Lynda](lynda.com)                    | $25+      | Various                  | Video tutorials                              |
-| [Thinkful](thinkful.com)              | Free/Paid | Various                  | Learn with help from a mentor                |
-| [Nettuts+](net.tutsplus.com)          | Free/Paid | Various                  |                                              |
-| [Skillshare](skillshare.com/search?query=programming)| $25+ | Various        | Video classes and community projects         |
-| [One Month](onemonth.com)             | $99       | Various                  | Self-paced online 30-day courses             |
-| [Bootcamper](bootcamper.io)           | $10k+     | Various                  | Multi-month, intensive development bootcamps |
-| [Course Report](coursereport.com)     | $10k+     | Various                  | Multi-month, intensive development bootcamps |
+|                  Site                     |    Cost   |   Languages/Frameworks   |             Additional Info                  |
+| -------------------------------------     | --------- | ------------------------ | -------------------------------------------- |
+| [Codecademy](www.codecademy.com)          | Free      | Various                  |                                              |
+| [The Odin Project](www.theodinproject.com)| Free      | Various                  |                                              |
+| [Ruby Monk](www.rubymonk.com)             | Free      | Ruby                     | Interactive tutorials                        |
+| [Ruby Koans](www.rubykoans.com)           | Free      | Ruby                     | The path to Ruby enlightenment               |
+| [CodeWars](www.codewars.com)              | Free      | Various                  | Coding exercises or 'katas'                  |
+| [CoderByte](www.coderbyte.com)            | Free      | Ruby                     | Challenges and competitions                  |
+| [Gibbon](www.gibbon.co)                   | Free      | Various                  | User-created learning paths                  |
+| [Project Euler](www.projecteuler.net)     | Free      | Content Cell             | [Practice coding via math problems] (http://www.theatlantic.com/technology/archive/2011/06/how-i-failed-failed-and-finally-succeeded-at-learning-how-to-code/239855/)  |
+| [Learn Ruby the Hard Way](http://ruby.learncodethehardway.org/book/)| Free | Ruby| Book   |
+| [CodeSchool](www.codeschool.com)          | Free/$25+ | Various                  | Video tutorials and in-browser practice      |
+| [Treehouse](www.teamtreehouse.com)        | $25+      | Various                  | Video tutorials and in-browser practice      |
+| [Lynda](www.lynda.com)                    | $25+      | Various                  | Video tutorials                              |
+| [Thinkful](www.thinkful.com)              | Free/Paid | Various                  | Learn with help from a mentor                |
+| [Nettuts+](http://net.tutsplus.com)       | Free/Paid | Various                  |                                              |
+| [Skillshare](www.skillshare.com/search?query=programming)| $25+ | Various        | Video classes and community projects         |
+| [One Month](www.onemonth.com)             | $99       | Various                  | Self-paced online 30-day courses             |
+| [Bootcamper](www.bootcamper.io)           | $10k+     | Various                  | Multi-month, intensive development bootcamps |
+| [Course Report](www.coursereport.com)     | $10k+     | Various                  | Multi-month, intensive development bootcamps |
 
 
 ###Ugh! There are too many languages and resources to choose from! Where is the best place to start?
@@ -61,7 +61,7 @@ We suggest Codecademy or CodeSchool. Both start with the basics, have plenty of 
 
 As far as languages are concerned, HTML/CSS, Ruby, JavaScript, and Python great languages to start with. All are in widespread use, cross-platform (used on/in multiple devices and environments), and are supported by plenty of documentation.
 
-Still up in the air? Get your feet wet in fifteen minutes at [tryruby.org](tryruby.org).
+Still up in the air? Get your feet wet in fifteen minutes at [www.tryruby.org](tryruby.org).
 
 If you need more help navigating the learning ecosystem, check out this helpful guide at [Bloc.io](https://www.bloc.io/programming-bootcamp-comparison).
 
