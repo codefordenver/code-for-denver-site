@@ -74,10 +74,10 @@ We don’t use one particular language or framework all of the time. What we use
 ###What tools do you use?
 
 Our current workflow includes:
-Flowdock for general/team communication and chat
-Git for version control
-Waffle.io for story management
-Google Docs for documentation and technical writing
+* Flowdock for general/team communication and chat
+* Git for version control
+* Waffle.io for story management
+* Google Docs for documentation and technical writing
 
 Don’t worry if you’re unfamiliar with any of these tools. We’ll help you get up and running.
 
