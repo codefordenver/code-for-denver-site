@@ -4,7 +4,7 @@
 
 ##Getting Started
 
-###What does Code for Denver typically do? (NOTE: include link)
+###What does Code for Denver typically do?
 
 Generally speaking, we work with nonprofits or local government in three month blocks, building apps or websites that serve their needs. Who we work with and what issues we address are determined at our annual CodeAcross Denver event, scheduled at the beginning of the year. To stay on top of the things throughout the year, we host regular meetups (weekly and bi-weekly) to manage things and work on current projects.
 
@@ -24,14 +24,14 @@ A hack night is an informal event where developers get together and work on a pr
 Yes! Many of our members have been beginning programmers who have found the environment helpful to improve their abilities while providing something of value.
 
 
-###I’m not a programmer or not interested in programming. Can I still get involved?
+###I’m not a programmer or I'm not interested in programming. Can I still get involved?
 
 Yes! As long as you are willing to collaborate and engage there are numerous ways in which to be involved. As you can tell from our name, coding is a big part of what we do. But helping solve challenges in the community takes more than software expertise. Our brigade volunteers also have backgrounds in marketing, design, sales, facilitation, nonprofits, project management, and more. Additional perspectives and experiences are always valued and welcome, so come on down!
 
 
-###Where can I learn to program? (NOTE: make this a table/matrix on the site)
+###Where can I learn to program?
 
-Luckily, there are numerous resources to choose from. Here’s a list of online educational sites, sorted by general cost:
+Luckily, there are numerous resources to choose from. Here’s a list of a few online educational sites and resources, sorted by general cost:
 
 |                  Site                 |    Cost   |   Languages/Frameworks   |             Additional Info                  |
 | ------------------------------------- | --------- | ------------------------ | -------------------------------------------- |
@@ -55,15 +55,15 @@ Luckily, there are numerous resources to choose from. Here’s a list of online 
 | [Course Report](coursereport.com)     | $10k+     | Various                  | Multi-month, intensive development bootcamps |
 
 
-###Ugh - there are too many languages and resources to choose from! Where is the best place to start?
+###Ugh! There are too many languages and resources to choose from! Where is the best place to start?
 
 We suggest Codecademy or CodeSchool. Both start with the basics, have plenty of free courses, and can be completed entirely in your browser.
 
 As far as languages are concerned, HTML/CSS, Ruby, JavaScript, and Python great languages to start with. All are in widespread use, cross-platform (used on/in multiple devices and environments), and are supported by plenty of documentation.
 
-Still up in the air? Get your feet wet in fifteen minutes at tryruby.org.
+Still up in the air? Get your feet wet in fifteen minutes at [tryruby.org](tryruby.org).
 
-If you need more help navigating the learning ecosystem, check out this helpful guide at Bloc.io.
+If you need more help navigating the learning ecosystem, check out this helpful guide at [Bloc.io](https://www.bloc.io/programming-bootcamp-comparison).
 
 
 ###What languages / frameworks do you typically use?
@@ -89,7 +89,7 @@ This varies according the circumstances and there are no hard and fast rules tha
 
 ###Is there any one person who is typically in charge of projects?
 
-This also depends on the circumstances, though you can get a general sense by viewing the list of organizers at our Meetup site.
+This also depends on the circumstances, though you can get a general sense by viewing the list of organizers at our [Meetup site](http://www.meetup.com/CodeForDenver/).
 
 
 ###To what degree is your work influenced by Code for America?
@@ -99,4 +99,4 @@ Though we are part of Code for America’s Brigade, Code for Denver is more of a
 
 ###Who can I contact for additional questions?
 
-Get in touch with our organizers via our Meetup site or drop us a line at codefordenver[at]gmail.com.
+Get in touch with our organizers via our [Meetup site](http://www.meetup.com/CodeForDenver/) or drop us a line at codefordenver[at]gmail.com.
