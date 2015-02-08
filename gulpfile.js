@@ -39,8 +39,4 @@ gulp.task('watch', function () {
   watch('js/*.js', batch(function(){
     gulp.start('scripts');
   }));
-
-  watch('css/*.css', batch(function(){
-    gulp.start('styles');
-  }));
 });
