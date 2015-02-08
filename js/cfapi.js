@@ -9,7 +9,7 @@
 */
 (function($) {
   $.getJSON( "http://codeforamerica.org/api/organizations/Code-for-Denver", function( data ) {
-    var events = [];
+    var events = []; 
 
     //  Custom helper. usage: {{dateFormat myDateString}}
     Handlebars.registerHelper('dateFormat', function(context, block) {
@@ -22,6 +22,5 @@
 
     // Place templates in Dom
     $('div#application-container').append(content);
-
   });
 })($);
