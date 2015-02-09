@@ -145,7 +145,10 @@ textarea {
 
 #get-involved #is-this-you {
     display: inline-block;
+}
 
+.carousel-inner {
+  height: 400px;
 }
 
 .sliding-thing {
@@ -205,6 +208,60 @@ textarea {
     display: inline-block;
     width: 7em;
 }
+
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-custom-caption {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  bottom: 0;
+  box-shadow: 0 0px 50px white;
+}
+
+.carousel-custom-caption a:hover {
+  color: #93C6D0;
+}
+
+.carousel-inner .item {
+  height: 100%;
+}
+
+.carousel-custom-caption h3,
+.carousel-custom-caption p {
+  margin-bottom: 5px;
+}
+
+.projects {
+  padding-left: 0;
+}
+
+.projects li {
+  list-style: none;
+  padding: 10px 15px;
+  background-color: #eee;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+}
+
+.projects li.active {
+  background-color: #ccc;
+}
+
+.projects li:not(.active):hover,
+.projects li:active {
+  box-shadow: 0 0px 15px rgba(0,0,0,0.1) inset;
+}
+
+>>>>>>> Add project slider
 /* ==========================================================================
    Helper classes
    ========================================================================== */
