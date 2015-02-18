@@ -204,9 +204,12 @@ textarea {
   z-index: 1;
 }
 
+.agenda ul {
+  padding: 0;
+}
+
 .agenda-time {
-    display: inline-block;
-    width: 7em;
+  color: #888;
 }
 
 .carousel-indicators {
@@ -261,7 +264,43 @@ textarea {
   box-shadow: 0 0px 15px rgba(0,0,0,0.1) inset;
 }
 
->>>>>>> Add project slider
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.gallery a {
+  width: 25%;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.map {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 15px;
+  height: 450px;
+  max-height: 75vh;
+}
+
+@media(max-width:768px) {
+  .gallery a {
+    width: 45%;
+  }
+}
+
+@media(max-width:512px) {
+  .gallery a {
+    width: 80%;
+  }
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
