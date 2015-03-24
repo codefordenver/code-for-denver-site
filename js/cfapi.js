@@ -25,5 +25,12 @@ console.log(data);
     $('div#projects-container').append(projects);
     $('div#meetups-container').append(meetups);
 
+    var nextEvent = data.current_events[0];
+
+    $('header.intro').append('<div class="upcoming">' +
+        '<h4>Next Event: ' + new Date(nextEvent.start_time).toLocaleDateString() + '</h4>' +
+        '<h2><a href="' + nextEvent.event_url + '">' + nextEvent.name + '</a></h2>' +
+    '</div>');
+
   });
 })($, window);
