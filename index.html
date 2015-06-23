@@ -164,14 +164,30 @@
     </section>
 
     <section id="meetups" class="container content-section">
-        <h2>Meetups</h2>
-        <p>
-            We meet often. Come join us! View our Meetups <a href="http://www.meetup.com/Colorado-Code-for-Communities/">here</a>
-        </p>
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Meetups</h2>
+            <p>
+                We meet often. Come join us! View our Meetups <a href="http://www.meetup.com/Colorado-Code-for-Communities/">here</a>
+            </p>
 
-        <div id="meetups-container">
-          <!-- .hbs autofilled here -->
+            <div id="meetups-container">
+              <!-- .hbs autofilled here -->
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h2>Twitter</h2>
+            <a class="twitter-timeline"
+              data-widget-id="600720083413962752"
+              href="https://twitter.com/CodeForDenver"
+              width="300"
+              height="340"
+              data-chrome="noborders">
+            Tweets by @CodeForDenver
+            </a>
+          </div>
         </div>
+
 
     </section>
 
@@ -189,6 +205,23 @@
     <script src="js/project-carousel.js"></script>
     <script src="js/main.js"></script>
 
+    <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+
+        return t;
+      }(document, "script", "twitter-wjs"));
+    </script>
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
