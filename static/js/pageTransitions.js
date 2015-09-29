@@ -63,20 +63,6 @@ var PageTransitions = (function() {
         return animcursor;
     };
 
-    $( "body" ).keyup(function(event) {
-        var key = event.which,
-            animation = $( '#dl-menu' ).data().dlmenu.$el.data( 'animation' );
-
-        if ( key == keys.RIGHT || key == keys.SPACE || key == keys.ENTER || key == keys.DOWN || key == keys.PAGE_DOWN ) {
-            nextPage( animcursorCheck() );
-            ++animcursor;
-        }
-        if ( key == keys.LEFT || key == keys.BACKSPACE || key == keys.PAGE_UP ) {
-            --animcursor;
-            nextPage( animcursorCheck() );
-        }
-    });
-
     $iterate.on( 'click', function() {
         nextPage( animcursorCheck() );
         ++animcursor;
@@ -429,4 +415,4 @@ var PageTransitions = (function() {
     nextPage : nextPage
   };
 
-})();
+});
