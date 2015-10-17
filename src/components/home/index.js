@@ -2,6 +2,7 @@ import React from 'react';
 
 import Navigation from './Navigation';
 import IntroHeader from './IntroHeader';
+import About from './About';
 
 export default class Home extends React.Component {
   componentDidMount() {
@@ -11,27 +12,10 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Navigation/>
-        <IntroHeader/>
+        <Navigation />
+        <IntroHeader />
 
-        <section id="about" className="container content-section">
-          <h1>About</h1>
-          <p>
-            We believe technology and innovation are powerful tools we can all use to make our community an even more spectacular place to live.
-          </p>
-          <p>
-            We are a diverse group of volunteers who are passionate about leveraging the power of technology to benefit the people of our Denver community.
-          </p>
-          <p>
-            We tap into the potential of technology to tackle issues like food systems, food security, economic development, safety and justice.
-          </p>
-          <p>
-            We recognize that we are a part of a much larger movement to address some of the challenges that face our planet. In order to collectively have the biggest impact, we work in partnership and collaboration with both local government, and the international network of Code for America brigades of which we are a part.
-          </p>
-          <p>
-            We also team up with local nonprofits and other active community members to make sure we understand the issues, to brainstorm technology-based solutions, and to actualize our ideas in ways that aim for measurable community benefit.
-          </p>
-        </section>
+        <About />
 
         <section id="projects" className="container content-section">
           <h2>Projects</h2>

@@ -30,6 +30,10 @@ module.exports = {
         test: /\.js$/,
         loaders: ['babel'],
         include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.md$/,
+        loader: 'html!markdown?gfm=true&sanitize=true'
       }
     ]
   }
