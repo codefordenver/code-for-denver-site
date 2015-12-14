@@ -1,8 +1,9 @@
 {
   "name": "code-for-denver-site",
+  "private": true,
   "version": "0.2.0",
   "description": "The website for the Denver brigade of Code for America",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -12,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wdoug/code-for-denver-site.git"
+    "url": "https://github.com/codefordenver/code-for-denver-site.git"
   },
   "keywords": [
     "Code",
@@ -29,9 +30,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wdoug/code-for-denver-site/issues"
+    "url": "https://github.com/codefordenver/code-for-denver-site/issues"
   },
-  "homepage": "https://github.com/wdoug/code-for-denver-site",
+  "homepage": "https://github.com/codefordenver/code-for-denver-site",
   "dependencies": {
     "react": "^0.14.0",
     "react-addons-css-transition-group": "^0.14.0",
