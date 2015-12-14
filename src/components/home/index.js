@@ -3,6 +3,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import IntroHeader from './IntroHeader';
 import About from './About';
+import Projects from './Projects';
 
 export default class Home extends React.Component {
   componentDidMount() {
@@ -17,27 +18,7 @@ export default class Home extends React.Component {
 
         <About />
 
-        <section id="projects" className="container content-section">
-          <h2>Projects</h2>
-          <div id="projects-container">
-            {/*<!-- .hbs autofilled here -->*/}
-          </div>
-          <br/>
-          <br/>
-          <h3>Nonprofit partnership program:</h3>
-          <p>
-            <a href="/CodeAcross/"><b>CodeAcross 2015</b></a> kick started our very anticipated <b>Nonprofit Partnership Program</b>. For these projects we will be collaborating very closely with the following nonprofits:
-          </p>
-          <ul>
-            <li><b>Colorado Antiviolence Program</b></li>
-            <li><b>Rocky Mountain MicroFinance Institute</b></li>
-            <li><b>Grow Local Colorado</b></li>
-            <li><b>Rocky Mountain Farmers Union</b></li>
-          </ul>
-          <p>
-            Find out how you can get involved below.
-          </p>
-        </section>
+        <Projects />
 
         <section id="get-involved" className="container content-section">
           <h1>Get Involved</h1>

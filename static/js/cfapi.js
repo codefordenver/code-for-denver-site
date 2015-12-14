@@ -18,8 +18,7 @@ console.log(data);
     // Wire data to templates
     var meetupsTemplate  = Handlebars.templates['events.hbs'],
         projectsTemplate = Handlebars.templates['projects.hbs'],
-        meetups          = meetupsTemplate(data),
-        projects         = projectsTemplate(data);
+        meetups          = meetupsTemplate(data);
 
     // Place templates in Dom
     $('div#projects-container').append(projects);
