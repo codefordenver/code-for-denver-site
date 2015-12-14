@@ -21,10 +21,10 @@ npm start
 
 ## Deploying
 
-Currently this would have to be a manual process:
-The source files must first be bundled using webpack:
-```
-npm run build
-```
+In order to do a manual deploy you will need a github token. This can be obtained
+[here](https://github.com/settings/tokens) (you will likely only need the `public_repo` option).
 
-This will create a `dist` directory that will need to be committed to the `gh-pages` branch (by default this is `.gitignore`d so that needs to be removed on that branch).
+You can then deploy using:
+```bash
+ GH_TOKEN=<your token> GH_REF=github.com/<your name>/code-for-denver-site.git ./deploy.sh
+```
