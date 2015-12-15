@@ -26,8 +26,8 @@ npm run build
 sed -i.orig '/dist/d' ./.gitignore
 
 # we'll pretend to be a new user in git
-# git config user.name "Travis CI"
-# git config user.email "<you>@<your-email>"
+git config user.name "Travis CI"
+git config user.email "codefordenver@gmail.com"
 
 # Commit the built files
 git add .
