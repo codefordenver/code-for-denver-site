@@ -21,7 +21,6 @@ console.log(data);
         meetups          = meetupsTemplate(data);
 
     // Place templates in Dom
-    $('div#projects-container').append(projects);
     $('div#meetups-container').append(meetups);
 
     var nextEvent = data.current_events[0];

@@ -6,7 +6,6 @@ const peopleTypes = [
   'a Designer?',
   'a Community Organizer?',
   'a Developer?',
-  'a Community Organizer?',
   'a Graphic Designer?',
   'a Facilitator?',
   'a Project Manager?',
@@ -27,7 +26,7 @@ const GetInvolved = () => (
           <div id="pt-main" className="pt-perspective">
             {
               peopleTypes.map(type => (
-                <div className="pt-page">{ type }</div>
+                <div key={type} className="pt-page">{ type }</div>
               ))
             }
           </div>
