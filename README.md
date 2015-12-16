@@ -21,7 +21,9 @@ npm start
 
 ## Deploying
 
-In order to do a manual deploy you will need a github token. This can be obtained
+[Travis CI](https://travis-ci.org/) is configured to build and deploy to github pages, on merges to `master`.
+
+If for some reason you need to do a manual deploy you will need a github token. This can be obtained
 [here](https://github.com/settings/tokens) (you will likely only need the `public_repo` option).
 
 You can then deploy using:
