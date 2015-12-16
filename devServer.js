@@ -23,6 +23,10 @@ app.use('/CodeAcross', function(req, res) {
   res.sendFile(path.join(__dirname, 'CodeAcross/index.html'));
 });
 
+app.use('/2015', function(req, res) {
+  res.sendFile(path.join(__dirname, '2015/index.html'));
+});
+
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
