@@ -1,30 +1,51 @@
 @font-stack:    Helvetica, sans-serif;
 @primary-color: rgba(0,0,0,0.75);
+@secondaty-color: ghostwhite;
+
+// red 3, 235, 140, 4
+// blue 159, 27, 3, 0
 
 body {
   font: 100% @font-stack;
-  color: @primary-color;
+  font-size: 4em;
   background-color: #eee;
-  margin-top: 15px;
+
+}
+
+.row {
+  padding: 15px;
+}
+
+.intro{
+  color: @secondaty-color;
+  background-image: url("../images/1.png");
+  background-size: cover;
+}
+
+.part-two{
+  color: @secondaty-color;
+  background-image: url("../images/2.png");
+  background-size: cover;
 }
 
 h3{
-  color: rgba(0,0,0,0.75);
+  color: @secondaty-color;
   font-size: 7rem;
 }
 
 p.lead {
-  color: whitesmoke;
+  color: @secondaty-color;
   padding: 0.25em;
-  background: rgba(0,0,0,0.75);
+  background: @primary-color;
 }
 
 .super {
-  font-size: 14rem;
+  font-size: 17rem;
 }
 
-@media screen and (min-width: 768px){
-    .jumbotron {
-      padding: inherit;
-    }
+.thanks {
+  h3 {
+    color: @primary-color;
+    font-size: 17rem;
+  }
 }
