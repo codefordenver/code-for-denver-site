@@ -10,22 +10,26 @@
 (def colors {:primary   "ghostwhite"
              :secondary "rgba(0,0,0,0.75)"})
 
+(def app-state (r/atom {:titles (:primary colors)
+                        :body   (:secondary colors)}))
+
 ;; -------------------------------
 ;; register media queries triggers
 
+(.register js/enquire "screen and (max-width:722px)"
+           (clj->js {:setup   (fn []
+                                  (print "ran setup"))
+                     :match   (fn []
+                                  (swap! app-state assoc-in [:titles] (:secondary colors))
+                                  (print "matched"))
+                     :unmatch (fn []
+                                  (swap! app-state assoc-in [:titles] (:primary colors))
+                                  (print "unmatched"))}))
+
+(add-watch app-state :logger #(-> %4 clj->js js/console.log))
+
 (defn some-component []
-      (let [app-state (r/atom {:titles (:primary colors)
-                               :body   (:secondary colors)})
-            _ (.register js/enquire "screen and (min-width:45em)"
-                         (clj->js {:setup   (fn []
-                                                (print "ran setup"))
-                                   :match   (fn []
-                                                (swap! app-state assoc-in [:titles] (:primary colors))
-                                                (print "matched"))
-                                   :unmatch (fn []
-                                                (swap! app-state assoc-in [:titles] "blue")
-                                                (print "unmatched"))}))]
-           (add-watch app-state :logger #(-> %4 clj->js js/console.log))
+      (let []
            [:div.main
             [:div.row.intro
              [:div.col-lg-12
