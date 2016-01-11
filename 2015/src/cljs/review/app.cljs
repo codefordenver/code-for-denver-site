@@ -1,74 +1,96 @@
 (ns review.app
-  (:require [reagent.core :as reagent :refer [atom]]))
+  (:require [reagent.core :as r]
+            [cljsjs.enquire :as enquire]))
+
+(enable-console-print!)
+
+;; -------------------------------
+;; define app state
+
+(def colors {:primary   "ghostwhite"
+             :secondary "rgba(0,0,0,0.75)"})
+
+;; -------------------------------
+;; register media queries triggers
 
 (defn some-component []
-      [:div.main
-       [:div.row.intro
-        [:div.col-lg-12
-         [:p.lead "Code For Denver is proud to present:"]
-         [:h1.super "2015"]
-         [:h2 "END OF YEAR SUMMARY"]]]
-       [:div.row.part-two
-        [:div.col-lg-12
-         [:p.lead.text-center "where we started.."]
-         [:h3 "STAT 1"]
-         [:p.lead
-          "Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-           Duis pharetra varius quam sit
-            amet vulputate. Quisque mauris
-             augue, molestie tincidunt
-             condimentum vitae, gravida a
-              libero. Aenean sit amet felis
-              dolor, in sagittis nisi. Sed
-              ac orci quis tortor imperdiet
-               venenatis. Duis elementum
-               auctor accumsan. Aliquam in
-               felis sit amet augue."]]]
-       [:div.row
-        [:div.col-lg-12
-         [:h3.text-center "STAT 2"]
-         [:p.lead
-          "Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-           Duis pharetra varius quam sit
-            amet vulputate. Quisque mauris
-             augue, molestie tincidunt
-             condimentum vitae, gravida a
-              libero. Aenean sit amet felis
-              dolor, in sagittis nisi. Sed
-              ac orci quis tortor imperdiet
-               venenatis. Duis elementum
-               auctor accumsan. Aliquam in
-               felis sit amet augue."]]]
-       [:div.row
-        [:div.col-lg-12
-         [:h3.text-right "STAT 3"]
-         [:p.lead
-          "Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-           Duis pharetra varius quam sit
-            amet vulputate. Quisque mauris
-             augue, molestie tincidunt
-             condimentum vitae, gravida a
-              libero. Aenean sit amet felis
-              dolor, in sagittis nisi. Sed
-              ac orci quis tortor imperdiet
-               venenatis. Duis elementum
-               auctor accumsan. Aliquam in
-               felis sit amet augue."]]]
+      (let [app-state (r/atom {:titles (:primary colors)
+                               :body   (:secondary colors)})
+            _ (.register js/enquire "screen and (min-width:45em)"
+                         (clj->js {:setup   (fn []
+                                                (print "ran setup"))
+                                   :match   (fn []
+                                                (swap! app-state assoc-in [:titles] (:primary colors))
+                                                (print "matched"))
+                                   :unmatch (fn []
+                                                (swap! app-state assoc-in [:titles] "blue")
+                                                (print "unmatched"))}))]
+           (add-watch app-state :logger #(-> %4 clj->js js/console.log))
+           [:div.main
+            [:div.row.intro
+             [:div.col-lg-12
+              [:p.lead "Code For Denver is proud to present:"]
+              [:h1.super {:style {:color (:titles @app-state)}} "2015"]
+              [:h2 "END OF YEAR SUMMARY"]]]
+            [:div.row.part-two
+             [:div.col-lg-12
+              [:p.lead.text-center "where we started.."]
+              [:h3 "STAT 1"]
+              [:p.lead
+               "Lorem ipsum dolor sit amet,
+               consectetur adipiscing elit.
+                Duis pharetra varius quam sit
+                 amet vulputate. Quisque mauris
+                  augue, molestie tincidunt
+                  condimentum vitae, gravida a
+                   libero. Aenean sit amet felis
+                   dolor, in sagittis nisi. Sed
+                   ac orci quis tortor imperdiet
+                    venenatis. Duis elementum
+                    auctor accumsan. Aliquam in
+                    felis sit amet augue."]]]
+            [:div.row
+             [:div.col-lg-12
+              [:h3.text-center "STAT 2"]
+              [:p.lead
+               "Lorem ipsum dolor sit amet,
+               consectetur adipiscing elit.
+                Duis pharetra varius quam sit
+                 amet vulputate. Quisque mauris
+                  augue, molestie tincidunt
+                  condimentum vitae, gravida a
+                   libero. Aenean sit amet felis
+                   dolor, in sagittis nisi. Sed
+                   ac orci quis tortor imperdiet
+                    venenatis. Duis elementum
+                    auctor accumsan. Aliquam in
+                    felis sit amet augue."]]]
+            [:div.row
+             [:div.col-lg-12
+              [:h3.text-right "STAT 3"]
+              [:p.lead
+               "Lorem ipsum dolor sit amet,
+               consectetur adipiscing elit.
+                Duis pharetra varius quam sit
+                 amet vulputate. Quisque mauris
+                  augue, molestie tincidunt
+                  condimentum vitae, gravida a
+                   libero. Aenean sit amet felis
+                   dolor, in sagittis nisi. Sed
+                   ac orci quis tortor imperdiet
+                    venenatis. Duis elementum
+                    auctor accumsan. Aliquam in
+                    felis sit amet augue."]]]
 
-       [:div.row.thanks
-        [:div.col-lg-12
-         [:h3.text-center.page-header "MANY THANKS!"]
-         [:div.list-group
-          [:button.list-group-item.btn-default "test"]]]]
+            [:div.row.thanks
+             [:div.col-lg-12
+              [:h3.text-center.page-header "MANY THANKS!"]
+              [:div.list-group
+               [:button.list-group-item.btn-default "test"]]]]]))
 
-       ])
-
-(defn calling-component []
+(defn main-component []
       [:div [some-component]])
 
 (defn init []
-      (reagent/render-component [calling-component]
-                                (.getElementById js/document "container")))
+      (r/render-component [main-component]
+                          (.getElementById js/document "container")))

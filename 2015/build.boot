@@ -8,6 +8,7 @@
                  [org.clojure/clojurescript "1.7.122"]
                  [crisptrutski/boot-cljs-test "0.2.0-SNAPSHOT" :scope "test"]
                  [reagent "0.5.0"]
+                 [cljsjs/enquire "2.1.2-0"]
                  [deraen/boot-less "0.2.1" :scope "test"]])
 
 (require
@@ -20,9 +21,9 @@
 
 (deftask build []
   (comp (speak)
-        
+
         (cljs)
-        
+
         (less)
         (sift   :move {#"less.css" "css/less.css" #"less.main.css.map" "css/less.main.css.map"})))
 
