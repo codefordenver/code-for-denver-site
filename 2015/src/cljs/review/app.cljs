@@ -8,7 +8,7 @@
 ;; define app state
 
 (def colors {:primary   "ghostwhite"
-             :secondary "rgba(0,0,0,0.75)"})
+             :secondary "rgba(100,100,100,1.0)"})
 
 (def app-state (r/atom {:titles (:primary colors)
                         :body   (:secondary colors)}))
@@ -35,7 +35,7 @@
              [:div.col-lg-12
               [:p.lead "Code For Denver is proud to present:"]
               [:h1.super {:style {:color (:titles @app-state)}} "2015"]
-              [:h2 "END OF YEAR SUMMARY"]]]
+              [:h2 {:style {:color (:titles @app-state)}} "END OF YEAR SUMMARY"]]]
             [:div.row.part-two
              [:div.col-lg-12
               [:p.lead.text-center "where we started.."]
