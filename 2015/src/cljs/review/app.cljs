@@ -13,7 +13,10 @@
 (def app-state (r/atom {:titles (:primary colors)
                         :body   (:secondary colors)}))
 
-(def titles ["Code Across 2015", "Sol Cavp", "Fresh Food Connect API", "Fresh Food Connect", "Code for Denver Site", "Denver Sustainability", "RMFU Feed"]) ;
+(def titles ["Code Across 2015" "Sol Cavp"
+             "Fresh Food Connect API"
+             "Fresh Food Connect" "Code for Denver Site"
+             "Denver Sustainability" "RMFU Feed"])          ;
 
 (def contributors [3, 5, 8, 9, 9, 10, 14])
 
@@ -43,50 +46,51 @@
 
 (defn some-component []
       (r/create-class
-        {:component-did-mount (fn []
-                                  (let [ctx (.getContext (.getElementById js/document "myChart") "2d")]
-                                       (print ctx)
-                                       (.Bar (js/Chart. ctx) (clj->js data))))
+        {:component-did-mount
+         (fn []
+             (let [ctx (.getContext (.getElementById js/document "myChart") "2d")]
+                  (.Bar (js/Chart. ctx) (clj->js data))))
          :reagent-render
-                              (fn []
-                                  [:div.main
-                                   [:div.row.intro
-                                    [:div.col-lg-12
-                                     [:p.lead "Code For Denver is proud to present:"]
-                                     [:h1.super {:style {:color (:titles @app-state)}} "2015"]
-                                     [:h2 "END OF YEAR SUMMARY"]]]
+         (fn []
+             [:div.main
+              [:div.row.intro
+               [:div.col-lg-12
+                [:p.lead [:img {:src "images/cfdlogo.png"}]]
+                [:p.lead.text-right "IS PROUD TO PRESENT"]
+                [:h1.super {:style {:color (:titles @app-state)}} "2015"]
+                [:h2 "END OF YEAR SUMMARY"]]]
 
-                                   [:div.row.part-two
-                                    [:div.col-lg-12
-                                     [:p.lead.text-center "where we started.."]
-                                     [:h3 "contributors"]
+              [:div.row.part-two
+               [:div.col-lg-12
+                [:p.lead.text-center "where we started.."]
+                [:h3 "contributors"]
 
-                                     [:canvas {:id     "myChart"
-                                               :width  "400"
-                                               :height "400"}]
-                                     [:p.lead
-                                      "embarked on 7 major projects.."]]]
+                [:canvas {:id     "myChart"
+                          :width  "400"
+                          :height "400"}]
+                [:p.lead
+                 "embarked on 7 major projects.."]]]
 
-                                   [:div.row.part-three
-                                    [:div.col-lg-12
-                                     [:h3.text-center "3000 hours"]
-                                     [:h3.text-center "75 work weeks"]
-                                     [:h3.text-center "1.5 years"]
-                                     [:p.lead.text-center
-                                      [:a {:href "http://sparktime.org/"
-                                           :style {:color "white"}} "sparktime.org"]]]]
+              [:div.row.part-three
+               [:div.col-lg-12
+                [:h3.text-center "3000 hours or"]
+                [:h3.text-center "75 work weeks or"]
+                [:h3.text-center "1.5 years"]
+                [:p.lead.text-center
+                 [:a {:href  "http://sparktime.org/"
+                      :style {:color "white"}} "sparktime.org"]]]]
 
-                                   [:div.row.part-four
-                                    [:div.col-lg-12
-                                     [:h3.text-right "47"]
-                                     [:p.lead.text-right
-                                      "meetup events"]]]
+              [:div.row.part-four
+               [:div.col-lg-12
+                [:h3.text-right "47"]
+                [:p.lead.text-right
+                 "meetup events"]]]
 
-                                   [:div.row.thanks
-                                    [:div.col-lg-12
-                                     [:h3.text-center.page-header "MANY THANKS!"]
-                                     [:div.list-group
-                                      [:button.list-group-item.btn-default "test"]]]]])}))
+              [:div.row.thanks
+               [:div.col-lg-12
+                [:h3.text-center.page-header "MANY THANKS!"]
+                [:div.list-group
+                 [:button.list-group-item.btn-default "test"]]]]])}))
 
 (defn main-component []
       [:div [some-component]])
