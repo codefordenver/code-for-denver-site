@@ -8,7 +8,7 @@
 ;; define app state
 
 (def colors {:primary   "white"
-             :secondary "rgba(100,100,100, 0.75)"})
+             :secondary "rgba(100,100,100, 1.00)"})
 
 (def app-state (r/atom {:titles (:primary colors)
                         :body   (:secondary colors)}))
@@ -19,6 +19,11 @@
              "Denver Sustainability" "RMFU Feed"])          ;
 
 (def contributors [3, 5, 8, 9, 9, 10, 14])
+
+#_(let []
+     (.global (.defaults js/Chart)
+              (clj->js {:scaleLineColor "white"
+                        :scaleFontColor "white"})))
 
 (def data {:labels   titles
            :datasets [{
@@ -55,21 +60,22 @@
              [:div.main
               [:div.row.intro
                [:div.col-lg-12
-                [:p.lead [:img {:src "images/cfdlogo.png"}]]
-                [:p.lead.text-right "IS PROUD TO PRESENT"]
+                [:p.lead [:img {:src   "images/cfdlogo.png"
+                                :width "220px"}]
+                 [:span "is proud to present"]]
                 [:h1.super {:style {:color (:titles @app-state)}} "2015"]
                 [:h2 "END OF YEAR SUMMARY"]]]
 
               [:div.row.part-two
                [:div.col-lg-12
-                [:p.lead.text-center "where we started.."]
+                [:p.lead.text-center "Embarked on 7 major projects.."]
                 [:h3 "contributors"]
 
                 [:canvas {:id     "myChart"
                           :width  "400"
                           :height "400"}]
                 [:p.lead
-                 "embarked on 7 major projects.."]]]
+                 "..."]]]
 
               [:div.row.part-three
                [:div.col-lg-12
