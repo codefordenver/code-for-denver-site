@@ -30,3 +30,8 @@ You can then deploy using:
 ```bash
  GH_TOKEN=<your token> GH_REF=github.com/<your name>/code-for-denver-site.git ./deploy.sh
 ```
+
+## Review apps
+When opening a pull request, heroku is configured to deploy a review app for that pull request so the content can be viewed and tested on an actual website.
+
+> NOTE: If this needs to be set up again, the heroku `NPM_CONFIG_PRODUCTION` config must be set to false (as seen in app.json) as development dependencies are needed to run the process specified in the Procfile

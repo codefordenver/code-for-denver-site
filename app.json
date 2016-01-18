@@ -2,6 +2,8 @@
   "name": "code-for-denver-site",
   "description": "Heroku review apps config for pull requests",
   "scripts": {},
-  "env": {},
+  "env": {
+    "NPM_CONFIG_PRODUCTION": "false"
+  },
   "addons": []
 }
