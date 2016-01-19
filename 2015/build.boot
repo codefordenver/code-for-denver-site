@@ -9,7 +9,6 @@
                  [crisptrutski/boot-cljs-test "0.2.0-SNAPSHOT" :scope "test"]
                  [reagent "0.5.0"]
                  [cljsjs/enquire "2.1.2-0"]
-                 [cljsjs/chartist "0.9.4-1"]
                  [deraen/boot-less "0.2.1" :scope "test"]])
 
 (require
@@ -71,3 +70,11 @@
   (comp (testing)
         (watch)
         (test-cljs :js-env :phantom)))
+
+(deftask static []
+  (comp (production)
+        (build)
+        (sift :move
+        {#"index.html" "../index.html"
+         #"images/*.png" "../images/"
+        })))

@@ -1,14 +1,16 @@
-@font-stack:    Helvetica, sans-serif;
-@primary-color: rgba(0,0,0,0.75);
+@font-stack: Helvetica, sans-serif;
+@primary-color: rgba(0, 0, 0, 0.75);
 @secondaty-color: ghostwhite;
 @cfd-blue: rgba(159, 27, 3, 0);
 @cfd-red: "#E24E54";
+@gray: rgba(100, 100, 100, 1.0);
 
 body {
   font: 100% @font-stack;
   font-size: 4em;
-  color: white;
+  color: @gray;
   background-color: #eee;
+  margin-top: 140px;
 }
 
 .row {
@@ -23,32 +25,37 @@ p.lead {
   background-image: url("../images/cfdlogo.png");
 }
 
-.intro{
+.banner {
   color: @secondaty-color;
-  background-image: url("../images/1.png");
   background-size: cover;
+  position: fixed;
+  height: 140px;
+  margin-top: -140px;
+  z-index: 99;
 }
 
-.part-two{
+.part-one {
   color: @secondaty-color;
-  background-image: url("../images/2.png");
-  background-size: cover;
 }
 
-.part-three{
+.part-two {
   color: @secondaty-color;
-  background-image: url("../images/1.png");
-  background-size: cover;
 }
 
-.part-four{
+.part-three {
   color: @secondaty-color;
-  background-image: url("../images/2.png");
-  background-size: cover;
 }
 
-h3{
+.part-four {
   color: @secondaty-color;
+}
+
+h2 {
+  color: @gray;
+}
+
+h3 {
+  color: @gray;
   font-size: 7rem;
 }
 

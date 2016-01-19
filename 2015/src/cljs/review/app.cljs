@@ -13,25 +13,23 @@
 (def app-state (r/atom {:titles (:primary colors)
                         :body   (:secondary colors)}))
 
-(def titles ["Code Across 2015" "Sol Cavp"
+(def titles ["Code Across 2015"
+             "Sol Cavp"
              "Fresh Food Connect API"
-             "Fresh Food Connect" "Code for Denver Site"
-             "Denver Sustainability" "RMFU Feed"])          ;
+             "Fresh Food Connect"
+             "Code for Denver Site"
+             "Denver Sustainability"
+             "RMFU Feed"])          ;
 
 (def contributors [3, 5, 8, 9, 9, 10, 14])
-
-#_(let []
-     (.global (.defaults js/Chart)
-              (clj->js {:scaleLineColor "white"
-                        :scaleFontColor "white"})))
 
 (def data {:labels   titles
            :datasets [{
                        :label           "Code for Denver Contributors"
-                       :fillColor       "white"
-                       :strokeColor     "white"
-                       :highlightFill   "white"
-                       :highlightStroke "rgba(220,220,220,1)"
+                       :fillColor       "#E44D50"
+                       :strokeColor     "#E44D50"
+                       :highlightFill   "#E44D50"
+                       :highlightStroke "black"
                        :data            contributors}]})
 
 ;; -------------------------------
@@ -54,17 +52,23 @@
         {:component-did-mount
          (fn []
              (let [ctx (.getContext (.getElementById js/document "myChart") "2d")]
-                  (.Bar (js/Chart. ctx) (clj->js data))))
+                  (.Bar (js/Chart. ctx) (clj->js data)
+                        (clj->js {:scaleFontColor "rgba(100,100,100, 1.00)"}))))
          :reagent-render
          (fn []
              [:div.main
-              [:div.row.intro
+
+              [:div.row.banner
                [:div.col-lg-12
                 [:p.lead [:img {:src   "images/cfdlogo.png"
                                 :width "220px"}]
-                 [:span "is proud to present"]]
-                [:h1.super {:style {:color (:titles @app-state)}} "2015"]
-                [:h2 "END OF YEAR SUMMARY"]]]
+                 [:span "is proud to present"]]]]
+
+              [:div.row.part-one
+               [:div.col-lg-12
+                [:p.lead
+                 [:h1.super {:style {:color (:titles @app-state)}} "2015"]
+                 [:h2 "END OF YEAR SUMMARY"]]]]
 
               [:div.row.part-two
                [:div.col-lg-12
