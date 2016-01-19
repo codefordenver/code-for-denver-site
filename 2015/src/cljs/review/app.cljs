@@ -73,13 +73,11 @@
               [:div.row.part-two
                [:div.col-lg-12
                 [:p.lead.text-center "Embarked on 7 major projects.."]
-                [:h3 "contributors"]
-
                 [:canvas {:id     "myChart"
                           :width  "400"
                           :height "400"}]
                 [:p.lead
-                 "..."]]]
+                 "contributors"]]]
 
               [:div.row.part-three
                [:div.col-lg-12
@@ -92,13 +90,19 @@
 
               [:div.row.part-four
                [:div.col-lg-12
-                [:h3.text-right "47"]
+                [:h3.text-right.super "47"]
                 [:p.lead.text-right
                  "meetup events"]]]
 
+              [:div.row.part-five
+               [:div.col-lg-12
+                [:h3.text-right "166 Docs, 25 Sheets, 21 Forms, 10 Slides, 8 PDFs, 3 Drawings"]
+                [:p.lead.text-right
+                 "Google Drive"]]]
+
               [:div.row.thanks
                [:div.col-lg-12
-                [:h3.text-center.page-header "MANY THANKS!"]
+                [:h3.text-center "MANY THANKS!"]
                 [:div.list-group
                  [:button.list-group-item.btn-default "test"]]]]])}))
 

@@ -76,5 +76,7 @@
         (build)
         (sift :move
         {#"index.html" "../index.html"
-         #"images/*.png" "../images/"
-        })))
+         #"css/less.css" "../css/less.css"
+         #"libs/bootstrap.min.css" "../libs/bootstrap.min.css"
+         #"images/(.*)" "../images/$1"
+         #"js/(.*)" "../js/$1"})))
