@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router';
+
 
 // TODO: move this to separate css / scss / whatevs file
 const logoStyle = {
@@ -16,14 +18,11 @@ const linkStyle = {
   padding: '5px'
 };
 
-const links = [
-  'Who We Are',
-  'Want To Help?',
-  'What We Do',
-  'Our Stories',
-  'Vital Statistics',
-  'Our Partners'
-];
+const links = {
+  'Home': '/',
+  'About': '/about',
+  'Other': '/other'
+};
 
 const Header = () => (
   <div style={headerStyle}>
@@ -31,8 +30,8 @@ const Header = () => (
 
     <nav>
       {
-        links.map(link => (
-          <a key={link} style={linkStyle}>{ link }</a>
+        Object.keys(links).map(link => (
+          <Link to={links[link]} key={link} style={linkStyle}>{ link }</Link>
         ))
       }
     </nav>

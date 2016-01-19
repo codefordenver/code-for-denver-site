@@ -35,11 +35,12 @@
   },
   "homepage": "https://github.com/codefordenver/code-for-denver-site",
   "dependencies": {
+    "history": "^1.17.0",
     "react": "^0.14.0",
     "react-addons-css-transition-group": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^3.1.0",
-    "react-router": "^1.0.0-rc3",
+    "react-router": "^1.0.3",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {

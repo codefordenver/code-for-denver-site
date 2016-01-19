@@ -2,9 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Page Not Found :(</title>
+        <!-- <title>Page Not Found :(</title> -->
+        <title>Code for Denver</title>
         <style>
-            ::-moz-selection {
+            /*::-moz-selection {
                 background: #b3d4fc;
                 text-shadow: none;
             }
@@ -67,11 +68,11 @@
                 max-width: 380px;
                 _width: 380px;
                 margin: 0 auto;
-            }
+            }*/
 
             /* google search */
 
-            #goog-fixurl ul {
+            /*#goog-fixurl ul {
                 list-style: none;
                 padding: 0;
                 margin: 0;
@@ -136,11 +137,13 @@
             input::-moz-focus-inner {
                 padding: 0;
                 border: 0;
-            }
+            }*/
         </style>
+
+        <link rel="stylesheet" href="static/css/normalize.css">
     </head>
     <body>
-        <div class="container">
+        <!-- <div class="container">
             <h1>Not found <span>:(</span></h1>
             <p>Sorry, but the page you were trying to view does not exist.</p>
             <p>It looks like this was the result of either:</p>
@@ -152,6 +155,10 @@
                 var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
             </script>
             <script src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
-        </div>
+        </div> -->
+
+        <div id="site"></div>
+
+        <script src="dist/bundle.js"></script>
     </body>
 </html>
