@@ -19,7 +19,7 @@
              "Fresh Food Connect"
              "Code for Denver Site"
              "Denver Sustainability"
-             "RMFU Feed"])          ;
+             "RMFU Feed"])
 
 (def contributors [3, 5, 8, 9, 9, 10, 14])
 
@@ -102,7 +102,7 @@
 
               [:div.row.thanks
                [:div.col-lg-12
-                [:h3.text-center "MANY THANKS!"]
+                [:h3.text-center.super "MANY THANKS!"]
                 [:div.list-group
                  [:button.list-group-item.btn-default "test"]]]]])}))
 
