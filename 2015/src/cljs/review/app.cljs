@@ -40,7 +40,7 @@
 (listen!)
 
 ;; -------------------------------
-;; define app state
+;; define app state & app-state utils
 
 (def colors {:primary   "white"
              :secondary "rgba(100,100,100, 1.00)"})
@@ -68,6 +68,9 @@
                        :highlightStroke "black"
                        :data            contributors}]})
 
+(defn swap-title! [title]
+      (swap! app-state assoc-in [:copy :banner-title] title))
+
 ;; -------------------------------
 ;; register media queries triggers and app-state change listeners
 
@@ -76,15 +79,19 @@
                      :match   #(swap! app-state assoc-in [:colors :titles] (:secondary colors))
                      :unmatch #(swap! app-state assoc-in [:colors :titles] (:primary colors))}))
 
-
 (add-watch current-y-scroll :y-scroll-watcher
            (fn [_ _ _ new-state]
-               ;; TODO: make this is a case expression
-               (if (> new-state 100)
-                 (swap! app-state assoc-in [:copy :banner-title] "Embarked on 7 major projects..")
-                 (swap! app-state assoc-in [:copy :banner-title] "is proud to present"))))
+               (print new-state)
+               (cond
+                 (< new-state 200) (swap-title! "is proud to present")
+                 (and (> new-state 201) (<= new-state 600)) (swap-title! "the story of how we embarked on 7 major projects..")
+                 (and (>= new-state 601) (< new-state 1000)) (swap-title! "our contributors spent a total of:")
+                 (and (>= new-state 1218) (< new-state 1500)) (swap-title! "organized a total of:")
+                 (and (>= new-state 1678) (< new-state 1880)) (swap-title! "wrote a ton of documentation & design specs:")
+                 (> new-state 1881) (swap-title! "all possible because of you.."))))
 
-;(add-watch app-state :logger #(-> %4 clj->js js/console.log))
+
+;; (add-watch app-state :logger #(-> %4 clj->js js/console.log))
 
 (defn some-component []
       (r/create-class
@@ -108,15 +115,15 @@
                [:div.col-lg-12
                 [:p.lead
                  [:h1.super {:style {:color (get-in @app-state [:colors :titles])}} "2015"]
-                 [:h2 "END OF YEAR SUMMARY"]]]]
+                 [:h2 "END OF YEAR SUMMARY"]]
+                [:p.lead ""]]]
 
               [:div.row.part-two
                [:div.col-lg-12
                 [:canvas {:id     "myChart"
                           :width  "400"
                           :height "400"}]
-                [:p.lead
-                 "contributors"]]]
+                [:p.lead ""]]]
 
               [:div.row.part-three
                [:div.col-lg-12
@@ -141,9 +148,16 @@
 
               [:div.row.thanks
                [:div.col-lg-12
-                [:h3.text-center.super "MANY THANKS!"]
-                [:div.list-group
-                 [:button.list-group-item.btn-default "test"]]]]])}))
+                [:h3.text-center "MANY THANKS!"]
+                [:p.lead.text-center "Core Team @ Code For Denver, sincerely thanks you for your kind contributions to a better xyz"]]]
+
+
+              [:div.row.thanks
+               [:div.col-lg-12
+                [:img.img-responsive {:src "images/1.png"}]
+                [:img.img-responsive {:src "images/2.png"}]
+                ]]
+              ])}))
 
 (defn main-component []
       [:div [some-component]])
