@@ -2,7 +2,7 @@
 @primary-color: rgba(0, 0, 0, 0.75);
 @secondaty-color: ghostwhite;
 @cfd-blue: rgba(159, 27, 3, 0);
-@cfd-red: "#E24E54";
+@cfd-red: #E24E54;
 @gray: rgba(100, 100, 100, 1.0);
 
 body {
@@ -14,7 +14,7 @@ body {
 }
 
 .row {
-  padding: 15px;
+  padding: 10px;
 }
 
 p.lead {
@@ -38,6 +38,9 @@ p.lead {
 
 .part-one {
   color: @secondaty-color;
+  background-image:url("../images/2.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .part-two {
@@ -53,7 +56,10 @@ p.lead {
 }
 
 h2 {
-  color: @gray;
+  color: @primary-color;
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 3px;
 }
 
 h3 {
@@ -68,7 +74,10 @@ p.lead {
 }
 
 .super {
-  font-size: 17rem;
+  font-size: 42rem;
+  text-align: center;
+  line-height: 95%;
+  color: @cfd-red;
 }
 
 .thanks {

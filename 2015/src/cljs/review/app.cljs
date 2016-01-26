@@ -114,7 +114,7 @@
               [:div.row.part-one
                [:div.col-lg-12
                 [:p.lead
-                 [:h1.super {:style {:color (get-in @app-state [:colors :titles])}} "2015"]
+                 [:h1.super "2015"]
                  [:h2 "END OF YEAR SUMMARY"]]
                 [:p.lead ""]]]
 
