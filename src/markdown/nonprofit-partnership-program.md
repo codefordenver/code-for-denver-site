@@ -7,8 +7,4 @@
 * **[Grow Local Colorado](http://www.growlocalcolorado.org/)**
 * **[Rocky Mountain Farmers Union](https://www.rmfu.org/)**
 
-**[See current status of projects here.](https://waffle.io/codefordenver/projects)**
-
 Find out how you can get involved below.
-
-
