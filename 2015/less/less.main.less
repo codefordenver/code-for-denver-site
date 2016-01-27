@@ -62,7 +62,7 @@ body {
 
 h1 {
   color: @primary-color;
-  font-size: 11rem;  
+  font-size: 11rem;
 }
 
 h2 {
@@ -101,4 +101,20 @@ p.lead {
 
 .img-full {
     width: 100%;
+}
+
+// CSS SHAPES
+
+@circle-width: 50px;
+
+#circle {
+  float: none;
+  margin: 0px auto;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background: @gray;
+  -moz-border-radius: @circle-width;
+  -webkit-border-radius: @circle-width;
+  border-radius: @circle-width;
 }

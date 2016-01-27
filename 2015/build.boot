@@ -8,6 +8,7 @@
                  [org.clojure/clojurescript "1.7.122"]
                  [crisptrutski/boot-cljs-test "0.2.0-SNAPSHOT" :scope "test"]
                  [reagent "0.5.0"]
+                 [timothypratley/reanimated "0.1.4"]
                  [cljsjs/enquire "2.1.2-0"]
                  [org.clojure/core.async "0.2.374"]
                  [deraen/boot-less "0.2.1" :scope "test"]])
