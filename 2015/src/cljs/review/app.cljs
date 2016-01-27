@@ -107,49 +107,54 @@
 
               [:div.row.banner
                [:div.col-lg-12
-                [:p.lead [:img {:src   "images/cfdlogo.png"
+                [:p.lead [:img.logo {:src   "images/cfdlogo.png"
                                 :width "220px"}]
                  [:span (get-in @app-state [:copy :banner-title])]]]]
 
               [:div.row.part-one
                [:div.col-lg-12
-                [:p.lead
-                 [:h1.super "2015"]
-                 [:h2 "END OF YEAR SUMMARY"]]
-                [:p.lead ""]]]
+                 [:h1.super.text-center "2015"]
+                 [:h2.text-center "END OF YEAR SUMMARY"]
+                ]]
 
               [:div.row.part-two
                [:div.col-lg-12
                 [:canvas {:id     "myChart"
                           :width  "400"
                           :height "400"}]
-                [:p.lead ""]]]
+                ]]
 
               [:div.row.part-three
                [:div.col-lg-12
-                [:h3.text-center "3000 hours or"]
-                [:h3.text-center "75 work weeks or"]
+                [:h3.text-center "3000 hours /"]
+                [:h3.text-center "75 work weeks /"]
                 [:h3.text-center "1.5 years"]
-                [:p.lead.text-center
+                [:h3 ""]
+                [:h4.text-center "tracked by "
                  [:a {:href  "http://sparktime.org/"
                       :style {:color "white"}} "sparktime.org"]]]]
+                [:h4 ""]
 
               [:div.row.part-four
                [:div.col-lg-12
-                [:h3.text-right.super "47"]
-                [:p.lead.text-right
-                 "meetup events"]]]
+                [:h3.super.text-center "47"]
+                [:h2.text-center "meetup events"]]]
 
               [:div.row.part-five
                [:div.col-lg-12
-                [:h3.text-right "166 Docs, 25 Sheets, 21 Forms, 10 Slides, 8 PDFs, 3 Drawings"]
-                [:p.lead.text-right
+                [:h3.text-left "166 Docs"]
+                [:h3.text-left "25 Sheets"]
+                [:h3.text-left "21 Forms"]
+                [:h3.text-left "10 Slides"]
+                [:h3.text-left "8 PDFs"]
+                [:h3.text-left "3 Drawings"]
+                [:h4.text-left
                  "Google Drive"]]]
 
               [:div.row.thanks
                [:div.col-lg-12
-                [:h3.text-center "MANY THANKS!"]
-                [:p.lead.text-center "Core Team @ Code For Denver, sincerely thanks you for your kind contributions to a better xyz"]]]
+                [:h1.text-center "MANY THANKS!"]
+                [:p.text-center "Core Team @ Code For Denver, sincerely thanks you for your kind contributions to a better xyz"]]]
 
 
               [:div.row.thanks
