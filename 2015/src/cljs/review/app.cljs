@@ -155,13 +155,9 @@
                [:div.col-lg-12
                 [:h1.text-center "MANY THANKS!"]
                 [:p.text-center "Core Team @ Code For Denver, sincerely thanks you for your kind contributions to a better xyz"]]]
-
-
-              [:div.row.thanks
-               [:div.col-lg-12
-                [:img.img-responsive {:src "images/1.png"}]
-                [:img.img-responsive {:src "images/2.png"}]
-                ]]
+              
+              [:div.footer
+               [:img.img-full {:src "images/4.jpg"}]]
               ])}))
 
 (defn main-component []
