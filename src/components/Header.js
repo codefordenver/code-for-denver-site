@@ -44,20 +44,6 @@ const Header = () => (
       </ul>
     </nav>
   </header>
-
-
-
-
-
-  /*
-  <div style={headerStyle}>
-    <img style={logoStyle} src="static/img/logo-CfD-revx450.png" alt="Code for Denver Logo" />
-
-    <nav>
-
-    </nav>
-  </div>
-  */
 );
 
 export default Header;
