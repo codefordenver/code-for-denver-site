@@ -38,7 +38,7 @@ const Header = () => (
       <ul>
         {
           Object.keys(links).map(link => (
-            <li className="mainnav-link"><Link to={links[link]} key={link} >{ link }</Link></li>
+            <li className="mainnav-link" key={link}><Link to={links[link]}>{ link }</Link></li>
           ))
         }
       </ul>
