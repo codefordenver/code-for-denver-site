@@ -87,8 +87,8 @@
                  (< new-state 200) (swap-title! "is proud to present")
                  (and (> new-state 201) (<= new-state 600)) (swap-title! "the story of how we embarked on 7 major projects..")
                  (and (>= new-state 601) (< new-state 1000)) (swap-title! "our contributors spent a total of:")
-                 (and (>= new-state 1218) (< new-state 1500)) (swap-title! "organized a total of:")
-                 (and (>= new-state 1678) (< new-state 1880)) (swap-title! "wrote a ton of documentation & design specs:")
+                 (and (>= new-state 1415) (< new-state 1991)) (swap-title! "organized a total of:")
+                 (and (>= new-state 1992) (< new-state 2692)) (swap-title! "wrote a ton of documentation & design specs:")
                  (> new-state 1881) (swap-title! "all possible because of you.."))))
 
 
@@ -131,11 +131,19 @@
                      [:h3.text-center "1.5 years"]
                      [:h4.text-center "tracked by "
                       [:a {:href  "http://sparktime.org/"
-                           :style {:color "white"}} "sparktime.org"]]]]
+                           :style {:color "white"}} "sparktime.org"]]
+                     [:div.container.timeline
+                      [:ol
+                       (for [x (range 1 13)]
+                            ^{:key x}
+                            [:li
+                             (str "Point " x)
+                             [:span.details
+                              (str "desc for point " x)]])]]]]
 
                    [:div.row.part-four
+                    [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]
                     [:div.col-lg-12
-                     [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 200) ")")}}]
                      [:h3.super.text-center "47"]
                      [:h2.text-center "meetup events"]]]
 
