@@ -17,10 +17,9 @@ const GetConnected = () => (
           <a className="social-link" href="#"><i className="fa fa-youtube-square"></i></a>
         </p>
       </div>
-      <div className="getconnected-twitter">
-        <div className="twitter-widget">
-
-        </div>
+      <div className="twitter-widget">
+        <a className="twitter-timeline" href="https://twitter.com/CodeForDenver" data-widget-id="691806964364505088">Tweets by @CodeForDenver</a>
+        <script src="static/js/twitter-widget.js"></script>
       </div>
     </div>
 
