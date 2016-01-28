@@ -36,12 +36,11 @@ const Header = () => (
     <img className="mainlogo" src="static/img/logo-bw.png" />
     <nav className="mainnav">
       <ul>
-        <li className="mainnav-link current"><a href="#" data-color="#e24e54">Who We Are</a></li>
-        <li className="mainnav-link"><a href="#" data-color="#fdbf46">What We Do</a></li>
-        <li className="mainnav-link"><a href="#" data-color="#26849e">Want to Help?</a></li>
-        <li className="mainnav-link"><a href="#" data-color="#611305">Our Stories</a></li>
-        <li className="mainnav-link"><a href="#" data-color="#611305">Vital Statistics</a></li>
-        <li className="mainnav-link"><a href="#" data-color="#41284a">Our Partners</a></li>
+        {
+          Object.keys(links).map(link => (
+            <li className="mainnav-link"><Link to={links[link]} key={link} >{ link }</Link></li>
+          ))
+        }
       </ul>
     </nav>
   </header>
@@ -83,11 +82,7 @@ const Header = () => (
     <img style={logoStyle} src="static/img/logo-CfD-revx450.png" alt="Code for Denver Logo" />
 
     <nav>
-      {
-        Object.keys(links).map(link => (
-          <Link to={links[link]} key={link} style={linkStyle}>{ link }</Link>
-        ))
-      }
+
     </nav>
   </div>
   */
