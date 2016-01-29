@@ -95,7 +95,9 @@
 ;; (add-watch app-state :logger #(-> %4 clj->js js/console.log))
 
 (defn main-component []
-      (let [circle-scale (anim/spring scroll)]
+      (let [;; animation state transitions
+            circle-scale (anim/spring scroll)
+            scroll-y (anim/interpolate-to scroll)]
            (r/create-class
              {:component-did-mount
               (fn []
@@ -134,12 +136,8 @@
                            :style {:color "white"}} "sparktime.org"]]
                      [:div.container.timeline
                       [:ol
-                       (for [x (range 1 13)]
-                            ^{:key x}
-                            [:li
-                             (str "Point " x)
-                             [:span.details
-                              (str "desc for point " x)]])]]]]
+                       ;; generate 18 months ~ 1.5 y
+                       [:span.cursor {:style {:left (+ (mod @scroll-y 300) 10)}}]]]]]
 
                    [:div.row.part-four
                     [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]

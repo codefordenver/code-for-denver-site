@@ -141,6 +141,18 @@ p.lead {
     border: 10px solid @timeline-color;
   }
 
+  .cursor {
+    position: absolute;
+    top: -8px;
+    left: -5px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 10px;
+    border: 10px solid @cfd-red;
+    z-index: 99;
+  }
+
   ol::before {
     left: -5px;
   }
@@ -160,7 +172,7 @@ p.lead {
     top: -77px;
     display: inline-block;
     float: left;
-    width: 150px;
+    width: 30px;
     transform: rotate(-45deg);
     font: bold 14px arial;
   }
@@ -179,6 +191,7 @@ p.lead {
   }
 
   /* ---- Details ---- */
+  // reveal on :hover
 
   .details {
     display: none;
