@@ -25,9 +25,9 @@ const links = {
   'Who We Are': '/',
   'What We Do': '/about',
   'Want to Help?': '/other',
-  'Our Stories' : '/',
-  'Vital Statistics' : '/',
-  'Our Partners' : '/'
+  'Our Stories' : '/#',
+  'Vital Statistics' : '/#',
+  'Our Partners' : '/#'
 };
 
 class Header extends React.Component {
