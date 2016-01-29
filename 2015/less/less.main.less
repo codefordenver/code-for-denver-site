@@ -1,5 +1,5 @@
 @font-stack: Helvetica, sans-serif;
-@primary-color: rgba(0, 0, 0, 0.75);
+@primary-color: #3c3c3c;
 @secondary-color: ghostwhite;
 @cfd-blue: rgba(159, 27, 3, 0);
 @cfd-red: #E24E54;
@@ -7,7 +7,7 @@
 
 body {
   font: 100% @font-stack;
-  font-size: 4rem;
+  font-size: 3rem;
   color: @gray;
   background-color: #eee;
   margin-top: 140px;
@@ -25,9 +25,21 @@ body {
   margin-right: 10px;
 }
 
-.banner {
+.banner-dark {
   color: @secondary-color;
   background-color: @primary-color;
+  background-size: cover;
+  position: fixed;
+  height: 140px;
+  margin-top: -140px;
+  z-index: 99;
+  left: 0;
+  right: 0;
+}
+
+.banner-light {
+  color: @primary-color;
+  background-color: #eee;
   background-size: cover;
   position: fixed;
   height: 140px;
@@ -81,12 +93,6 @@ h4 {
   color: @cfd-red;
 }
 
-p.lead {
-  color: @secondary-color;
-  padding: 0.25em;
-  font-size: 3rem;
-}
-
 .super {
   font-size: 40rem;
   line-height: 95%;
@@ -114,7 +120,7 @@ p.lead {
   z-index: 1;
   width: 50px;
   height: 50px;
-  background: @gray;
+  background-color: rgba(100,100,100,0.75);
   -moz-border-radius: @circle-width;
   -webkit-border-radius: @circle-width;
   border-radius: @circle-width;

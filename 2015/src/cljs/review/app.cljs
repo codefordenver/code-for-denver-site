@@ -48,7 +48,8 @@
 
 (def app-state (r/atom {:colors {:titles (:primary colors)
                                  :body   (:secondary colors)}
-                        :copy   {:banner-title "is proud to present"}}))
+                        :copy   {:banner-title "is proud to present" }
+                        :banner-style "banner-dark"}))
 
 (def titles ["Code Across 2015"
              "Sol Cavp"
@@ -69,13 +70,14 @@
                        :highlightStroke "black"
                        :data            contributors}]})
 
-(defn swap-title! [title]
-      (swap! app-state assoc-in [:copy :banner-title] title))
+(defn swap-title! [title style]
+      (swap! app-state assoc-in [:copy :banner-title] title)
+      (swap! app-state assoc-in [:banner-style] style))
 
 ;; -------------------------------
 ;; register media queries triggers and app-state change listeners
 
-(.register js/enquire "screen and (max-width:722px)"
+#_(.register js/enquire "screen and (max-width:722px)"
            (clj->js {;;:setup   (fn [])
                      :match   #(swap! app-state assoc-in [:colors :titles] (:secondary colors))
                      :unmatch #(swap! app-state assoc-in [:colors :titles] (:primary colors))}))
@@ -84,12 +86,12 @@
            (fn [_ _ _ new-state]
                (print new-state)
                (cond
-                 (< new-state 200) (swap-title! "is proud to present")
-                 (and (> new-state 201) (<= new-state 600)) (swap-title! "the story of how we embarked on 7 major projects..")
-                 (and (>= new-state 601) (< new-state 1000)) (swap-title! "our contributors spent a total of:")
-                 (and (>= new-state 1415) (< new-state 1991)) (swap-title! "organized a total of:")
-                 (and (>= new-state 1992) (< new-state 2692)) (swap-title! "wrote a ton of documentation & design specs:")
-                 (> new-state 1881) (swap-title! "all possible because of you.."))))
+                 (< new-state 200) (swap-title! "is proud to present" "banner-dark")
+                 (and (> new-state 201) (<= new-state 962)) (swap-title! "the story of how we embarked on 7 major projects.." "banner-light")
+                 (and (>= new-state 962) (< new-state 1494)) (swap-title! "our contributors spent a total of:" "banner-dark")
+                 (and (>= new-state 1494) (< new-state 2157)) (swap-title! "organized a total of:" "banner-light")
+                 (and (>= new-state 2157) (< new-state 2851)) (swap-title! "wrote a ton of documentation & design specs:" "banner-dark")
+                 (> new-state 2851) (swap-title! "all possible because of you.." "banner-light"))))
 
 
 ;; (add-watch app-state :logger #(-> %4 clj->js js/console.log))
@@ -109,9 +111,9 @@
               (fn []
                   [:div.main
 
-                   [:div.row.banner
+                   [:div {:class (str "row " (:banner-style @app-state))} 
                     [:div.col-lg-12
-                     [:p.lead [:img.logo {:src   "images/cfdlogo.png"
+                     [:p [:img.logo {:src   "images/cfdlogo.png"
                                           :width "220px"}]
                       [:span (get-in @app-state [:copy :banner-title])]]]]
 
