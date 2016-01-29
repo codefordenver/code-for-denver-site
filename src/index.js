@@ -37,9 +37,15 @@ const OtherPage = () => (
   </section>
 );
 
-const App = ({ children }) => (
+// const App = ({ children }) => (
+
+const App = (props) => {
+  const {children} = props;
+
+  return (
+
   <div>
-    <Header />
+    <Header path={props.location.pathname} />
     <Hero />
     <Interested />
 
@@ -56,6 +62,7 @@ const App = ({ children }) => (
     </footer>
   </div>
 );
+}
 
 const notFound = () => (
   <div>
