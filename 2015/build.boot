@@ -9,8 +9,8 @@
                  [crisptrutski/boot-cljs-test "0.2.0-SNAPSHOT" :scope "test"]
                  [reagent "0.5.0"]
                  [timothypratley/reanimated "0.1.4"]
-                 [cljsjs/enquire "2.1.2-0"]
-                 [org.clojure/core.async "0.2.374"]
+                 [cljs-ajax "0.5.3"]
+                 [cljsjs/jquery "2.1.4-0"]
                  [deraen/boot-less "0.2.1" :scope "test"]])
 
 (require

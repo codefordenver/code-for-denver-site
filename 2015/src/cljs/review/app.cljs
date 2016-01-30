@@ -1,44 +1,10 @@
 (ns review.app
-  (:require-macros [cljs.core.async.macros :refer [go-loop]])
-  (:require [cljs.core.async :refer [<! put! chan timeout]]
-            [reagent.core :as r]
-            [cljsjs.enquire :as enquire]
-            [goog.events :as events]
-            [goog.events.EventType :as EventType]
-            [goog.dom :as dom]
+  (:require [reagent.core :as r]
+            [cljsjs.jquery :as $]
+            [ajax.core :refer [GET]]
             [timothypratley.reanimated.core :as anim]))
 
 (enable-console-print!)
-
-;; -------------------------------
-;; y-scroll event channel
-;; http://www.mattgreer.org/articles/scrolling-animations-with-reagent/
-
-(def scroll (r/atom 0))
-
-(def prev-scroll (r/atom 0))
-
-(defn get-scroll []
-      (-> (dom/getDocumentScroll)
-          (.-y)))
-
-(defn events->chan [el event-type c]
-      (events/listen el event-type #(put! c %))
-      c)
-
-(defn scroll-chan []
-      (events->chan js/window EventType/SCROLL (chan 1 (map get-scroll))))
-
-(defn listen! []
-      (let [chan (scroll-chan)]
-           (go-loop []
-                    (let [new-y (<! chan)]
-                         (reset! prev-scroll @scroll)
-                         ;; dont include negative values
-                         (reset! scroll (max 0 new-y)))
-                    (recur))))
-
-(listen!)
 
 ;; -------------------------------
 ;; define app state & app-state utils
@@ -46,10 +12,11 @@
 (def colors {:primary   "white"
              :secondary "rgba(100,100,100, 1.00)"})
 
-(def app-state (r/atom {:colors {:titles (:primary colors)
-                                 :body   (:secondary colors)}
-                        :copy   {:banner-title "is proud to present" }
-                        :banner-style "banner-dark"}))
+(def app-state (r/atom {:colors       {:titles (:primary colors)
+                                       :body   (:secondary colors)}
+                        :copy         {:banner-title "is proud to present"}
+                        :banner-style "banner-dark"
+                        :logo-url     "cfdlogo.png"}))
 
 (def titles ["Code Across 2015"
              "Sol Cavp"
@@ -70,36 +37,33 @@
                        :highlightStroke "black"
                        :data            contributors}]})
 
-(defn swap-title! [title style]
+(defn swap-title! [title style & [logo-url]]
+      (print logo-url)
       (swap! app-state assoc-in [:copy :banner-title] title)
-      (swap! app-state assoc-in [:banner-style] style))
+      (swap! app-state assoc-in [:banner-style] style)
+      (swap! app-state assoc-in [:logo-url] (or logo-url "cfdlogo-sm.png")))
 
-;; -------------------------------
-;; register media queries triggers and app-state change listeners
-
-#_(.register js/enquire "screen and (max-width:722px)"
-           (clj->js {;;:setup   (fn [])
-                     :match   #(swap! app-state assoc-in [:colors :titles] (:secondary colors))
-                     :unmatch #(swap! app-state assoc-in [:colors :titles] (:primary colors))}))
-
-(add-watch scroll :y-scroll-watcher
+(add-watch anim/scroll :y-scroll-watcher
            (fn [_ _ _ new-state]
-               (print new-state)
+
                (cond
-                 (< new-state 200) (swap-title! "is proud to present" "banner-dark")
+
+                 (< new-state 200) (swap-title! "is proud to present" "banner-dark" "cfdlogo.png")
+
                  (and (> new-state 201) (<= new-state 962)) (swap-title! "the story of how we embarked on 7 major projects.." "banner-light")
+
                  (and (>= new-state 962) (< new-state 1494)) (swap-title! "our contributors spent a total of:" "banner-dark")
+
                  (and (>= new-state 1494) (< new-state 2157)) (swap-title! "organized a total of:" "banner-light")
+
                  (and (>= new-state 2157) (< new-state 2851)) (swap-title! "wrote a ton of documentation & design specs:" "banner-dark")
+
                  (> new-state 2851) (swap-title! "all possible because of you.." "banner-light"))))
-
-
-;; (add-watch app-state :logger #(-> %4 clj->js js/console.log))
 
 (defn main-component []
       (let [;; animation state transitions
-            circle-scale (anim/spring scroll)
-            scroll-y (anim/interpolate-to scroll)]
+            circle-scale (anim/spring anim/scroll)
+            scroll-y (anim/interpolate-to anim/scroll)]
            (r/create-class
              {:component-did-mount
               (fn []
@@ -109,12 +73,12 @@
                              (clj->js {:scaleFontColor "rgba(100,100,100, 1.00)"}))))
               :reagent-render
               (fn []
+
                   [:div.main
 
-                   [:div {:class (str "row " (:banner-style @app-state))} 
+                   [:div {:class (str "row " (:banner-style @app-state))}
                     [:div.col-lg-12
-                     [:p [:img.logo {:src   "images/cfdlogo.png"
-                                          :width "220px"}]
+                     [:p [:img.logo {:src   (str "images/" (:logo-url @app-state))}]
                       [:span (get-in @app-state [:copy :banner-title])]]]]
 
                    [:div.row.part-one
@@ -133,13 +97,12 @@
                      [:h3.text-center "3000 hours /"]
                      [:h3.text-center "75 work weeks /"]
                      [:h3.text-center "1.5 years"]
+                     [:div.timeline
+                      [:ol
+                       [:span.cursor {:style {:left (/ (mod @scroll-y (.width (js/$ ".timeline"))) 2)}}]]]
                      [:h4.text-center "tracked by "
                       [:a {:href  "http://sparktime.org/"
-                           :style {:color "white"}} "sparktime.org"]]
-                     [:div.container.timeline
-                      [:ol
-                       ;; generate 18 months ~ 1.5 y
-                       [:span.cursor {:style {:left (+ (mod @scroll-y 300) 10)}}]]]]]
+                           :style {:color "white"}} "sparktime.org"]]]]
 
                    [:div.row.part-four
                     [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]
@@ -160,7 +123,9 @@
                    [:div.row.thanks
                     [:div.col-lg-12
                      [:h1.text-center "MANY THANKS!"]
-                     [:p.text-center "Core Team @ Code For Denver, sincerely thanks you for your kind contributions to a better xyz"]]]
+                     [:p.text-center "Core Team @ Code For Denver,
+                     sincerely thanks you for your kind
+                     contributions to a better xyz"]]]
 
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]]])})))
