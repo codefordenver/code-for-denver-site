@@ -1,4 +1,4 @@
-[
+{"data": [
   {
     "login": "alyssaevans",
     "id": 3489120,
@@ -1708,6 +1708,5 @@
     "received_events_url": "https://api.github.com/users/zacharyrose/received_events",
     "type": "User",
     "site_admin": false
-  }
-]
-]
+  }]
+}
