@@ -37,28 +37,28 @@
                        :highlightStroke "black"
                        :data            contributors}]})
 
-(defn swap-title! [title style & [logo-url]]
-      (print logo-url)
+(defn refresh! [title style & [logo-url]]
       (swap! app-state assoc-in [:copy :banner-title] title)
       (swap! app-state assoc-in [:banner-style] style)
       (swap! app-state assoc-in [:logo-url] (or logo-url "cfdlogo-sm.png")))
 
 (add-watch anim/scroll :y-scroll-watcher
            (fn [_ _ _ new-state]
+               (do
+                 ;; (print new-state)
+                 (cond
 
-               (cond
+                   (< new-state 200) (refresh! "is proud to present" "banner-dark" "cfdlogo.png")
 
-                 (< new-state 200) (swap-title! "is proud to present" "banner-dark" "cfdlogo.png")
+                   (and (> new-state 201) (<= new-state 962)) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
 
-                 (and (> new-state 201) (<= new-state 962)) (swap-title! "the story of how we embarked on 7 major projects.." "banner-light")
+                   (and (>= new-state 962) (< new-state 1494)) (refresh! "our contributors spent a total of:" "banner-dark")
 
-                 (and (>= new-state 962) (< new-state 1494)) (swap-title! "our contributors spent a total of:" "banner-dark")
+                   (and (>= new-state 1494) (< new-state 2157)) (refresh! "organized a total of:" "banner-light")
 
-                 (and (>= new-state 1494) (< new-state 2157)) (swap-title! "organized a total of:" "banner-light")
+                   (and (>= new-state 2157) (< new-state 2665)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
 
-                 (and (>= new-state 2157) (< new-state 2851)) (swap-title! "wrote a ton of documentation & design specs:" "banner-dark")
-
-                 (> new-state 2851) (swap-title! "all possible because of you.." "banner-light"))))
+                   (> new-state 2665) (refresh! "all possible because of you.." "banner-light")))))
 
 (defn main-component []
       (let [;; animation state transitions
@@ -76,56 +76,65 @@
 
                   [:div.main
 
-                   [:div {:class (str "row " (:banner-style @app-state))}
-                    [:div.col-lg-12
-                     [:p [:img.logo {:src   (str "images/" (:logo-url @app-state))}]
-                      [:span (get-in @app-state [:copy :banner-title])]]]]
+                   [:div.container
+                    [:div.row {:class (:banner-style @app-state)}
+                     [:div.col-lg-3.col-md-4.col-sm-4.col-xs-2
+                      [:img.logo {:src (str "images/" (:logo-url @app-state))}]]
+                     [:div.col-lg-9.col-md-8.col-sm-4.col-xs-10
+                      [:p [:span (get-in @app-state [:copy :banner-title])]]]]]
 
-                   [:div.row.part-one
-                    [:div.col-lg-12
-                     [:h1.super.text-center "2015"]
-                     [:h2.text-center "END OF YEAR SUMMARY"]]]
+                   [:div.container-fluid
+                    [:div.row.part-one
+                     [:div.col-lg-12.col-md-6
+                      [:h1.super.text-center "2015"]]
+                     [:div.col-lg-12
+                      [:h2.text-center "END OF YEAR SUMMARY"]]]]
 
-                   [:div.row.part-two
-                    [:div.col-lg-12
-                     [:canvas {:id     "myChart"
-                               :width  "400"
-                               :height "400"}]]]
+                   [:div.container-fluid
+                    [:div.row.part-two
+                     [:div.col-lg-12
+                      [:canvas {:id     "myChart"
+                                :width  "400"
+                                :height "400"}]]]]
 
-                   [:div.row.part-three
-                    [:div.col-lg-12
-                     [:h3.text-center "3000 hours /"]
-                     [:h3.text-center "75 work weeks /"]
-                     [:h3.text-center "1.5 years"]
-                     [:div.timeline
-                      [:ol
-                       [:span.cursor {:style {:left (/ (mod @scroll-y (.width (js/$ ".timeline"))) 2)}}]]]
-                     [:h4.text-center "tracked by "
-                      [:a {:href  "http://sparktime.org/"
-                           :style {:color "white"}} "sparktime.org"]]]]
+                   [:div.container-fluid
+                    [:div.row.part-three
+                     [:div.col-lg-12
+                      [:h3.text-center "3000 hours /"]
+                      [:h3.text-center "75 work weeks /"]
+                      [:h3.text-center "1.5 years"]
+                      [:div.timeline
+                       [:ol
+                        [:span.cursor {:style {:left (/ (mod @scroll-y (.width (js/$ ".timeline"))) 2)}}]]]
+                      [:h4.text-center "tracked by "
+                       [:a {:href  "http://sparktime.org/"
+                            :style {:color "white"}} "sparktime.org"]]]]]
 
-                   [:div.row.part-four
-                    [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]
-                    [:div.col-lg-12
-                     [:h3.super.text-center "47"]
-                     [:h2.text-center "meetup events"]]]
+                   [:div.container-fluid
+                    [:div.row.part-four
+                     [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]
+                     [:div.col-lg-12
+                      [:h3.super.text-center "47"]
+                      [:h2.text-center "meetup events"]]]]
 
-                   [:div.row.part-five
-                    [:div.col-lg-12
-                     [:h3.text-left "166 Docs"]
-                     [:h3.text-left "25 Sheets"]
-                     [:h3.text-left "21 Forms"]
-                     [:h3.text-left "10 Slides"]
-                     [:h3.text-left "8 PDFs"]
-                     [:h3.text-left "3 Drawings"]
-                     [:h4.text-left "Google Drive"]]]
+                   [:div.container-fluid
+                    [:div.row.part-five
+                     [:div.col-lg-12
+                      [:h3.text-left "166 Docs"]
+                      [:h3.text-left "25 Sheets"]
+                      [:h3.text-left "21 Forms"]
+                      [:h3.text-left "10 Slides"]
+                      [:h3.text-left "8 PDFs"]
+                      [:h3.text-left "3 Drawings"]
+                      [:h4.text-left "Google Drive"]]]]
 
-                   [:div.row.thanks
-                    [:div.col-lg-12
-                     [:h1.text-center "MANY THANKS!"]
-                     [:p.text-center "Core Team @ Code For Denver,
+                   [:div.container-fluid
+                    [:div.row.thanks
+                     [:div.col-lg-12
+                      [:h1.text-center "MANY THANKS!"]
+                      [:p.text-center "Core Team @ Code For Denver,
                      sincerely thanks you for your kind
-                     contributions to a better xyz"]]]
+                     contributions to a better xyz"]]]]
 
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]]])})))

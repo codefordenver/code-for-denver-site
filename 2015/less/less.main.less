@@ -1,6 +1,6 @@
 @font-stack: Helvetica, sans-serif;
-@primary-color: #3c3c3c;
-@secondary-color: ghostwhite;
+@dark: #3c3c3c;
+@light: ghostwhite;
 @cfd-blue: rgba(159, 27, 3, 0);
 @cfd-red: #E24E54;
 @gray: rgba(100, 100, 100, 1.0);
@@ -10,7 +10,15 @@ body {
   font-size: 3rem;
   color: @gray;
   background-color: #eee;
-  margin-top: 140px;
+  max-width: 70%;
+  margin: 140px auto;
+  @media (max-width: 856px) {
+    max-width: inherit;
+  }
+}
+
+.light {
+  color: @light;
 }
 
 .row {
@@ -26,8 +34,8 @@ body {
 }
 
 .banner-dark {
-  color: @secondary-color;
-  background-color: @primary-color;
+  color: @light;
+  background-color: @dark;
   background-size: cover;
   position: fixed;
   height: 140px;
@@ -38,7 +46,7 @@ body {
 }
 
 .banner-light {
-  color: @primary-color;
+  color: @dark;
   background-color: #eee;
   background-size: cover;
   position: fixed;
@@ -50,36 +58,36 @@ body {
 }
 
 .part-one {
-  color: @secondary-color;
+  color: @light;
   background-image: url("../images/2.png");
   background-size: cover;
   background-position: center;
 }
 
 .part-two {
-  color: @secondary-color;
+  color: @light;
 }
 
 .part-three {
-  background-color: @primary-color;
+  background-color: @dark;
 }
 
 .part-four {
-  color: @secondary-color;
+  color: @light;
 }
 
 .part-five {
-  background-color: @primary-color;
+  background-color: @dark;
 }
 
 h1 {
-  color: @primary-color;
-  font-size: 11rem;
+  color: @dark;
+  font-size: 14vw;
 }
 
 h2 {
-  color: @primary-color;
-  font-size: 5rem;
+  color: @dark;
+  font-size: 5vm;
   letter-spacing: 3px;
 }
 
@@ -94,7 +102,7 @@ h4 {
 }
 
 .super {
-  font-size: 40rem;
+  font-size: 30vw;
   line-height: 95%;
   color: @cfd-red;
 }
@@ -112,7 +120,7 @@ h4 {
 // CSS SHAPES
 
 @circle-width: 50px;
-@timeline-color: @secondary-color;
+@timeline-color: @light;
 
 #circle {
   float: none;
@@ -230,7 +238,7 @@ h4 {
 
   li:hover {
     cursor: pointer;
-    color: @secondary-color;
+    color: @light;
   }
 
   li:hover::before {
