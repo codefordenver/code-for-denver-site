@@ -1,10 +1,23 @@
 (ns review.app
+  (:require-macros
+    [cljs.core.async.macros :refer [go alt!]])
   (:require [reagent.core :as r]
             [cljsjs.jquery :as $]
             [ajax.core :refer [GET]]
+            [cljs.core.async :refer [chan close! put!]]
             [timothypratley.reanimated.core :as anim]))
 
 (enable-console-print!)
+
+(defn fetch! [url]
+      (let [ch (chan 1)]
+           (GET url
+                {:response-format :json
+                 :keywords?       true
+                 :handler         (fn [res]
+                                      (do (put! ch res)
+                                          (close! ch)))})
+           ch))
 
 ;; -------------------------------
 ;; define app state & app-state utils
@@ -26,8 +39,6 @@
              "Denver Sustainability"
              "RMFU Feed"])
 
-(def contributors [3, 5, 8, 9, 9, 10, 14])
-
 (def data {:labels   titles
            :datasets [{
                        :label           "Code for Denver Contributors"
@@ -35,7 +46,7 @@
                        :strokeColor     "#E44D50"
                        :highlightFill   "#E44D50"
                        :highlightStroke "black"
-                       :data            contributors}]})
+                       :data            [3 5 8 9 9 10 14]}]})
 
 (defn refresh! [title style & [logo-url]]
       (swap! app-state assoc-in [:copy :banner-title] title)
@@ -63,9 +74,14 @@
 (defn main-component []
       (let [;; animation state transitions
             circle-scale (anim/spring anim/scroll)
-            scroll-y (anim/interpolate-to anim/scroll)]
+            scroll-y (anim/interpolate-to anim/scroll)
+            contributors (atom [])]
            (r/create-class
-             {:component-did-mount
+             {:component-will-mount
+              (fn []
+                  (let [c (fetch! "./data/contributors.json")]
+                       (go (reset! contributors (:data (<! c))))))
+              :component-did-mount
               (fn []
                   (let [ctx (.getContext (.getElementById js/document "myChart") "2d")]
                        (.Bar (js/Chart. ctx)
@@ -75,7 +91,6 @@
               (fn []
 
                   [:div.main
-
                    [:div.container
                     [:div.row {:class (:banner-style @app-state)}
                      [:div.col-lg-3.col-md-4.col-sm-4.col-xs-2
@@ -85,9 +100,8 @@
 
                    [:div.container-fluid
                     [:div.row.part-one
-                     [:div.col-lg-12.col-md-6
-                      [:h1.super.text-center "2015"]]
                      [:div.col-lg-12
+                      [:h1.super.text-center "2015"]
                       [:h2.text-center "END OF YEAR SUMMARY"]]]]
 
                    [:div.container-fluid
@@ -132,9 +146,30 @@
                     [:div.row.thanks
                      [:div.col-lg-12
                       [:h1.text-center "MANY THANKS!"]
-                      [:p.text-center "Core Team @ Code For Denver,
-                     sincerely thanks you for your kind
-                     contributions to a better xyz"]]]]
+                      [:hr]
+                      [:div.grid
+                       (for [user @contributors
+                             :let [id (:id user)
+                                   avatar_url (:avatar_url user)
+                                   login (:login user)
+                                   html_url (:html_url user)
+                                   username (:login user)]]
+                            ^{:key id}
+                            [:div {:class         "img-thumbnail element-item transition"
+                                   :data-category "transition"}
+                             [:a {:href   html_url
+                                  :target "_blank"}
+                              [:img {:src avatar_url}]
+                              ;; TODO: fix css so that we can
+                              ;; display username
+                              ;; username ;; <-- uncomment this line for username
+                              ]])]
+                      [:br]
+                      [:p.text-center
+                       [:b "The Core Team @ Code For Denver"]
+                       ", sincerely thanks you for your kind contributions towards"
+                       [:b " strengthening our community."]]
+                      [:hr]]]]
 
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]]])})))
@@ -144,4 +179,4 @@
 
 (defn init []
       (r/render-component [parent-component]
-                          (.getElementById js/document "container")))
+                          (.getElementById js/document "mount")))
