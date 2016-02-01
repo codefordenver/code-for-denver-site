@@ -31,22 +31,24 @@
                         :banner-style "banner-dark"
                         :logo-url     "cfdlogo.png"}))
 
-(def titles ["Code Across 2015"
-             "Sol Cavp"
-             "Fresh Food Connect API"
-             "Fresh Food Connect"
-             "Code for Denver Site"
-             "Denver Sustainability"
-             "RMFU Feed"])
+(def chart-titles ["Code Across 2015"
+                   "Sol Cavp"
+                   "Fresh Food Connect API"
+                   "Fresh Food Connect"
+                   "Code for Denver Site"
+                   "Denver Sustainability"
+                   "RMFU Feed"])
 
-(def data {:labels   titles
-           :datasets [{
-                       :label           "Code for Denver Contributors"
-                       :fillColor       "#E44D50"
-                       :strokeColor     "#E44D50"
-                       :highlightFill   "#E44D50"
-                       :highlightStroke "black"
-                       :data            [3 5 8 9 9 10 14]}]})
+(def contributions (r/atom []))
+
+(def chart-data {:labels   chart-titles
+                 :datasets [{
+                             :label           "Code for Denver Contributors"
+                             :fillColor       "#E44D50"
+                             :strokeColor     "#E44D50"
+                             :highlightFill   "#E44D50"
+                             :highlightStroke "black"
+                             :data            [4 5 114 216 105 135 199]}]})
 
 (defn refresh! [title style & [logo-url]]
       (swap! app-state assoc-in [:copy :banner-title] title)
@@ -75,18 +77,30 @@
       (let [;; animation state transitions
             circle-scale (anim/spring anim/scroll)
             scroll-y (anim/interpolate-to anim/scroll)
-            contributors (atom [])]
+            contributors (r/atom [])]
            (r/create-class
              {:component-will-mount
               (fn []
-                  (let [c (fetch! "./data/contributors.json")]
-                       (go (reset! contributors (:data (<! c))))))
+                  (let [c (fetch! "./data/github.json")]
+                       (go
+                         (let [data (<! c)]
+                              (reset! contributors (:contributors data))
+                              (reset! contributions
+                                      (for [key [:code-across-2015
+                                                 :sol-cavp
+                                                 :fresh-food-connect-api
+                                                 :fresh-food-connect
+                                                 :code-for-denver-site
+                                                 :denver-sustainability
+                                                 :rmfu-feed]]
+                                           (reduce + (map :contributions
+                                                          (key (:contributions data))))))))))
               :component-did-mount
               (fn []
                   (let [ctx (.getContext (.getElementById js/document "myChart") "2d")]
                        (.Bar (js/Chart. ctx)
-                             (clj->js data)
-                             (clj->js {:scaleFontColor "rgba(100,100,100, 1.00)"}))))
+                             (clj->js chart-data)
+                             #js {:scaleFontColor "rgba(100,100,100, 1.00)"})))
               :reagent-render
               (fn []
 
@@ -148,6 +162,7 @@
                       [:h1.text-center "MANY THANKS!"]
                       [:hr]
                       [:div.grid
+                       [:p (str @contributions)]
                        (for [user @contributors
                              :let [id (:id user)
                                    avatar_url (:avatar_url user)
