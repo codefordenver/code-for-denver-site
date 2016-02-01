@@ -39,8 +39,6 @@
                    "Denver Sustainability"
                    "RMFU Feed"])
 
-(def contributions (r/atom []))
-
 (def chart-data {:labels   chart-titles
                  :datasets [{
                              :label           "Code for Denver Contributors"
@@ -84,17 +82,7 @@
                   (let [c (fetch! "./data/github.json")]
                        (go
                          (let [data (<! c)]
-                              (reset! contributors (:contributors data))
-                              (reset! contributions
-                                      (for [key [:code-across-2015
-                                                 :sol-cavp
-                                                 :fresh-food-connect-api
-                                                 :fresh-food-connect
-                                                 :code-for-denver-site
-                                                 :denver-sustainability
-                                                 :rmfu-feed]]
-                                           (reduce + (map :contributions
-                                                          (key (:contributions data))))))))))
+                              (reset! contributors (:contributors data))))))
               :component-did-mount
               (fn []
                   (let [ctx (.getContext (.getElementById js/document "myChart") "2d")]
@@ -162,7 +150,6 @@
                       [:h1.text-center "MANY THANKS!"]
                       [:hr]
                       [:div.grid
-                       [:p (str @contributions)]
                        (for [user @contributors
                              :let [id (:id user)
                                    avatar_url (:avatar_url user)
