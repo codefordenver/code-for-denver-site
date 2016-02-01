@@ -61,15 +61,15 @@
 
                    (< new-state 200) (refresh! "is proud to present" "banner-dark" "cfdlogo.png")
 
-                   (and (> new-state 201) (<= new-state 962)) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
+                   (and (> new-state 201) (<= new-state 762)) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
 
-                   (and (>= new-state 962) (< new-state 1494)) (refresh! "our contributors spent a total of:" "banner-dark")
+                   (and (>= new-state 762) (< new-state 1394)) (refresh! "our contributors spent a total of:" "banner-dark")
 
-                   (and (>= new-state 1494) (< new-state 2157)) (refresh! "organized a total of:" "banner-light")
+                   (and (>= new-state 1394) (< new-state 1800)) (refresh! "organized a total of:" "banner-light")
 
-                   (and (>= new-state 2157) (< new-state 2665)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
+                   (and (>= new-state 1800) (< new-state 2555)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
 
-                   (> new-state 2665) (refresh! "all possible because of you.." "banner-light")))))
+                   (> new-state 2555) (refresh! "all possible because of you.." "banner-light")))))
 
 (defn main-component []
       (let [;; animation state transitions
@@ -95,10 +95,10 @@
                   [:div.main
                    [:div.container
                     [:div.row {:class (:banner-style @app-state)}
-                     [:div.col-lg-3.col-md-4.col-sm-4.col-xs-2
-                      [:img.logo {:src (str "images/" (:logo-url @app-state))}]]
-                     [:div.col-lg-9.col-md-8.col-sm-4.col-xs-10
-                      [:p [:span (get-in @app-state [:copy :banner-title])]]]]]
+                     [:div.col-lg-12
+                      [:img.logo {:src (str "images/" (:logo-url @app-state))}]
+                      [:span (get-in @app-state [:copy :banner-title])]]
+                    ]]
 
                    [:div.container-fluid
                     [:div.row.part-one
