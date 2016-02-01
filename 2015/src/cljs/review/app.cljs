@@ -148,7 +148,9 @@
                     [:div.row.thanks
                      [:div.col-lg-12
                       [:h1.text-center "MANY THANKS!"]
-                      [:hr]
+                      [:hr]]
+                     [:div.row
+                      [:div.col-lg-10.col-lg-offset-1
                       [:div.grid
                        (for [user @contributors
                              :let [id (:id user)
@@ -157,21 +159,23 @@
                                    html_url (:html_url user)
                                    username (:login user)]]
                             ^{:key id}
-                            [:div {:class         "img-thumbnail element-item transition"
-                                   :data-category "transition"}
-                             [:a {:href   html_url
-                                  :target "_blank"}
+                            [:div.element-item.wrapper
+                              [:a {:href html_url
+                                  :target "_blank"
+                                  }
                               [:img {:src avatar_url}]
-                              ;; TODO: fix css so that we can
-                              ;; display username
-                              ;; username ;; <-- uncomment this line for username
-                              ]])]
-                      [:br]
+                               ]
+                               [:div.tooltip 
+                                username
+                                ]
+                              ])]]]
+                     [:div.row
+                      [:div.col-lg-12
                       [:p.text-center
                        [:b "The Core Team @ Code For Denver"]
                        ", sincerely thanks you for your kind contributions towards"
                        [:b " strengthening our community."]]
-                      [:hr]]]]
+                      [:hr]]]]]
 
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]]])})))
