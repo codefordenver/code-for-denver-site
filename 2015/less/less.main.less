@@ -369,3 +369,131 @@ h4 {
    }
 
 }
+
+/* ---- Google Docs Animation CSS ---- */
+
+.gdocs {
+
+  top: 0px;
+  box-sizing: border-box; margin: 0; padding: 0;
+
+  h1, h2 {
+    font-weight: normal;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 32px;
+    color: #A1A2A3;
+    margin-top: 60px;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: #C1C2C3;
+    margin-bottom: 20px;
+  }
+
+  .box {
+    width: 640px;
+    margin: 0 auto;
+    padding-left: 40px;
+  }
+  .icon {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 50px;
+    background-color: #E1E2E3;
+    font-family: arial;
+  }
+  .icon:before {
+    width: 0;
+    height: 40px;
+    border-left: 10px solid #E1E2E3;
+    border-top: 10px solid transparent;
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -10px;
+  }
+  .icon:after {
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(0,0,0,.3);
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -10px;
+  }
+  .doc-type {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 16px;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 10px;
+    color: #FFF;
+  }
+  .doc-icon {
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #FFF;
+  }
+
+  .icon.blue { background-color: @cfd-red; z-index: 7; }
+  .icon.blue:before { border-left-color: @cfd-red; }
+
+  .doc-icon.doc { font-size: 16px; line-height: 22px; }
+
+  .icon.turquoise { background-color: #009999;  z-index: 6; }
+  .icon.turquoise:before { border-left-color: #009999; }
+
+  .doc-icon.code { font-size: 13px; line-height: 24px;}
+
+  .icon.darkgreen { background-color: #33C36B;  z-index: 5; }
+  .icon.darkgreen:before { border-left-color: #33C36B; }
+
+  .doc-icon.spread { font-size: 20px; line-height: 21px; }
+
+  .icon.lightgreen { background-color: #99CC00;  z-index: 4; }
+  .icon.lightgreen:before { border-left-color: #99CC00; }
+
+  .doc-icon.zip { font-size: 20px; line-height: 21px; }
+
+  .icon.yellow { background-color: #F1B705;  z-index: 3; }
+  .icon.yellow:before { border-left-color: #F1B705; }
+
+  .doc-icon.misc { font-size: 22px; line-height: 20px; }
+
+  .icon.orange { background-color: #FF7C14; z-index: 2; }
+  .icon.orange:before { border-left-color: #FF7C14; }
+
+  .doc-icon.ptt { font-size: 18px; line-height: 22px; }
+
+  .icon.red { background-color: #DE4206; z-index: 1; }
+  .icon.red:before { border-left-color: #DE4206; }
+
+  .doc-icon.pdf { font-size: 16px; line-height: 22px; }
+
+  .icon {
+    animation-name: open;
+    animation-fill-mode: forwards;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+  }
+
+}
+
+@-webkit-keyframes open {
+  0%   { margin-right: -40px; }
+  100% { margin-right: 40px; }
+}

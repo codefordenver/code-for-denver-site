@@ -71,6 +71,12 @@
 
                    (> new-state 2555) (refresh! "all possible because of you.." "banner-light")))))
 
+(defn doc-generator [many]
+      (for [n (range many)]
+           ^{:key n} [:div.icon.blue
+                      [:span.doc-icon.doc "☰"]
+                      [:span.doc-type "DOC"]]))
+
 (defn main-component []
       (let [;; animation state transitions
             circle-scale (anim/spring anim/scroll)
@@ -136,12 +142,32 @@
                    [:div.container-fluid
                     [:div.row.part-five
                      [:div.col-lg-12
-                      [:h3.text-left "166 Docs"]
-                      [:h3.text-left "25 Sheets"]
-                      [:h3.text-left "21 Forms"]
-                      [:h3.text-left "10 Slides"]
-                      [:h3.text-left "8 PDFs"]
-                      [:h3.text-left "3 Drawings"]
+                      [:div.gdocs
+
+                       [:div.box
+                        [:h3.text-left "3 Drawings"
+                         (doc-generator 3)]]
+
+                       [:div.box
+                        [:h3.text-left "8 PDFs"
+                         (doc-generator 8)]]
+
+                       [:div.box
+                        [:h3.text-left "10 Slides"
+                         (doc-generator 10)]]
+
+                       [:div.box
+                        [:h3.text-left "21 Forms"
+                         (doc-generator 21)]]
+
+                       [:div.box
+                        [:h3.text-left "25 Sheets"
+                         (doc-generator 25)]]
+
+                       [:div.box
+                        [:h3.text-left "166 Docs"
+                         (doc-generator 166)]]]
+
                       [:h4.text-left "Google Drive"]]]]
 
                    [:div.container-fluid
@@ -173,7 +199,10 @@
                        [:hr]]]]]
 
                    [:div.footer
-                    [:img.img-full {:src "images/4.jpg"}]]])})))
+                    [:img.img-full {:src "images/4.jpg"}]
+                    [:img.img-full {:src "images/5.jpg"}]
+                    [:img.img-full {:src "images/6.jpg"}]
+                    ]])})))
 
 (defn parent-component []
       [:div [main-component]])
