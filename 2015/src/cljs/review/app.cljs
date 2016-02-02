@@ -48,6 +48,7 @@
                              :highlightStroke "black"
                              :data            [4 5 114 216 105 135 199]}]})
 
+
 (defn refresh! [title style & [logo-url]]
       (swap! app-state assoc-in [:copy :banner-title] title)
       (swap! app-state assoc-in [:banner-style] style)
@@ -85,7 +86,38 @@
                               (reset! contributors (:contributors data))))))
               :component-did-mount
               (fn []
-                  (let [ctx (.getContext (.getElementById js/document "myChart") "2d")]
+                  (let [ctx (.getContext (.getElementById js/document "myChart") "2d")
+                        pieChart (.addColorSet js/CanvasJS "cfd-colors" #js ["#eee" "#E24E54"])
+                        chart (.Chart (. js/CanvasJS) "pieChart"
+                           (clj->js {
+
+                             :colorSet "cfd-colors"
+
+                             :title {
+                                 :text "Budget Breakdown"
+                             }
+                             :exportFileName "Pie Chart"
+                             :exportEnabled true
+                             :animationEnabled true
+                             :legend {
+                                 :verticalAlign "bottom"
+                                 :horizontalAlign "center"
+                             }
+                             :data [{
+                                 :type "pie"
+                                 :showInLegend true
+                                 :toolTipContent "{legendText}: <strong>{y}%</strong>"
+                                 :indexLabel "{label} {y}%"
+                                 :dataPoints [
+                                     {:y 16
+                                      :legendText "Everything else"
+                                      :label "Everything else" 
+                                      }, 
+                                      {:y 84
+                                       :legendText "Pizza"
+                                       :exploded true
+                                       :label "Pizza"}]}]}))
+                        ]
                        (.Bar (js/Chart. ctx)
                              (clj->js chart-data)
                              #js {:scaleFontColor "rgba(100,100,100, 1.00)"})))
@@ -143,6 +175,13 @@
                       [:h3.text-left "8 PDFs"]
                       [:h3.text-left "3 Drawings"]
                       [:h4.text-left "Google Drive"]]]]
+                   
+                   [:div.container-fluid
+                    [:div.row.part-four
+                     [:div.col-lg-12
+                      [:canvas {:id     "pieChart"
+                                :width  "400"
+                                :height "100%"}]]]]
 
                    [:div.container-fluid
                     [:div.row.thanks
