@@ -171,7 +171,12 @@
                         ", sincerely thanks you for your kind contributions towards"
                         [:b " strengthening our community."]]
                        [:hr]]]]]
-
+                   [:h4.join.text-center "JOIN US!"]
+                   [:div.row.text-center
+                    [:div.col-lg-12
+                    [:a {:href  "http://www.meetup.com/CodeForDenver/"
+                         :style {:color "white"}}  [:img.text-center.text-center {:src "images/meetup-icon.png" :style {:transform (str "scale(" (/ @circle-scale 5000) ")")} }]
+                     ]]]
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]]])})))
 
