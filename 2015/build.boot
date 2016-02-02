@@ -12,6 +12,7 @@
                  [cljs-ajax "0.5.3"]
                  [cljsjs/jquery "2.1.4-0"]
                  [org.clojure/core.async "0.2.374"]
+                 [cljsjs/chartist "0.9.4-1"]
                  [deraen/boot-less "0.2.1" :scope "test"]])
 
 (require

@@ -5,6 +5,7 @@
             [cljsjs.jquery :as $]
             [ajax.core :refer [GET]]
             [cljs.core.async :refer [chan close! put!]]
+            [cljsjs.chartist]
             [timothypratley.reanimated.core :as anim]))
 
 (enable-console-print!)
@@ -48,6 +49,7 @@
                              :highlightStroke "black"
                              :data            [4 5 114 216 105 135 199]}]})
 
+
 (defn refresh! [title style & [logo-url]]
       (swap! app-state assoc-in [:copy :banner-title] title)
       (swap! app-state assoc-in [:banner-style] style)
@@ -67,13 +69,15 @@
 
                    (and (>= new-state 1394) (< new-state 1800)) (refresh! "organized a total of:" "banner-light")
 
-                   (and (>= new-state 1800) (< new-state 2555)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
+                   (and (>= new-state 1800) (< new-state 3920)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
 
-                   (> new-state 2555) (refresh! "all possible because of you.." "banner-light")))))
+                   (and (>= new-state 3921) (< new-state 4376)) (refresh! "ate a lot pizza..." "banner-light")
+
+                   (> new-state 4376) (refresh! "all possible because of you.." "banner-light")))))
 
 (defn doc-generator [many]
       (for [n (range many)]
-           ^{:key n} [:div.icon.blue
+           ^{:key n} [:div.icon.red
                       [:span.doc-icon.doc "☰"]
                       [:span.doc-type "DOC"]]))
 
@@ -91,7 +95,20 @@
                               (reset! contributors (:contributors data))))))
               :component-did-mount
               (fn []
-                  (let [ctx (.getContext (.getElementById js/document "myChart") "2d")]
+                  (let [ctx (.getContext (.getElementById js/document "myChart") "2d")
+                        pie-chart-data {:labels ["Pizza(86%)" "Everything else (16%)"]
+                                        :series [84 16]}]
+                       (.Pie js/Chartist
+                             "#pieChart"
+                             (clj->js pie-chart-data)
+                             (clj->js {:labelInterpolationFnc (fn [value] value)})
+                             (clj->js [["screen and (min-width: 640px)", {:labelOffset 5
+                                                                          :chartPadding 10
+                                                                          :labelDirection "explode"
+                                                                          :labelInterpolationFnc (fn [v] v)
+                                                                          }]
+                                       ["screen and (min-width: 1024px)", {:labelOffset 5
+                                                                           :chartPadding 10}]]))
                        (.Bar (js/Chart. ctx)
                              (clj->js chart-data)
                              #js {:scaleFontColor "rgba(100,100,100, 1.00)"})))
@@ -103,8 +120,7 @@
                     [:div.row {:class (:banner-style @app-state)}
                      [:div.col-lg-12
                       [:img.logo {:src (str "images/" (:logo-url @app-state))}]
-                      [:span (get-in @app-state [:copy :banner-title])]]
-                     ]]
+                      [:span (get-in @app-state [:copy :banner-title])]]]]
 
                    [:div.container-fluid
                     [:div.row.part-one
@@ -169,6 +185,12 @@
                          (doc-generator 166)]]]
 
                       [:h4.text-left "Google Drive"]]]]
+
+                   [:div.container-fluid
+                    [:div.row.part-six
+                     [:div.col-lg-12
+                      [:h2.subtitles.text-center "Budget Distributions or Contributions per Calorie"]
+                      [:div#pieChart]]]]
 
                    [:div.container-fluid
                     [:div.row.thanks
