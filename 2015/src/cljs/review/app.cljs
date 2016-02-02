@@ -9,7 +9,7 @@
 
 (enable-console-print!)
 
-(defn fetch! [url]
+(defn <fetch [url]
       (let [ch (chan 1)]
            (GET url
                 {:response-format :json
@@ -79,7 +79,7 @@
            (r/create-class
              {:component-will-mount
               (fn []
-                  (let [c (fetch! "./data/github.json")]
+                  (let [c (<fetch "./data/github.json")]
                        (go
                          (let [data (<! c)]
                               (reset! contributors (:contributors data))))))
@@ -98,13 +98,13 @@
                      [:div.col-lg-12
                       [:img.logo {:src (str "images/" (:logo-url @app-state))}]
                       [:span (get-in @app-state [:copy :banner-title])]]
-                    ]]
+                     ]]
 
                    [:div.container-fluid
                     [:div.row.part-one
                      [:div.col-lg-12
                       [:h1.super.text-center "2015"]
-                      [:h2.text-center "END OF YEAR SUMMARY"]]]]
+                      [:h2.subtitles.text-center "END OF YEAR SUMMARY"]]]]
 
                    [:div.container-fluid
                     [:div.row.part-two
@@ -131,7 +131,7 @@
                      [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]
                      [:div.col-lg-12
                       [:h3.super.text-center "47"]
-                      [:h2.text-center "meetup events"]]]]
+                      [:h2.subtitles.text-center "meetup events"]]]]
 
                    [:div.container-fluid
                     [:div.row.part-five
@@ -151,31 +151,26 @@
                       [:hr]]
                      [:div.row
                       [:div.col-lg-10.col-lg-offset-1
-                      [:div.grid
-                       (for [user @contributors
-                             :let [id (:id user)
-                                   avatar_url (:avatar_url user)
-                                   login (:login user)
-                                   html_url (:html_url user)
-                                   username (:login user)]]
-                            ^{:key id}
-                            [:div.element-item.wrapper
-                              [:a {:href html_url
-                                  :target "_blank"
-                                  }
-                              [:img {:src avatar_url}]
-                               ]
-                               [:div.tooltip 
-                                username
-                                ]
-                              ])]]]
+                       [:div.grid
+                        (for [user @contributors
+                              :let [id (:id user)
+                                    avatar_url (:avatar_url user)
+                                    login (:login user)
+                                    html_url (:html_url user)
+                                    username (:login user)]]
+                             ^{:key id}
+                             [:div.element-item.wrapper
+                              [:a {:href   html_url
+                                   :target "_blank"}
+                               [:img {:src avatar_url}]]
+                              [:div.tooltip username]])]]]
                      [:div.row
                       [:div.col-lg-12
-                      [:p.text-center
-                       [:b "The Core Team @ Code For Denver"]
-                       ", sincerely thanks you for your kind contributions towards"
-                       [:b " strengthening our community."]]
-                      [:hr]]]]]
+                       [:p.text-center
+                        [:b "The Core Team @ Code For Denver"]
+                        ", sincerely thanks you for your kind contributions towards"
+                        [:b " strengthening our community."]]
+                       [:hr]]]]]
 
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]]])})))
