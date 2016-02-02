@@ -87,6 +87,10 @@ hr {
   background-color: @dark;
 }
 
+.part-six {
+  margin-bottom: 100px;
+}
+
 h1 {
   color: @dark;
   font-size: 14vw;
@@ -449,51 +453,14 @@ h4 {
     color: #FFF;
   }
 
-  .icon.blue { background-color: @cfd-red; z-index: 7; }
-  .icon.blue:before { border-left-color: @cfd-red; }
-
-  .doc-icon.doc { font-size: 16px; line-height: 22px; }
-
-  .icon.turquoise { background-color: #009999;  z-index: 6; }
-  .icon.turquoise:before { border-left-color: #009999; }
-
-  .doc-icon.code { font-size: 13px; line-height: 24px;}
-
-  .icon.darkgreen { background-color: #33C36B;  z-index: 5; }
-  .icon.darkgreen:before { border-left-color: #33C36B; }
-
-  .doc-icon.spread { font-size: 20px; line-height: 21px; }
-
-  .icon.lightgreen { background-color: #99CC00;  z-index: 4; }
-  .icon.lightgreen:before { border-left-color: #99CC00; }
-
-  .doc-icon.zip { font-size: 20px; line-height: 21px; }
-
-  .icon.yellow { background-color: #F1B705;  z-index: 3; }
-  .icon.yellow:before { border-left-color: #F1B705; }
-
-  .doc-icon.misc { font-size: 22px; line-height: 20px; }
-
-  .icon.orange { background-color: #FF7C14; z-index: 2; }
-  .icon.orange:before { border-left-color: #FF7C14; }
-
-  .doc-icon.ptt { font-size: 18px; line-height: 22px; }
-
-  .icon.red { background-color: #DE4206; z-index: 1; }
-  .icon.red:before { border-left-color: #DE4206; }
-
-  .doc-icon.pdf { font-size: 16px; line-height: 22px; }
-
-  .icon {
-    animation-name: open;
-    animation-fill-mode: forwards;
-    animation-duration: .8s;
-    animation-iteration-count: 1;
-  }
+  .icon.red { background-color: @cfd-red; z-index: 7; }
+  .icon.red:before { border-left-color: @cfd-red; }
 
 }
 
-@-webkit-keyframes open {
-  0%   { margin-right: -40px; }
-  100% { margin-right: 40px; }
+/* ---- Pizza Pie-chart CSS ---- */
+
+#pieChart {
+  margin-top: 150px;
+  transform: scale(3);
 }
