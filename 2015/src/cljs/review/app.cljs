@@ -108,7 +108,7 @@
 
                    [:div.container-fluid
                     [:div.row.part-two
-                     [:div.col-lg-12
+                     [:div.col-lg-12.col-lg-push-3
                       [:canvas {:id     "myChart"
                                 :width  "400"
                                 :height "400"}]]]]
@@ -147,7 +147,7 @@
                    [:div.container-fluid
                     [:div.row.thanks
                      [:div.col-lg-12
-                      [:h1.text-center "MANY THANKS!"]
+                      [:h1.text-center "MADE POSSIBLE BY"]
                       [:hr]]
                      [:div.row
                       [:div.col-lg-10.col-lg-offset-1
