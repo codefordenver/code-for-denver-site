@@ -69,11 +69,11 @@
 
                    (and (>= new-state 1394) (< new-state 1800)) (refresh! "organized a total of:" "banner-light")
 
-                   (and (>= new-state 1800) (< new-state 3920)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
+                   (and (>= new-state 1800) (< new-state 2910)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
 
-                   (and (>= new-state 3921) (< new-state 4376)) (refresh! "ate a lot pizza..." "banner-light")
+                   (and (>= new-state 2910) (< new-state 3800)) (refresh! "ate a lot of pizza..." "banner-light")
 
-                   (> new-state 4376) (refresh! "all possible because of you.." "banner-light")))))
+                   (> new-state 3800) (refresh! "all possible because of you.." "banner-dark")))))
 
 (defn doc-generator [many]
       (for [n (range many)]
@@ -96,19 +96,27 @@
               :component-did-mount
               (fn []
                   (let [ctx (.getContext (.getElementById js/document "myChart") "2d")
-                        pie-chart-data {:labels ["Pizza(86%)" "Everything else (16%)"]
-                                        :series [84 16]}]
+                        pie-chart-data {:labels ["Pizza (84%)" "Everything else (16%)"]
+                                        :series [{:className "pizza"
+                                                  :value 84}
+                                                 {:className "else"
+                                                  :value 16}
+                                                 ]
+                                        }]
                        (.Pie js/Chartist
                              "#pieChart"
                              (clj->js pie-chart-data)
                              (clj->js {:labelInterpolationFnc (fn [value] value)})
-                             (clj->js [["screen and (min-width: 640px)", {:labelOffset 5
-                                                                          :chartPadding 10
+                             (clj->js [["screen and (min-width: 640px)", {:height 250
+                                                                          :labelOffset -34
+                                                                          :chartPadding 50
+                                                                          :labelPosition "outside"
                                                                           :labelDirection "explode"
                                                                           :labelInterpolationFnc (fn [v] v)
                                                                           }]
-                                       ["screen and (min-width: 1024px)", {:labelOffset 5
-                                                                           :chartPadding 10}]]))
+                                       ["screen and (min-width: 1024px)", {:height 300
+                                                                           :labelOffset -40
+                                                                           :chartPadding 70}]]))
                        (.Bar (js/Chart. ctx)
                              (clj->js chart-data)
                              #js {:scaleFontColor "rgba(100,100,100, 1.00)"})))
@@ -120,7 +128,8 @@
                     [:div.row {:class (:banner-style @app-state)}
                      [:div.col-lg-12
                       [:img.logo {:src (str "images/" (:logo-url @app-state))}]
-                      [:span (get-in @app-state [:copy :banner-title])]]]]
+                      [:span (get-in @app-state [:copy :banner-title])]]
+                     ]]
 
                    [:div.container-fluid
                     [:div.row.part-one
@@ -161,42 +170,46 @@
                       [:div.gdocs
 
                        [:div.box
-                        [:h3.text-left "3 Drawings"
+                        [:h3.text-left "\u20033 Drawings "
                          (doc-generator 3)]]
 
                        [:div.box
-                        [:h3.text-left "8 PDFs"
+                        [:h3.text-left "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A08 PDFs "
                          (doc-generator 8)]]
 
                        [:div.box
-                        [:h3.text-left "10 Slides"
+                        [:h3.text-left "\u200A\u00A0\u00A0\u00A0\u00A010 Slides "
                          (doc-generator 10)]]
 
                        [:div.box
-                        [:h3.text-left "21 Forms"
+                        [:h3.text-left "\u200A\u200A\u200A\u00A0\u00A0\u00A021 Forms "
                          (doc-generator 21)]]
 
                        [:div.box
-                        [:h3.text-left "25 Sheets"
+                        [:h3.text-left "\u200A\u200A\u200A\u00A0\u00A025 Sheets "
                          (doc-generator 25)]]
 
                        [:div.box
-                        [:h3.text-left "166 Docs"
+                        [:h3.text-left "\u200A\u200A\u200A\u00A0\u00A0\u00A0166 Docs "
                          (doc-generator 166)]]]
 
-                      [:h4.text-left "Google Drive"]]]]
+                       [:h4.text-right "shared on Google Drive"]
+                      ]]]
 
                    [:div.container-fluid
-                    [:div.row.part-six
+                    [:div.row.part-four
                      [:div.col-lg-12
-                      [:h2.subtitles.text-center "Budget Distributions or Contributions per Calorie"]
+                      [:h3.text-center "budget distribution"]
                       [:div#pieChart]]]]
 
                    [:div.container-fluid
                     [:div.row.thanks
                      [:div.col-lg-12
-                      [:h1.text-center "MADE POSSIBLE BY"]
-                      [:hr]]
+                      [:h1.text-center "MADE POSSIBLE BY"]]
+
+                     [:p.text-center
+                      [:b "Core Team @ Code For Denver"]]
+
                      [:div.row
                       [:div.col-lg-10.col-lg-offset-1
                        [:div.grid
@@ -225,6 +238,18 @@
                     [:a {:href  "http://www.meetup.com/CodeForDenver/"
                          :style {:color "white"}}  [:img.text-center.text-center {:src "images/meetup-icon.png" :style {:transform (str "scale(" (/ @circle-scale 5000) ")")} }]
                      ]]]
+
+                     [:p.text-center
+                      [:b "Partners"]]
+
+                     [:p.text-center
+                      [:b "Sponsors"]]
+
+                     [:hr]
+
+                     [:p.text-center "Thank you sincerely for your kind contributions towards"
+                      [:b " strengthening our community."]]
+
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]
                     [:img.img-full {:src "images/5.jpg"}]

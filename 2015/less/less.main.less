@@ -81,34 +81,42 @@ hr {
 
 .part-four {
   color: @light;
+  background-image: url("../images/3.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .part-five {
-  background-color: @dark;
+  background-color: #eee;
+  h3 {color: @dark;}
+  h4 {color:@gray;}
+  padding: 60px 0px 40px 0;
 }
 
 .part-six {
-  margin-bottom: 100px;
+  height: 700px;
+  background-color: @dark;
+
 }
 
 h1 {
   color: @dark;
-  font-size: 14vw;
+  font-size: 12vw;
 }
 
 h2 {
   color: @dark;
-  font-size: 5vm;
+  font-size: 3.5vw;
   letter-spacing: 3px;
 }
 
 h3 {
   color: #eee;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: @cfd-red;
 }
 
@@ -404,21 +412,19 @@ h4 {
   }
 
   .box {
-    width: 640px;
     margin: 0 auto;
-    padding-left: 40px;
   }
   .icon {
     display: inline-block;
     position: relative;
-    width: 40px;
-    height: 50px;
+    width: 36px;
+    height: 45px;
     background-color: #E1E2E3;
     font-family: arial;
   }
   .icon:before {
     width: 0;
-    height: 40px;
+    height: 35px;
     border-left: 10px solid #E1E2E3;
     border-top: 10px solid transparent;
     position: absolute;
@@ -438,23 +444,24 @@ h4 {
   }
   .doc-type {
     position: absolute;
-    bottom: 0;
-    width: 50px;
-    height: 16px;
-    font-size: 10px;
+    bottom: 3px;
+    left: 2px;
+    width: 34px;
+    height: 11px;
+    font-size: 8px;
     text-transform: uppercase;
     text-align: center;
-    line-height: 10px;
+    line-height: 8px;
     color: #FFF;
   }
   .doc-icon {
     position: absolute;
-    top: 10px;
-    width: 50px;
-    height: 20px;
-    font-size: 20px;
+    top: 9px;
+    width: 38px;
+    height: 15px;
+    font-size: 18px;
     text-align: center;
-    line-height: 20px;
+    line-height: 18px;
     color: #FFF;
   }
 
@@ -468,4 +475,12 @@ h4 {
 #pieChart {
   margin-top: 150px;
   transform: scale(3);
+}
+
+.else {
+    fill: @cfd-red;
+}
+
+.pizza {
+    fill: #b50f0f;
 }
