@@ -5,6 +5,7 @@
             [cljsjs.jquery :as $]
             [ajax.core :refer [GET]]
             [cljs.core.async :refer [chan close! put!]]
+            [cljsjs.chartist]
             [timothypratley.reanimated.core :as anim]))
 
 (enable-console-print!)
@@ -196,7 +197,7 @@
                       ]]]
 
                    [:div.container-fluid
-                    [:div.row.part-four
+                    [:div.row.part-six
                      [:div.col-lg-12
                       [:h3.text-center "budget distribution"]
                       [:div#pieChart]]]]
@@ -238,7 +239,9 @@
                     ]]
 
                    [:div.footer
-                    [:img.img-full {:src "images/4.jpg"}]]])})))
+                    [:img.img-full {:src "images/4.jpg"}]
+                    [:img.img-full {:src "images/5.jpg"}]
+                    [:img.img-full {:src "images/6.jpg"}]]])})))
 
 (defn parent-component []
       [:div [main-component]])
