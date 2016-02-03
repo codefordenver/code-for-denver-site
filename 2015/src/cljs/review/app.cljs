@@ -139,7 +139,7 @@
 
                    [:div.container-fluid
                     [:div.row.part-two
-                     [:div.col-lg-12
+                     [:div.col-lg-12.col-lg-push-3
                       [:canvas {:id     "myChart"
                                 :width  "400"
                                 :height "400"}]]]]
