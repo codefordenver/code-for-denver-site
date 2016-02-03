@@ -1,4 +1,3 @@
-
 (set-env!
  :source-paths    #{"src/cljs" "less"}
  :resource-paths  #{"resources"}

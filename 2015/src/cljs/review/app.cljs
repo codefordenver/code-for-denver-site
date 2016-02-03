@@ -197,7 +197,7 @@
                       ]]]
 
                    [:div.container-fluid
-                    [:div.row.part-four
+                    [:div.row.part-six
                      [:div.col-lg-12
                       [:h3.text-center "budget distribution"]
                       [:div#pieChart]]]]
