@@ -1,0 +1,376 @@
+@font-stack: Helvetica, sans-serif;
+@dark: #3c3c3c;
+@light: ghostwhite;
+@cfd-blue: rgba(159, 27, 3, 0);
+@cfd-red: #E24E54;
+@gray: rgba(100, 100, 100, 1.0);
+
+body {
+  font: 100% @font-stack;
+  font-size: 3rem;
+  color: @gray;
+  background-color: #eee;
+  max-width: 80%;
+  margin: 120px auto;
+  overflow-x: hidden;
+  @media (max-width: 856px) {
+    max-width: inherit;
+  }
+}
+
+.subtitles {
+  background: rgba(100, 100, 100, 0.5);
+  color: @light;
+  max-width: 100%;
+}
+
+hr {
+  border-color: @dark;
+}
+
+.light {
+  color: @light;
+}
+
+.row {
+  padding: 23px 30px 30px 30px;
+}
+
+.logo {
+  margin-right: 25px;
+}
+
+.banner-dark {
+  color: @light;
+  background-color: @dark;
+  background-size: cover;
+  position: fixed;
+  height: 120px;
+  margin-top: -120px;
+  z-index: 100;
+  left: 0;
+  right: 0;
+}
+
+.banner-light {
+  color: @dark;
+  background-color: #eee;
+  background-size: cover;
+  position: fixed;
+  height: 120px;
+  margin-top: -120px;
+  z-index: 100;
+  left: 0;
+  right: 0;
+}
+
+.part-one {
+  color: @light;
+  background-image: url("../images/2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.part-two {
+  color: @light;
+}
+
+.part-three {
+  background-color: @dark;
+}
+
+.part-four {
+  color: @light;
+}
+
+.part-five {
+  background-color: @dark;
+}
+
+h1 {
+  color: @dark;
+  font-size: 14vw;
+}
+
+h2 {
+  color: @dark;
+  font-size: 5vm;
+  letter-spacing: 3px;
+}
+
+h3 {
+  color: #eee;
+  font-size: 7rem;
+}
+
+h4 {
+  font-size: 3rem;
+  color: @cfd-red;
+}
+
+.super {
+  font-size: 30vw;
+  line-height: 95%;
+  color: @cfd-red;
+}
+
+.thanks {
+  h3 {
+    font-size: 17rem;
+  }
+}
+.join {
+  font-size: 10vw;
+  line-height: 95%;
+  color: @cfd-red;
+}
+
+.img-full {
+  width: 100%;
+}
+
+// CSS SHAPES
+
+@circle-width: 50px;
+@timeline-color: @light;
+
+#circle {
+  float: none;
+  margin: 188px auto -210px;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(100,100,100,0.75);
+  -moz-border-radius: @circle-width;
+  -webkit-border-radius: @circle-width;
+  border-radius: @circle-width;
+}
+
+.timeline {
+  ol {
+    position: relative;
+    display: block;
+    margin: 100px;
+    height: 4px;
+    background: @timeline-color;
+  }
+
+  ol::before,
+  ol::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 10px;
+    border: 10px solid @timeline-color;
+  }
+
+  .cursor {
+    position: absolute;
+    top: -8px;
+    left: -5px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 10px;
+    border: 10px solid @cfd-red;
+    z-index: 99;
+  }
+
+  ol::before {
+    left: -5px;
+  }
+
+  ol::after {
+    right: -10px;
+    border: 10px solid transparent;
+    border-right: 0;
+    border-left: 20px solid @timeline-color;
+    border-radius: 3px;
+  }
+
+  /* ---- Timeline ---- */
+
+  li {
+    position: relative;
+    top: -77px;
+    display: inline-block;
+    float: left;
+    width: 30px;
+    transform: rotate(-45deg);
+    font: bold 14px arial;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -29px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border: 4px solid @timeline-color;
+    border-radius: 10px;
+    background: #eee;
+  }
+
+  /* ---- Details ---- */
+  // reveal on :hover
+
+  .details {
+    display: none;
+    position: absolute;
+    left: -85px;
+    top: 60px;
+    padding: 15px;
+    border-radius: 3px;
+    border-right: 2px solid rgba(0, 0, 0, .1);
+    border-bottom: 2px solid rgba(0, 0, 0, .1);
+    transform: rotate(45deg);
+    font: 12px arial;
+    background: #fff;
+  }
+
+  .details::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -9px;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    border-top: 0;
+  }
+
+  /* ---- Hover effects ---- */
+
+  li:hover {
+    cursor: pointer;
+    color: @light;
+  }
+
+  li:hover::before {
+    top: 1px;
+    left: -31px;
+    width: 8px;
+    height: 8px;
+    border-width: 5px;
+    border-color: @cfd-red;
+  }
+
+  li:hover .details {
+    display: block;
+    color: #444;
+  }
+}
+
+
+/* ---- Github contributors grid---- */
+
+.grid {
+
+  .element-item {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    background: #888;
+    color: #262524;
+  }
+
+  .element-item img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .wrapper {
+     background: #ececec;
+     color: #555;
+     font-family: "Gill Sans", Impact, sans-serif;
+     font-size: 20px;
+     position: relative;
+     -webkit-transform: translateZ(0); /* webkit flicker fix */
+     -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+   }
+
+   .wrapper .tooltip {
+     border-radius: 5px;
+     display: inline-block;
+     width: 175px;
+     text-align: center;
+     background: #e24e54;
+     bottom: 100%;
+     color: #fff;
+     left: -65px;
+     margin-bottom: 15px;
+     opacity: 0;
+     padding: 10px;
+     pointer-events: none;
+     position: absolute;
+     -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+         -ms-transform: translateY(10px);
+          -o-transform: translateY(10px);
+             transform: translateY(10px);
+     -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+         -ms-transition: all .25s ease-out;
+          -o-transition: all .25s ease-out;
+             transition: all .25s ease-out;
+     -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+        -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+         -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+             box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+   }
+
+   /* This bridges the gap so you can mouse into the tooltip without it disappearing */
+   .wrapper .tooltip:before {
+     bottom: -20px;
+     content: " ";
+     display: inline-block;
+     height: 20px;
+     left: 0;
+     position: absolute;
+   }
+
+   /* CSS Triangles - see Trevor's post */
+   .wrapper .tooltip:after {
+     border-left: solid transparent 10px;
+     border-right: solid transparent 10px;
+     border-top: solid #e24e54 10px;
+     bottom: -10px;
+     content: " ";
+     height: 0;
+     left: 50%;
+     margin-left: -13px;
+     position: absolute;
+     width: 0;
+   }
+
+   .wrapper:hover .tooltip {
+     opacity: 1;
+     pointer-events: auto;
+     -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+         -ms-transform: translateY(0px);
+          -o-transform: translateY(0px);
+             transform: translateY(0px);
+   }
+
+   /* IE can just show/hide with no transition */
+   .lte8 .wrapper .tooltip {
+     display: none;
+   }
+
+   .lte8 .wrapper:hover .tooltip {
+     display: block;
+   }
+
+}
