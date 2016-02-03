@@ -24,8 +24,8 @@ const linkStyle = {
 const links = {
   'Who We Are': '/',
   'What We Do': '/about',
-  'Want to Help?': '/other',
-  'Can We Help You?' : '/#',
+  'Want to Help?': '/volunteer',
+  'Can We Help You?' : '/partner',
   'Blog' : '/#',
   'Support Us' : '/#'
 };

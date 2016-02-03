@@ -6,6 +6,9 @@ import { createHistory } from 'history';
 import Header from './components/Header';
 import About from './components/home/About';
 
+import Volunteer from './components/home/Volunteer';
+import Partner from './components/home/Partner';
+
 import Hero from './components/Hero';
 import Interested from './components/Interested';
 
@@ -78,6 +81,8 @@ ReactDOM.render((
       <IndexRoute component={Home}/>
       <Route path="about" component={About}/>
       <Route path="other" component={OtherPage}/>
+      <Route path="volunteer" component={Volunteer}/>
+      <Route path="partner" component={Partner}/>
       <Route path="*" component={notFound} />
     </Route>
   </Router>
