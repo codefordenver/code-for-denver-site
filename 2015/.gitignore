@@ -3,4 +3,4 @@
 /.nrepl-history
 /idea
 .idea
-.iml
+*.iml
