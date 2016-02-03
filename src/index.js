@@ -18,8 +18,8 @@ import FooterNav from './components/FooterNav';
 const Home = () => (
     <section className="standard primary">
       <h1>Who We Are</h1>
-      <p><a href="#">Code for Denver</a> is an dedicated, cooperative and diverse group of volunteers
-        dedicated to the creation of civic technology aimed squarely at solving
+      <p><a href="#">Code for Denver</a> is a dedicated, cooperative and diverse group of volunteers.
+        We are dedicated to the creation of civic technology aimed squarely at solving
         the problems of the world around us.</p>
       <p>We are technologists, programmers, visual and graphic designers,
         product managers, community organizers, students, researchers, developers,
