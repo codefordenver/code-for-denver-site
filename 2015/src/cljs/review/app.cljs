@@ -98,24 +98,24 @@
                   (let [ctx (.getContext (.getElementById js/document "myChart") "2d")
                         pie-chart-data {:labels ["Pizza (84%)" "Everything else (16%)"]
                                         :series [{:className "pizza"
-                                                  :value 84}
+                                                  :value     84}
                                                  {:className "else"
-                                                  :value 16}
+                                                  :value     16}
                                                  ]
                                         }]
                        (.Pie js/Chartist
                              "#pieChart"
                              (clj->js pie-chart-data)
                              (clj->js {:labelInterpolationFnc (fn [value] value)})
-                             (clj->js [["screen and (min-width: 640px)", {:height 250
-                                                                          :labelOffset -34
-                                                                          :chartPadding 50
-                                                                          :labelPosition "outside"
-                                                                          :labelDirection "explode"
+                             (clj->js [["screen and (min-width: 640px)", {:height                250
+                                                                          :labelOffset           -34
+                                                                          :chartPadding          50
+                                                                          :labelPosition         "outside"
+                                                                          :labelDirection        "explode"
                                                                           :labelInterpolationFnc (fn [v] v)
                                                                           }]
-                                       ["screen and (min-width: 1024px)", {:height 300
-                                                                           :labelOffset -40
+                                       ["screen and (min-width: 1024px)", {:height       300
+                                                                           :labelOffset  -40
                                                                            :chartPadding 70}]]))
                        (.Bar (js/Chart. ctx)
                              (clj->js chart-data)
@@ -128,8 +128,7 @@
                     [:div.row {:class (:banner-style @app-state)}
                      [:div.col-lg-12
                       [:img.logo {:src (str "images/" (:logo-url @app-state))}]
-                      [:span (get-in @app-state [:copy :banner-title])]]
-                     ]]
+                      [:span (get-in @app-state [:copy :banner-title])]]]]
 
                    [:div.container-fluid
                     [:div.row.part-one
@@ -193,8 +192,7 @@
                         [:h3.text-left "\u200A\u200A\u200A\u00A0\u00A0\u00A0166 Docs "
                          (doc-generator 166)]]]
 
-                       [:h4.text-right "shared on Google Drive"]
-                      ]]]
+                      [:h4.text-right "shared on Google Drive"]]]]
 
                    [:div.container-fluid
                     [:div.row.part-six
@@ -225,6 +223,7 @@
                                    :target "_blank"}
                                [:img {:src avatar_url}]]
                               [:div.tooltip username]])]]]
+
                      [:div.row
                       [:div.col-lg-12
                        [:p.text-center
@@ -232,23 +231,23 @@
                         ", sincerely thanks you for your kind contributions towards"
                         [:b " strengthening our community."]]
                        [:hr]]]]]
+
+
                    [:h4.join.text-center "JOIN US!"]
                    [:div.row.text-center
                     [:div.col-lg-12
-                    [:a {:href  "http://www.meetup.com/CodeForDenver/"
-                         :style {:color "white"}}  [:img.text-center.text-center {:src "images/meetup-icon.png" :style {:transform (str "scale(" (/ @circle-scale 5000) ")")} }]
-                     ]]]
+                     [:a {:href  "http://www.meetup.com/CodeForDenver/"
+                          :style {:color "white"}}
+                      [:img.text-center.text-center
+                       {:src   "images/meetup-icon.png"
+                        :style {:transform (str "scale(" (/ @circle-scale 5000) ")")}}]
+                      ]]]
 
-                     [:p.text-center
-                      [:b "Partners"]]
+                   [:p.text-center
+                    [:b "Partners"]]
 
-                     [:p.text-center
-                      [:b "Sponsors"]]
-
-                     [:hr]
-
-                     [:p.text-center "Thank you sincerely for your kind contributions towards"
-                      [:b " strengthening our community."]]
+                   [:p.text-center
+                    [:b "Sponsors"]]
 
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]
