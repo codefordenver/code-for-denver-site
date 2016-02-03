@@ -36,6 +36,9 @@ const GetInvolved = () => (
         <p>Follow us on <a href="https://github.com/codefordenver">Github</a></p>
       </div>
     </div>
+
+    <p>Here are some ways our volunteers are already getting involved:</p>
+    <iframe src="http://codeforamerica.org/geeks/civicissues/widget?organization_name=Code-for-Denver&number=6" width="100%" height="600" frameBorder="0"></iframe>
   </section>
 );
 
