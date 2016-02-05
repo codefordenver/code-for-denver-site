@@ -1,24 +1,11 @@
 (ns review.app
-  (:require-macros
-    [cljs.core.async.macros :refer [go alt!]])
   (:require [reagent.core :as r]
             [cljsjs.jquery :as $]
             [ajax.core :refer [GET]]
-            [cljs.core.async :refer [chan close! put!]]
             [cljsjs.chartist]
             [timothypratley.reanimated.core :as anim]))
 
 (enable-console-print!)
-
-(defn <fetch [url]
-      (let [ch (chan 1)]
-           (GET url
-                {:response-format :json
-                 :keywords?       true
-                 :handler         (fn [res]
-                                      (do (put! ch res)
-                                          (close! ch)))})
-           ch))
 
 ;; -------------------------------
 ;; define app state & app-state utils
@@ -55,25 +42,25 @@
       (swap! app-state assoc-in [:banner-style] style)
       (swap! app-state assoc-in [:logo-url] (or logo-url "cfdlogo-sm.png")))
 
+(def positions [200 201 762 1394 1800 2910 3800])
+
 (add-watch anim/scroll :y-scroll-watcher
-           (fn [_ _ _ new-state]
-               (do
-                 ;; (print new-state)
-                 (cond
+           (fn [_ _ _ y]
+               (cond
 
-                   (< new-state 200) (refresh! "is proud to present" "banner-dark" "cfdlogo.png")
+                 (< y 200) (refresh! "is proud to present" "banner-dark" "cfdlogo.png")
 
-                   (and (> new-state 201) (<= new-state 762)) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
+                 (and (> y 201) (<= y 762)) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
 
-                   (and (>= new-state 762) (< new-state 1394)) (refresh! "our contributors spent a total of:" "banner-dark")
+                 (and (>= y 762) (< y 1394)) (refresh! "our contributors spent a total of:" "banner-dark")
 
-                   (and (>= new-state 1394) (< new-state 1800)) (refresh! "organized a total of:" "banner-light")
+                 (and (>= y 1394) (< y 1800)) (refresh! "organized a total of:" "banner-light")
 
-                   (and (>= new-state 1800) (< new-state 2910)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
+                 (and (>= y 1800) (< y 2910)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
 
-                   (and (>= new-state 2910) (< new-state 3800)) (refresh! "ate a lot of pizza..." "banner-light")
+                 (and (>= y 2910) (< y 3800)) (refresh! "ate a lot of pizza..." "banner-light")
 
-                   (> new-state 3800) (refresh! "all possible because of you.." "banner-dark")))))
+                 (> y 3800) (refresh! "all possible because of you.." "banner-dark"))))
 
 (defn doc-generator [many]
       (for [n (range many)]
@@ -85,24 +72,26 @@
       (let [;; animation state transitions
             circle-scale (anim/spring anim/scroll)
             scroll-y (anim/interpolate-to anim/scroll)
-            contributors (r/atom [])]
+            contributors (r/atom [])
+            scroll-to (atom 0)]
            (r/create-class
              {:component-will-mount
               (fn []
-                  (let [c (<fetch "./data/github.json")]
-                       (go
-                         (let [data (<! c)]
-                              (reset! contributors (:contributors data))))))
+                  (GET "./data/github.json"
+                       {:response-format :json
+                        :keywords?       true
+                        :handler         #(reset! contributors (:contributors %))}))
+
               :component-did-mount
               (fn []
                   (let [ctx (.getContext (.getElementById js/document "myChart") "2d")
+
                         pie-chart-data {:labels ["Pizza (84%)" "Everything else (16%)"]
-                                        :series [{:className "pizza"
+                                        :series [{:className "pizza light"
                                                   :value     84}
                                                  {:className "else"
-                                                  :value     16}
-                                                 ]
-                                        }]
+                                                  :value     16}]}]
+
                        (.Pie js/Chartist
                              "#pieChart"
                              (clj->js pie-chart-data)
@@ -112,8 +101,7 @@
                                                                           :chartPadding          50
                                                                           :labelPosition         "outside"
                                                                           :labelDirection        "explode"
-                                                                          :labelInterpolationFnc (fn [v] v)
-                                                                          }]
+                                                                          :labelInterpolationFnc (fn [v] v)}]
                                        ["screen and (min-width: 1024px)", {:height       300
                                                                            :labelOffset  -40
                                                                            :chartPadding 70}]]))
@@ -126,9 +114,21 @@
                   [:div.main
                    [:div.container
                     [:div.row {:class (:banner-style @app-state)}
-                     [:div.col-lg-12
+                     [:div.col-lg-9
                       [:img.logo {:src (str "images/" (:logo-url @app-state))}]
-                      [:span (get-in @app-state [:copy :banner-title])]]]]
+                      [:span (get-in @app-state [:copy :banner-title])]]
+                     [:div.col-lg-3
+                      [:a.arrow-wrap
+                       {:onClick #(if (= @scroll-to (count positions))
+                                   (reset! scroll-to 0)
+                                   (do
+                                     (-> (js/$ "html, body")
+                                         (.animate #js {:scrollTop (str (get positions @scroll-to) "px")}))
+                                     (swap! scroll-to inc)))}
+                       [:span {:class (if (>= @scroll-y (last positions))
+                                        "arrow-up"
+                                        "arrow-down")}]
+                       [:span.hint]]]]]
 
                    [:div.container-fluid
                     [:div.row.part-one
@@ -240,8 +240,7 @@
                           :style {:color "white"}}
                       [:img.text-center.text-center
                        {:src   "images/meetup-icon.png"
-                        :style {:transform (str "scale(" (/ @circle-scale 5000) ")")}}]
-                      ]]]
+                        :style {:transform (str "scale(" (/ @circle-scale 5000) ")")}}]]]]
 
                    [:p.text-center
                     [:b "Partners"]]
