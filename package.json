@@ -38,10 +38,11 @@
     "classnames": "^2.2.3",
     "history": "^1.17.0",
     "react": "^0.14.0",
-    "react-addons-css-transition-group": "^0.14.0",
+    "react-addons-css-transition-group": "^0.14.7",
     "react-dom": "^0.14.0",
     "react-redux": "^3.1.0",
     "react-router": "^1.0.3",
+    "redux": "^3.2.1",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
