@@ -13,10 +13,10 @@
 - boot repl --client
 - (start-repl)
 
-## Building Static Assets
+## Building Static Assets for Deployment:
 
-- boot static
+- boot production build target
 
-## Testing
+## Testing:
 
 - boot test
