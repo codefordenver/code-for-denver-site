@@ -13,9 +13,7 @@
 (def colors {:primary   "white"
              :secondary "rgba(100,100,100, 1.00)"})
 
-(def app-state (r/atom {:colors       {:titles (:primary colors)
-                                       :body   (:secondary colors)}
-                        :copy         {:banner-title "is proud to present"}
+(def app-state (r/atom {:banner-title "is proud to present"
                         :banner-style "banner-dark"
                         :logo-url     "cfdlogo.png"}))
 
@@ -38,9 +36,9 @@
 
 
 (defn refresh! [title style & [logo-url]]
-      (swap! app-state assoc-in [:copy :banner-title] title)
-      (swap! app-state assoc-in [:banner-style] style)
-      (swap! app-state assoc-in [:logo-url] (or logo-url "cfdlogo-sm.png")))
+      (swap! app-state assoc :banner-title title)
+      (swap! app-state assoc :banner-style style)
+      (swap! app-state assoc :logo-url (or logo-url "cfdlogo-sm.png")))
 
 (def positions [200 201 762 1394 1800 2910 3800])
 
@@ -56,11 +54,11 @@
 
                  (and (>= y 1394) (< y 1800)) (refresh! "organized a total of:" "banner-light")
 
-                 (and (>= y 1800) (< y 2910)) (refresh! "wrote a ton of documentation & design specs:" "banner-dark")
+                 (and (>= y 1800) (< y 2910)) (refresh! "wrote a ton of documentation & design specs:" "banner-light")
 
-                 (and (>= y 2910) (< y 3800)) (refresh! "ate a lot of pizza..." "banner-light")
+                 (and (>= y 2910) (< y 3800)) (refresh! "ate a lot of pizza..." "banner-dark")
 
-                 (> y 3800) (refresh! "all possible because of you.." "banner-dark"))))
+                 (> y 3800) (refresh! "all possible because of you.." "banner-light"))))
 
 (defn doc-generator [many]
       (for [n (range many)]
@@ -69,11 +67,10 @@
                       [:span.doc-type "DOC"]]))
 
 (defn main-component []
-      (let [;; animation state transitions
-            circle-scale (anim/spring anim/scroll)
+      (let [circle-scale (anim/spring anim/scroll)
             scroll-y (anim/interpolate-to anim/scroll)
             contributors (r/atom [])
-            scroll-to (atom 0)]
+            scroll-to (r/atom 0)]
            (r/create-class
              {:component-will-mount
               (fn []
@@ -96,34 +93,37 @@
                              "#pieChart"
                              (clj->js pie-chart-data)
                              (clj->js {:labelInterpolationFnc (fn [value] value)})
-                             (clj->js [["screen and (min-width: 640px)", {:height                250
+                             (clj->js [["screen and (min-width: 380px)", {:height                200
+                                                                          :labelOffset           -3
+                                                                          :chartPadding          10
+                                                                          :labelPosition         "outside"
+                                                                          :labelDirection        "explode"}]
+                                       ["screen and (min-width: 640px)", {:height                450
                                                                           :labelOffset           -34
                                                                           :chartPadding          50
                                                                           :labelPosition         "outside"
-                                                                          :labelDirection        "explode"
-                                                                          :labelInterpolationFnc (fn [v] v)}]
-                                       ["screen and (min-width: 1024px)", {:height       300
-                                                                           :labelOffset  -40
-                                                                           :chartPadding 70}]]))
+                                                                          :labelDirection        "explode"}]
+                                       ["screen and (min-width: 1024px)", {:height       600
+                                                                           :labelOffset  -20
+                                                                           :chartPadding 60}]]))
                        (.Bar (js/Chart. ctx)
                              (clj->js chart-data)
                              #js {:scaleFontColor "rgba(100,100,100, 1.00)"})))
               :reagent-render
               (fn []
-
                   [:div.main
                    [:div.container
                     [:div.row {:class (:banner-style @app-state)}
                      [:div.col-lg-9
-                      [:img.logo {:src (str "images/" (:logo-url @app-state))}]
-                      [:span (get-in @app-state [:copy :banner-title])]]
+                      [:a {:href "http://www.codefordenver.org/" :target "_blank"} [:img.logo {:src (str "images/" (:logo-url @app-state))}]]
+                      [:span (@app-state :banner-title)]]
                      [:div.col-lg-3
                       [:a.arrow-wrap
                        {:onClick #(if (= @scroll-to (count positions))
                                    (reset! scroll-to 0)
                                    (do
                                      (-> (js/$ "html, body")
-                                         (.animate #js {:scrollTop (str (get positions @scroll-to) "px")}))
+                                         (.animate #js {:scrollTop (str (positions @scroll-to) "px")}))
                                      (swap! scroll-to inc)))}
                        [:span {:class (if (>= @scroll-y (last positions))
                                         "arrow-up"
@@ -146,8 +146,8 @@
                    [:div.container-fluid
                     [:div.row.part-three
                      [:div.col-lg-12
-                      [:h3.text-center "3000 hours /"]
-                      [:h3.text-center "75 work weeks /"]
+                      [:h3.text-center "3000 hours"]
+                      [:h3.text-center "75 work weeks"]
                       [:h3.text-center "1.5 years"]
                       [:div.timeline
                        [:ol
@@ -251,8 +251,7 @@
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]
                     [:img.img-full {:src "images/5.jpg"}]
-                    [:img.img-full {:src "images/6.jpg"}]
-                    ]])})))
+                    [:img.img-full {:src "images/6.jpg"}]]])})))
 
 (defn parent-component []
       [:div [main-component]])
