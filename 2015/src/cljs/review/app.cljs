@@ -138,10 +138,14 @@
 
                    [:div.container-fluid
                     [:div.row.part-two
-                     [:div.col-lg-12.col-lg-push-3
+                     [:div.col-lg-12.col-lg-push-2
+                      [:div.legend.y-axis "# of Commits*"]
                       [:canvas {:id     "myChart"
                                 :width  "400"
-                                :height "400"}]]]]
+                                :height "400"}]]
+                     [:p.legend.text-center.col-lg-12 "Projects"]
+                     [:br]
+                     [:p.text-center "*In the GitHub workflow, a commit is an individual contribution to a project file (or set of files)."]]]
 
                    [:div.container-fluid
                     [:div.row.part-three
