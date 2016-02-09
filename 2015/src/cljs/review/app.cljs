@@ -145,7 +145,8 @@
                                 :height "400"}]]
                      [:p.legend.text-center.col-lg-12 "Projects"]
                      [:br]
-                     [:p.text-center "*In the GitHub workflow, a commit is an individual contribution to a project file (or set of files)."]]]
+                     [:small
+                      [:p.text-center "* In the GitHub workflow, a commit is an individual contribution to a project file (or set of files)."]]]]
 
                    [:div.container-fluid
                     [:div.row.part-three
