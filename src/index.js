@@ -57,43 +57,61 @@ const App = (props) => {
     <GetConnected />
     <Dashboard />
 
-      <About> //about will read as 'what we do' ?
-        <Mission />
-        <SkillsAndLanguages />
-        <HowItWorks />
-        <Projects />
-        <Statistics />
-        <TheCommunity />
-        <SocialMediaLinks />
-        <Videos />
-        <UpcomingEvents />
+      <About> 
+
+        <WhoWeAre>
+          <Hero/>
+          <Mission />
+          <CodeAcross/>
+          <AnnualSummary>
+          <Videos />
+          <TwitterFeed/>
+          <SocialMediaLinks />
+          <Sparktime/>
+        </WhoWeAre>
+
+        <WhatWeDo>
+          <Hero/>
+          <SkillsAndLanguages />
+          <HowItWorks />
+          <Projects />
+          <Statistics />
+          <TheCommunity />
+        </WhatWeDo>
+       
       </About>
 
-      <Volunteer>//volunteer will read as 'how you can help'?
+      <WantToHelp>
+        <Hero/>
         <CurrentProjects />
         <Contributing />
         <SkillsAndInterestsForm />
         <EventsCalendar />
-      </Volunteer>
+      </WantToHelp>
 
-      <Resources>  
+      <CanWeHelpYou>  
+        <Hero/>
         <ProjectGuidelines />
         <PitchingAProject />
         <PitchGuidelines />
+        <ProspectivePartnerForm/>
         <LearningLinks />
-      </Resources> 
+      </CanWeHelpYou> 
 
-      <Voice>
+      <OurVoice>
+        <Hero/>
         <SocialMediaLinks />
         <Blog />
         <Videos />
-      </Voice>
+        <Calendar/>
+      </OurVoice>
 
-      <Support>
+      <SupportUs> 
+        <Hero/>
         <BecomeASupporter />
         <Donate />
         <TellAFriend />
-      </Support>
+      </SupportUs>
 
 
     </main>
