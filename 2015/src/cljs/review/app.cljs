@@ -242,11 +242,36 @@
                        {:src   "images/meetup-icon.png"
                         :style {:transform (str "scale(" (/ @circle-scale 5000) ")")}}]]]]
 
+                  [:div.container-fluid
+                  [:div.row.text-center {:style {:background "#fff"}}
+                   [:div.col-lg-12
                    [:p.text-center
-                    [:b "Partners"]]
+                    [:b "Partners"]]]]
+                   [:div.row.text-center {:style {:background "#fff"}}
+                    [:div.col-lg-3 {:style {:margin-top "20px"}} 
+                     [:img {:src "images/grow-local-co-logo.jpg" :width "150px" :height "45px"}]]
+                    [:div.col-lg-3 {:style {:margin-top "20px"}} 
+                     [:img {:src "images/rmfu-logo.png" :width "150px" :height "45px"} ]]
+                    [:div.col-lg-3
+                     [:img {:src "images/co-avp-logo.png" :width "150px" :height "85px"} ]]
+                    [:div.col-lg-3 {:style {:margin-top "10px"}} 
+                     [:img {:src "images/rmmfi-logo.jpg" :width "150px" :height "65px"} ]]
+                    ]
 
+                  [:div.row.text-center {:style {:background "#fff"}}
+                   [:div.col-lg-12
                    [:p.text-center
-                    [:b "Sponsors"]]
+                    [:b "Sponsors"]]]]
+                   [:div.row.text-center {:style {:background "#fff"}}
+                    [:div.col-lg-3 {:style {:margin-top "35px"}} 
+                     [:img {:src "images/cfa-logo.png" :width "150px" :height "55px"} ]]
+                    [:div.col-lg-3 
+                     [:img {:src "images/ca-technologies-logo.jpg" :width "150px" :height "125px"} ]]
+                    [:div.col-lg-3 
+                     [:img {:src "images/galvanize-logo.png" :width "150px" :height "125px"} ]]
+                    [:div.col-lg-3 {:style {:margin-top "40px"}} 
+                     [:img {:src "images/vlizz-logo.png" :width "150px" :height "45px"} ]]
+                    ]]
 
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]
