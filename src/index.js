@@ -56,6 +56,46 @@ const App = (props) => {
     { children }
     <GetConnected />
     <Dashboard />
+
+      <About> //about will read as 'what we do' ?
+        <Mission />
+        <SkillsAndLanguages />
+        <HowItWorks />
+        <Projects />
+        <Statistics />
+        <TheCommunity />
+        <SocialMediaLinks />
+        <Videos />
+        <UpcomingEvents />
+      </About>
+
+      <Volunteer>//volunteer will read as 'how you can help'?
+        <CurrentProjects />
+        <Contributing />
+        <SkillsAndInterestsForm />
+        <EventsCalendar />
+      </Volunteer>
+
+      <Resources>  
+        <ProjectGuidelines />
+        <PitchingAProject />
+        <PitchGuidelines />
+        <LearningLinks />
+      </Resources> 
+
+      <Voice>
+        <SocialMediaLinks />
+        <Blog />
+        <Videos />
+      </Voice>
+
+      <Support>
+        <BecomeASupporter />
+        <Donate />
+        <TellAFriend />
+      </Support>
+
+
     </main>
 
 
