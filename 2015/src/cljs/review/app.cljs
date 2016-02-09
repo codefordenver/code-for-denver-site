@@ -265,8 +265,8 @@
                    [:div.row.text-center {:style {:background "#fff"}}
                     [:div.col-lg-3 {:style {:margin-top "35px"}} 
                      [:img {:src "images/cfa-logo.png" :width "150px" :height "55px"} ]]
-                    [:div.col-lg-3 {:style {:margin-top "30px"}} 
-                     [:img {:src "images/rally-logo.png" :width "150px" :height "65px"} ]]
+                    [:div.col-lg-3 
+                     [:img {:src "images/ca-technologies-logo.jpg" :width "150px" :height "125px"} ]]
                     [:div.col-lg-3 
                      [:img {:src "images/galvanize-logo.png" :width "150px" :height "125px"} ]]
                     [:div.col-lg-3 {:style {:margin-top "40px"}} 
