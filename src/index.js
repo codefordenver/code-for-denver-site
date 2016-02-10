@@ -56,64 +56,6 @@ const App = (props) => {
     { children }
     <GetConnected />
     <Dashboard />
-
-      <About> 
-
-        <WhoWeAre>
-          <Hero/>
-          <Mission />
-          <CodeAcross/>
-          <AnnualSummary>
-          <Videos />
-          <TwitterFeed/>
-          <SocialMediaLinks />
-          <Sparktime/>
-        </WhoWeAre>
-
-        <WhatWeDo>
-          <Hero/>
-          <SkillsAndLanguages />
-          <HowItWorks />
-          <Projects />
-          <Statistics />
-          <TheCommunity />
-        </WhatWeDo>
-       
-      </About>
-
-      <WantToHelp>
-        <Hero/>
-        <CurrentProjects />
-        <Contributing />
-        <SkillsAndInterestsForm />
-        <EventsCalendar />
-      </WantToHelp>
-
-      <CanWeHelpYou>  
-        <Hero/>
-        <ProjectGuidelines />
-        <PitchingAProject />
-        <PitchGuidelines />
-        <ProspectivePartnerForm/>
-        <LearningLinks />
-      </CanWeHelpYou> 
-
-      <OurVoice>
-        <Hero/>
-        <SocialMediaLinks />
-        <Blog />
-        <Videos />
-        <Calendar/>
-      </OurVoice>
-
-      <SupportUs> 
-        <Hero/>
-        <BecomeASupporter />
-        <Donate />
-        <TellAFriend />
-      </SupportUs>
-
-
     </main>
 
 
