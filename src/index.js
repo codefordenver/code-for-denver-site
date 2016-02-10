@@ -4,18 +4,11 @@ import { Router, Route, Link, IndexRoute } from 'react-router';
 import { createHistory } from 'history';
 
 import Header from './components/Header';
-import About from './components/home/About';
+import Footer from './components/Footer';
 
+import About from './components/home/About';
 import Volunteer from './components/home/Volunteer';
 import Partner from './components/home/Partner';
-
-import Hero from './components/segments/Hero';
-import Interested from './components/segments/Interested';
-
-import GetConnected from './components/segments/GetConnected';
-import Dashboard from './components/segments/Dashboard';
-
-import Footer from './components/Footer';
 
 import WhoWeAre from './components/pages/WhoWeAre';
 
@@ -36,17 +29,8 @@ const App = (props) => {
 
   <div>
     <Header path={props.location.pathname} />
-    <Hero />
-    <Interested />
-
-    <main>
     { children }
-    <GetConnected />
-    <Dashboard />
-    </main>
-
     <Footer />
-
   </div>
 );
 }

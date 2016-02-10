@@ -1,5 +1,11 @@
 import React from 'react';
 
+import Hero from '../segments/Hero';
+import Interested from '../segments/Interested';
+
+import GetConnected from '../segments/GetConnected';
+import Dashboard from '../segments/Dashboard';
+
 const MainText = () => (
     <section className="standard primary">
       <h1>Who We Are</h1>
@@ -16,7 +22,13 @@ const MainText = () => (
 );
 
 const WhoWeAre = () => (
-<MainText />
+  <main>
+    <Hero />
+    <Interested />
+    <MainText />
+    <GetConnected />
+    <Dashboard />
+  </main>
 );
 
 export default WhoWeAre;
