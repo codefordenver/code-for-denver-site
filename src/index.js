@@ -15,8 +15,9 @@ import Interested from './components/Interested';
 import GetConnected from './components/GetConnected';
 import Dashboard from './components/Dashboard';
 
-import Sponsors from './components/Sponsors';
-import FooterNav from './components/FooterNav';
+import Footer from './components/Footer';
+
+
 
 const Home = () => (
     <section className="standard primary">
@@ -58,11 +59,8 @@ const App = (props) => {
     <Dashboard />
     </main>
 
+    <Footer />
 
-    <footer>
-      <Sponsors />
-      <FooterNav />
-    </footer>
   </div>
 );
 }
