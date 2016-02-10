@@ -8,7 +8,7 @@ class Hero extends React.Component {
         {console.log(this.props)}
         <div className="intro">
           <h1>{this.props.title}</h1>
-          {this.props.content}
+          <p>{this.props.content}</p>
         </div>
       </section>
     );

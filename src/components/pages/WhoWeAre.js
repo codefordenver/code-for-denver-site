@@ -26,7 +26,7 @@ const HeroBackground="hero.png";
 
 const HeroTitle= "We Are Code For Denver.";
 
-const HeroContent = <p><a href="#">We meet almost every Monday. Join us, everyone is welcome!</a></p>;
+const HeroContent = <a href="#">We meet almost every Monday. Join us, everyone is welcome!</a>;
 
 const WhoWeAre = () => (
   <main>

@@ -12,7 +12,7 @@ const MainText = () => (
 
 const HeroBackground="hero.png";
 const HeroTitle= "Support Us hero.";
-const HeroContent = <p>Support Us content</p>;
+const HeroContent = "Support Us content";
 
 
 const SupportUs = () => (
