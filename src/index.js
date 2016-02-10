@@ -11,6 +11,11 @@ import Volunteer from './components/home/Volunteer';
 import Partner from './components/home/Partner';
 
 import WhoWeAre from './components/pages/WhoWeAre';
+import WhatWeDo from './components/pages/WhatWeDo';
+import WantToHelp from './components/pages/WantToHelp';
+import CanWeHelpYou from './components/pages/CanWeHelpYou';
+import OurVoice from './components/pages/OurVoice';
+import SupportUs from './components/pages/SupportUs';
 
 const App = (props) => {
   const {children} = props;
@@ -37,9 +42,12 @@ ReactDOM.render((
   <Router history={history}>
     <Route path="/" component={App}>
       <IndexRoute component={WhoWeAre}/>
-      <Route path="about" component={About}/>
-      <Route path="volunteer" component={Volunteer}/>
-      <Route path="partner" component={Partner}/>
+      <Route path="WhoWeAre" component={WhoWeAre}/>
+      <Route path="WhatWeDo" component={WhatWeDo}/>
+      <Route path="WantToHelp" component={WantToHelp}/>
+      <Route path="CanWeHelpYou" component={CanWeHelpYou}/>
+      <Route path="OurVoice" component={OurVoice}/>
+      <Route path="SupportUs" component={SupportUs}/>
       <Route path="*" component={notFound} />
     </Route>
   </Router>
