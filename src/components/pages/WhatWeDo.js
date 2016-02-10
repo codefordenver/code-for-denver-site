@@ -2,6 +2,11 @@ import React from 'react';
 
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
+import SkillsAndLanguages from '../segments/SkillsAndLanguages';
+import HowItWorks from '../segments/HowItWorks';
+import Projects from '../segments/Projects';
+import Statistics from '../segments/Statistics';
+import TheCommunity from '../segments/TheCommunity';
 
 const MainText = () => (
     <section className="standard primary">
@@ -18,7 +23,14 @@ const WhatWeDo = () => (
   <main>
     <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
     <Interested />
+    <SkillsAndLanguages />
+    <HowItWorks />
+    <Projects />
+  	<Statistics />
+  	<TheCommunity />
+  { /* Commenting out this element, not sure it's needed for anything.
     <MainText />
+  */ }
   </main>
 );
 
