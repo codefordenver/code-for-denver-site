@@ -9,11 +9,11 @@ import About from './components/home/About';
 import Volunteer from './components/home/Volunteer';
 import Partner from './components/home/Partner';
 
-import Hero from './components/Hero';
-import Interested from './components/Interested';
+import Hero from './components/segments/Hero';
+import Interested from './components/segments/Interested';
 
-import GetConnected from './components/GetConnected';
-import Dashboard from './components/Dashboard';
+import GetConnected from './components/segments/GetConnected';
+import Dashboard from './components/segments/Dashboard';
 
 import Footer from './components/Footer';
 
