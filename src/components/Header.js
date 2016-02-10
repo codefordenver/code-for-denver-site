@@ -16,8 +16,8 @@ const links = {
 
 'Who We Are': '/',
 'What We Do': '/WhatWeDo',
-'Want To Help': '/WantToHelp',
-'Can We Help You': '/CanWeHelpYou',
+'Want To Help?': '/WantToHelp',
+'Can We Help You?': '/CanWeHelpYou',
 'Our Voice': '/OurVoice',
 'Support Us': '/SupportUs'
 
