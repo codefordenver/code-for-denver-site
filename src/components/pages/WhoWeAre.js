@@ -3,7 +3,8 @@ import React from 'react';
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
 
-import GetConnected from '../segments/GetConnected';
+import TwitterFeed from '../segments/TwitterFeed';
+import SocialMediaLinks from '../segments/SocialMediaLinks';
 import Dashboard from '../segments/Dashboard';
 
 const MainText = () => (
@@ -32,7 +33,12 @@ const WhoWeAre = () => (
     <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
     <Interested />
     <MainText />
-    <GetConnected />
+    <section className="standard getconnected">
+      <div className="flexgrid-row">
+        <SocialMediaLinks />
+        <TwitterFeed />
+      </div>
+    </section>
     <Dashboard />
   </main>
 );
