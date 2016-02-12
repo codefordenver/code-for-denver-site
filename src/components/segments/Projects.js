@@ -1,56 +1,59 @@
+'use strict';
+
 import React from 'react';
 import MarkdownRenderer from '../MarkdownRenderer';
+import ReactDom from 'react-dom';
+import Carousel from 'nuka-carousel';
 
-const Projects = () => (
+class Projects extends React.Component {
 
-  <section className="standard projects">
-    <MarkdownRenderer fileName="projects" />
-  </section>
-///
-// https://www.npmjs.com/package/react-responsive-carousel
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Carousel = require('react-responsive-carousel').Carousel;
+  render() {
+    return (
 
-var DemoCarousel = React.createClass({
-    render() {
-        return (
-            <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
-                <div>
-                    <img src="img/cfd-1.jpg" />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src="img/cfd-2.jpg" />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src="img/cfd-3.jpg" />
-                    <p className="legend">Legend 3</p>
-                </div>
-                <div>
-                    <img src="img/cfd4.jpg" />
-                    <p className="legend">Legend 4</p>
-                </div>
-                <div>
-                    <img src="img/cfd-5.jpg" />
-                    <p className="legend">Legend 5</p>
-                </div>
-                <div>
-                    <img src="img/cfd-6.jpg" />
-                    <p className="legend">Legend 6</p>
-                </div>
-            </Carousel>
-        );
-    }
-});
-ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
+      <section className="standard projects">
+        <DemoCarousel/>
+        <MarkdownRenderer fileName="projects" />
+      </section>
 
-// Don't forget to include the css in your page 
+    );
+  }
+}
+
+class DemoCarousel extends React.Component {
+
+  mixins: [Carousel.ControllerMixin]
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      slideIndex: 0
+    };
+  }
+
+  render() {
+    return (
+
+      <div style={{width: '50%', margin: 'auto'}}>
+        <Carousel
+          ref="carousel"
+          data={this.setCarouselData}
+          slideIndex={this.state.slideIndex}
+          afterSlide={newSlideIndex => this.setState({ slideIndex: newSlideIndex })}>
+          <img src="static/img/cfd-1.jpg"/>
+          <img src="static/img/cfd-2.jpg"/>
+          <img src="static/img/cfd-3.jpg"/>
+          <img src="static/img/cfd-4.jpg"/>
+          <img src="static/img/cfd-5.jpg"/>
+          <img src="static/img/cfd-6.jpg"/>
+        </Carousel>
+      </div>
+
+    )
+  }
+}
+
+
+// Don't forget to include the css in your page
 // <link rel="stylesheet" href="style.css"/>
-// Begin DemoSliderControls
-
-///
-);
 
 export default Projects;
