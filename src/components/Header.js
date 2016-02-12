@@ -4,30 +4,23 @@ var classNames = require('classnames');
 
 // TODO: move this to separate css / scss / whatevs file
 
-/*
-const logoStyle = {
-  height: '40px'
-};
-const primaryRed = '#E24E54';
-const headerStyle = {
-  backgroundColor: primaryRed,
-  textAlign: 'center'
-};
-const linkStyle = {
-  color: primaryRed,
-  backgroundColor: 'white',
-  margin: '0 5px',
-  padding: '5px'
-};
-*/
-
 const links = {
+  /*
   'Who We Are': '/',
   'What We Do': '/about',
   'Want to Help?': '/volunteer',
   'Can We Help You?' : '/partner',
   'Blog' : '/#',
   'Support Us' : '/#'
+*/
+
+'Who We Are': '/',
+'What We Do': '/WhatWeDo',
+'Want To Help?': '/WantToHelp',
+'Can We Help You?': '/CanWeHelpYou',
+'Our Voice': '/OurVoice',
+'Support Us': '/SupportUs'
+
 };
 
 class Header extends React.Component {

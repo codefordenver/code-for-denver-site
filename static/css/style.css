@@ -109,8 +109,6 @@ a:hover
 
 /* Hero Image Section */
 .hero {
-  background: url("../img/hero.png") no-repeat center center;
-  background-size: cover;
   height: 16.5rem;
   position: relative;
 }
@@ -145,6 +143,7 @@ a:hover
   margin: 0;
   padding: 0;
   font-size: .9rem;
+  color: #fff;
 }
 
 .hero p a {
