@@ -43,7 +43,8 @@
     "react-redux": "^3.1.0",
     "react-router": "^1.0.3",
     "redux": "^3.2.1",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "sugar-date": "^1.5.1"
   },
   "devDependencies": {
     "babel-core": "^5.4.7",
