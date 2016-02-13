@@ -164,7 +164,7 @@
                        [:p [:cite "Harrison Topp"]]
                        [:p [:cite "Membership Director"]]
                        [:p [:cite "Rocky Mountain Farmers Union"]]
-                      [:h5.text-right [:a {:href "codefordenver.org"} "See more at codefordenver.org"]]
+                      [:h5.text-right [:a {:href "http://www.codefordenver.org"} "See more at codefordenver.org"]]
                       [:hr]]
                      ]]
 
