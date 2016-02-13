@@ -40,7 +40,7 @@
       (swap! app-state assoc :banner-style style)
       (swap! app-state assoc :logo-url (or logo-url "cfdlogo-sm.png")))
 
-(def positions [200 201 762 1394 1800 2910 3800])
+(def positions [200 201 1200 1750 2370 3420 4150])
 
 (add-watch anim/scroll :y-scroll-watcher
            (fn [_ _ _ y]
@@ -48,17 +48,17 @@
 
                  (< y 200) (refresh! "is proud to present" "banner-dark" "cfdlogo.png")
 
-                 (and (> y 201) (<= y 762)) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
+                 (and (> y 201) (<= y 1200)) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
 
-                 (and (>= y 762) (< y 1394)) (refresh! "our contributors spent a total of:" "banner-dark")
+                 (and (>= y 1200) (< y 1750)) (refresh! "our contributors spent a total of:" "banner-dark")
 
-                 (and (>= y 1394) (< y 1800)) (refresh! "organized a total of:" "banner-light")
+                 (and (>= y 1750) (< y 2370)) (refresh! "organized a total of:" "banner-light")
 
-                 (and (>= y 1800) (< y 2910)) (refresh! "wrote a ton of documentation & design specs:" "banner-light")
+                 (and (>= y 2370) (< y 3240)) (refresh! "wrote a ton of documentation & design specs:" "banner-light")
 
-                 (and (>= y 2910) (< y 3800)) (refresh! "ate a lot of pizza..." "banner-dark")
+                 (and (>= y 3420) (< y 4110)) (refresh! "ate a lot of pizza..." "banner-dark")
 
-                 (> y 3800) (refresh! "all possible because of you.." "banner-light"))))
+                 (> y 4150) (refresh! "Thank you!" "banner-light"))))
 
 (defn doc-generator [many]
       (for [n (range many)]
@@ -93,16 +93,16 @@
                              "#pieChart"
                              (clj->js pie-chart-data)
                              (clj->js {:labelInterpolationFnc (fn [value] value)})
-                             (clj->js [["screen and (min-width: 380px)", {:height                200
-                                                                          :labelOffset           -3
-                                                                          :chartPadding          10
-                                                                          :labelPosition         "outside"
-                                                                          :labelDirection        "explode"}]
-                                       ["screen and (min-width: 640px)", {:height                450
-                                                                          :labelOffset           -34
-                                                                          :chartPadding          50
-                                                                          :labelPosition         "outside"
-                                                                          :labelDirection        "explode"}]
+                             (clj->js [["screen and (min-width: 380px)", {:height         200
+                                                                          :labelOffset    -3
+                                                                          :chartPadding   10
+                                                                          :labelPosition  "outside"
+                                                                          :labelDirection "explode"}]
+                                       ["screen and (min-width: 640px)", {:height         450
+                                                                          :labelOffset    -34
+                                                                          :chartPadding   50
+                                                                          :labelPosition  "outside"
+                                                                          :labelDirection "explode"}]
                                        ["screen and (min-width: 1024px)", {:height       600
                                                                            :labelOffset  -20
                                                                            :chartPadding 60}]]))
@@ -120,11 +120,15 @@
                      [:div.col-lg-3
                       [:a.arrow-wrap
                        {:onClick #(if (= @scroll-to (count positions))
-                                   (reset! scroll-to 0)
+                                   (do
+                                     (reset! scroll-to 0)
+                                     (-> (js/$ "html, body")
+                                         (.animate #js {:scrollTop (str (positions @scroll-to) "px")})))
                                    (do
                                      (-> (js/$ "html, body")
                                          (.animate #js {:scrollTop (str (positions @scroll-to) "px")}))
-                                     (swap! scroll-to inc)))}
+                                     (swap! scroll-to inc)))
+                        }
                        [:span {:class (if (>= @scroll-y (last positions))
                                         "arrow-up"
                                         "arrow-down")}]
@@ -138,15 +142,31 @@
 
                    [:div.container-fluid
                     [:div.row.part-two
-                     [:div.col-lg-12.col-lg-push-2
+                     [:div.col-lg-6.jumbotron
+                      [:h4.subtitles.text-center "Projects"]
                       [:div.legend.y-axis "# of Commits*"]
                       [:canvas {:id     "myChart"
-                                :width  "400"
-                                :height "400"}]]
-                     [:p.legend.text-center.col-lg-12 "Projects"]
-                     [:br]
-                     [:small
-                      [:p.text-center "* In the GitHub workflow, a commit is an individual contribution to a project file (or set of files)."]]]]
+                                :width  "350"
+                                :height "350"}]
+                      [:p.text-center [:small "* In the GitHub workflow, a commit is an individual
+                       contribution to a project file (or set of files)."]]
+                      [:hr]]
+                     [:div.col-lg-6.jumbotron
+                      [:h4.subtitles.text-center "Testimonials"]
+                      [:blockquote
+                       [:p "Code for Denver not only provided an invaluable service to our organization,
+                       they helped us build a new understanding about teamwork.  As a grassroots
+                       organization, we’re used to working with volunteers to solve challenges.
+                       Code for Denver created an exceptional volunteer environment with outstanding
+                       results.  The final product was both beautiful and functional.
+                       I can’t express highly enough my gratitude for Code for Denver."]
+                       ]
+                       [:p [:cite "Harrison Topp"]]
+                       [:p [:cite "Membership Director"]]
+                       [:p [:cite "Rocky Mountain Farmers Union"]]
+                      [:h5.text-right [:a {:href "codefordenver.org"} "See more at codefordenver.org"]]
+                      [:hr]]
+                     ]]
 
                    [:div.container-fluid
                     [:div.row.part-three
@@ -247,36 +267,36 @@
                        {:src   "images/meetup-icon.png"
                         :style {:transform (str "scale(" (/ @circle-scale 5000) ")")}}]]]]
 
-                  [:div.container-fluid
-                  [:div.row.text-center {:style {:background "#fff"}}
-                   [:div.col-lg-12
-                   [:p.text-center
-                    [:b "Partners"]]]]
-                   [:div.row.text-center {:style {:background "#fff"}}
-                    [:div.col-lg-3 {:style {:margin-top "20px"}} 
-                     [:img {:src "images/grow-local-co-logo.jpg" :width "150px" :height "45px"}]]
-                    [:div.col-lg-3 {:style {:margin-top "20px"}} 
-                     [:img {:src "images/rmfu-logo.png" :width "150px" :height "45px"} ]]
-                    [:div.col-lg-3
-                     [:img {:src "images/co-avp-logo.png" :width "150px" :height "85px"} ]]
-                    [:div.col-lg-3 {:style {:margin-top "10px"}} 
-                     [:img {:src "images/rmmfi-logo.jpg" :width "150px" :height "65px"} ]]
-                    ]
+                   [:div.container-fluid
+                    [:div.row.text-center {:style {:background "#fff"}}
+                     [:div.col-lg-12
+                      [:p.text-center
+                       [:b "Partners"]]]]
+                    [:div.row.text-center {:style {:background "#fff"}}
+                     [:div.col-lg-3 {:style {:margin-top "20px"}}
+                      [:img {:src "images/grow-local-co-logo.jpg" :width "150px" :height "45px"}]]
+                     [:div.col-lg-3 {:style {:margin-top "20px"}}
+                      [:img {:src "images/rmfu-logo.png" :width "150px" :height "45px"}]]
+                     [:div.col-lg-3
+                      [:img {:src "images/co-avp-logo.png" :width "150px" :height "85px"}]]
+                     [:div.col-lg-3 {:style {:margin-top "10px"}}
+                      [:img {:src "images/rmmfi-logo.jpg" :width "150px" :height "65px"}]]
+                     ]
 
-                  [:div.row.text-center {:style {:background "#fff"}}
-                   [:div.col-lg-12
-                   [:p.text-center
-                    [:b "Sponsors"]]]]
-                   [:div.row.text-center {:style {:background "#fff"}}
-                    [:div.col-lg-3 {:style {:margin-top "35px"}} 
-                     [:img {:src "images/cfa-logo.png" :width "150px" :height "55px"} ]]
-                    [:div.col-lg-3 
-                     [:img {:src "images/ca-technologies-logo.jpg" :width "150px" :height "125px"} ]]
-                    [:div.col-lg-3 
-                     [:img {:src "images/galvanize-logo.png" :width "150px" :height "125px"} ]]
-                    [:div.col-lg-3 {:style {:margin-top "40px"}} 
-                     [:img {:src "images/vlizz-logo.png" :width "150px" :height "45px"} ]]
-                    ]]
+                    [:div.row.text-center {:style {:background "#fff"}}
+                     [:div.col-lg-12
+                      [:p.text-center
+                       [:b "Sponsors"]]]]
+                    [:div.row.text-center {:style {:background "#fff"}}
+                     [:div.col-lg-3 {:style {:margin-top "35px"}}
+                      [:img {:src "images/cfa-logo.png" :width "150px" :height "55px"}]]
+                     [:div.col-lg-3
+                      [:img {:src "images/ca-technologies-logo.jpg" :width "150px" :height "125px"}]]
+                     [:div.col-lg-3
+                      [:img {:src "images/galvanize-logo.png" :width "150px" :height "125px"}]]
+                     [:div.col-lg-3 {:style {:margin-top "40px"}}
+                      [:img {:src "images/vlizz-logo.png" :width "150px" :height "45px"}]]
+                     ]]
 
                    [:div.footer
                     [:img.img-full {:src "images/4.jpg"}]

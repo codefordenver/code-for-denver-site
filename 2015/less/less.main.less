@@ -70,10 +70,18 @@ hr {
 }
 
 .y-axis {
-    margin-top:200px;
-	transform: rotate(270deg);
-	transform-origin: left top 0;
-    float: left;
+  position: absolute;
+  margin-top: 200px;
+  transform: rotate(270deg);
+  transform-origin: left top 0;
+  float: left;
+}
+
+canvas {
+  margin: 0 50px;
+  @media screen and (max-width: 856px) {
+    margin: 0 200px;
+  }
 }
 
 .part-one {
@@ -84,7 +92,7 @@ hr {
 }
 
 .part-two {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 .part-three {
@@ -571,5 +579,23 @@ h4 {
   border-width: 3em 3em 0 3em;
   border-color: @dark transparent transparent transparent;
   -webkit-transform: rotate(0deg)
+}
+
+// testimonials css
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
 }
 
