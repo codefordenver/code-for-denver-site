@@ -1,5 +1,4 @@
 # Can We Help You?
-
 ## Become a Partner
 ### What kind of projects does Code for Denver work on?
 Code for Denver provides technology, design, organizational and coding expertise. Our primary goal is to provide support to those who usually do not enjoy the kinds of services we provide. This could be due to size or budget. Our ideal project involves:
@@ -24,7 +23,7 @@ Vague ideas
 Defined ideas
 Validation
 Active Development
-
+--
 For details on project stages [click here.](https://docs.google.com/document/d/1vdVOLMUURX4Gj5_UCxZdz8iQ5FIHATVlDYn_ag2NBGg/)
 
 Here is info directed at organizers [about project stages](https://docs.google.com/document/d/1ddbdewkcRGrDgeyx2W2jfYllvx5XnmGZ4ccppSWopFw/)
