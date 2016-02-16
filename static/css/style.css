@@ -443,20 +443,21 @@ a:hover
   margin: 0;
 }
 
-/*
-@media (max-width:858px) {
-  .sparktime-trackedtime
-  { display: none;}
-}
 
+@media (max-width:750px) {
+  .sparktime-stats h1
+  {
+    font-size: 3.5rem;
+  }
 
-@media (max-width:778px) {
+@media (max-width:650px) {
   .sparktime-stats h1
   {
     font-size: 3rem;
   }
+
 }
-*/
+
 }
 
 
