@@ -39,12 +39,11 @@ class DemoCarousel extends React.Component {
           data={this.setCarouselData}
           slideIndex={this.state.slideIndex}
           afterSlide={newSlideIndex => this.setState({ slideIndex: newSlideIndex })}>
-          <img src="static/img/cfd-1.jpg"/>
-          <img src="static/img/cfd-2.jpg"/>
-          <img src="static/img/cfd-3.jpg"/>
-          <img src="static/img/cfd-4.jpg"/>
-          <img src="static/img/cfd-5.jpg"/>
-          <img src="static/img/cfd-6.jpg"/>
+          <img src="static/img/screenshot-feed.png"/>
+          <img src="static/img/screenshot-freshfoodconnect.png"/>
+          <img src="static/img/screenshot-denverenergyefficiency.png"/>
+          <img src="static/img/screenshot-sol.png"/>
+          <img src="static/img/screenshot-rmmfi.png"/>
         </Carousel>
       </div>
 
