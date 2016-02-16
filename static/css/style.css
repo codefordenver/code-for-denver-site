@@ -83,10 +83,10 @@ a:hover
   display: flex;
 }
 
-@media (max-width:625px) {
+@media (max-width:700px) {
   .mainnav ul {
     flex-direction: column;
-    font-size: 1.5em;
+    font-size: 1.999em;
   }
 }
 
@@ -99,7 +99,7 @@ a:hover
 {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: .75em;
+  font-size: 1em;
   width:100%;
   background-color: #fff;
   transition: color 1s, background-color 1s;
