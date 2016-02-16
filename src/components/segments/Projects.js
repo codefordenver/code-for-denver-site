@@ -52,8 +52,7 @@ class DemoCarousel extends React.Component {
   }
 }
 
-
 // Don't forget to include the css in your page
-// <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="style.css"/>
 
 export default Projects;
