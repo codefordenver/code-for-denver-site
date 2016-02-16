@@ -196,8 +196,8 @@ a:hover
 
 .calendar-date
 {
-    /*height: 5rem;
-    width: 5rem;*/
+  margin-right: 1rem;
+  padding-bottom: .5rem;
 }
 
 .calendar-date .month
@@ -227,8 +227,7 @@ a:hover
 
 .calendar-text
 {
-    margin-left: 1rem;
-    flex-grow:
+
 }
 
 .meetup-btn {
