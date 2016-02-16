@@ -182,8 +182,9 @@
                             :style {:color "white"}} "sparktime.org"]]]]]
 
                    [:div.container-fluid
+                    [:div.row.circle-row
+                     [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]]
                     [:div.row.part-four
-                     [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]
                      [:div.col-lg-12
                       [:h3.super.text-center "47"]
                       [:h2.subtitles.text-center "meetup events"]]]]
