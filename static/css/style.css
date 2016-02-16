@@ -196,8 +196,8 @@ a:hover
 
 .calendar-date
 {
-    height: 5rem;
-    width: 5rem;
+  margin-right: 1rem;
+  padding-bottom: .5rem;
 }
 
 .calendar-date .month
@@ -210,6 +210,7 @@ a:hover
   background-color: #000;
   height:1.5rem;
   line-height: 1.5rem;
+  padding: 0 .25rem;
 }
 
 .calendar-date .day
@@ -226,8 +227,7 @@ a:hover
 
 .calendar-text
 {
-    margin-left: 1rem;
-    flex-grow:
+
 }
 
 .meetup-btn {
@@ -304,10 +304,6 @@ a:hover
   margin: auto;
   box-sizing: border-box;
 }
-.dashboard .flexgrid-row
-{
-  background-color: #000;
-}
 
 .dashboard-item
 {
@@ -379,9 +375,90 @@ a:hover
 
 .dashboard-item.sparktime
 {
-  height: 5.5rem;
-  background: #48b9b5 url("../img/dashboard-sparktime.png") top left / auto 100% no-repeat;
+  /*height: 5.5rem;*/
+  /*background: #48b9b5 url("../img/dashboard-sparktime.png") top left / auto 100% no-repeat;*/
+  background-color: #48b9b5;
+
 }
+
+.dashboard-item.sparktime img
+{
+  /*height: 100%;*/
+  /*max-height: none;*/
+  height: 6rem;
+  width: auto;
+  float: left;
+}
+
+.dashboard-item.sparktime .flexgrid-row
+{
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
+.sparktime-content
+{
+  padding-left: 1rem;
+}
+
+.sparktime-stats h1
+{
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  color: #fff;
+  text-align: left;
+  line-height: 1.1em;
+  padding-right: .5rem;
+}
+
+.sparktime-checkin
+{
+  padding-bottom: .25rem;
+}
+
+.sparktime-checkin p
+{
+  text-align: left;
+  font-family: "Enriqueta", serif;
+  margin: 0;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.sparktime-trackedtime
+{
+  align-self: flex-end;
+}
+
+.sparktime-trackedtime p
+{
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  color: #116663;
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+@media (max-width:750px) {
+  .sparktime-stats h1
+  {
+    font-size: 3.5rem;
+  }
+
+@media (max-width:650px) {
+  .sparktime-stats h1
+  {
+    font-size: 3rem;
+  }
+
+}
+
+}
+
 
 /* Sponsors */
 .sponsors-sponsor
