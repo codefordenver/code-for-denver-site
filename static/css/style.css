@@ -18,14 +18,14 @@ h1
 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.414rem;
   color: #232121;
 }
 
 p
 {
-  font-family: "Enriqueta", serif;
-  font-size: .8rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
 }
 
 a
@@ -83,6 +83,13 @@ a:hover
   display: flex;
 }
 
+@media (max-width:700px) {
+  .mainnav ul {
+    flex-direction: column;
+    font-size: 1.999em;
+  }
+}
+
 .mainnav-link
 {
   flex-grow: 1;
@@ -92,7 +99,7 @@ a:hover
 {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: .75em;
+  font-size: 1em;
   width:100%;
   background-color: #fff;
   transition: color 1s, background-color 1s;
@@ -138,7 +145,7 @@ a:hover
 }
 
 .hero p {
-  font-family: "Enriqueta", serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -194,6 +201,22 @@ a:hover
   flex-grow:2;
 }
 
+@media (max-width:625px) {
+  .interested-title h1
+  {
+    text-align: center;
+  }
+  .interested-title h2
+  {
+    text-align: center;
+  }
+  .interested-calendar div
+  {
+    justify-content:center;
+    /*align-items:center;*/
+  }
+}
+
 .calendar-date
 {
   margin-right: 1rem;
@@ -232,7 +255,7 @@ a:hover
 
 .meetup-btn {
   display: inline-block;
-  font-family: "Enriqueta", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: .9rem;
   font-weight: bold;
   background: #3498db;
@@ -485,7 +508,7 @@ a:hover
     height: 4rem;
 }
 
-@media (max-width: 666px) {
+@media (max-width: 670px) {
   .sponsors > .flexgrid-row
   {
    flex-direction: column;
@@ -517,6 +540,12 @@ a:hover
     order: 2
   }
 
+  .sponsors-sponsor
+  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
 }
 
 /* footer-nav */
@@ -543,7 +572,7 @@ a:hover
 {
   color: #fff;
   list-style: none;
-  font-size: .5rem;
+  font-size: .707rem;
   text-align: left;
   line-height: 1rem;
   font-weight: 700;
