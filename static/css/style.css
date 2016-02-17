@@ -24,7 +24,7 @@ h1
 
 p
 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Enriqueta", serif;
   font-size: 1rem;
 }
 
@@ -145,7 +145,7 @@ a:hover
 }
 
 .hero p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Enriqueta", serif;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -255,7 +255,7 @@ a:hover
 
 .meetup-btn {
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Enriqueta", serif;
   font-size: .9rem;
   font-weight: bold;
   background: #3498db;
