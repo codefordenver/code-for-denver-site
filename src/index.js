@@ -15,7 +15,7 @@ import WhatWeDo from './components/pages/WhatWeDo';
 import WantToHelp from './components/pages/WantToHelp';
 import CanWeHelpYou from './components/pages/CanWeHelpYou';
 import OurVoice from './components/pages/OurVoice';
-import SupportUs from './components/pages/SupportUs';
+import WantToLearn from './components/pages/WantToLearn';
 
 const App = (props) => {
   const {children} = props;
@@ -47,7 +47,7 @@ ReactDOM.render((
       <Route path="WantToHelp" component={WantToHelp}/>
       <Route path="CanWeHelpYou" component={CanWeHelpYou}/>
       <Route path="OurVoice" component={OurVoice}/>
-      <Route path="SupportUs" component={SupportUs}/>
+      <Route path="WantToLearn" component={WantToLearn}/>
       <Route path="*" component={notFound} />
     </Route>
   </Router>

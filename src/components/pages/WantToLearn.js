@@ -10,12 +10,12 @@ const MainText = () => (
     </section>
 );
 
-const HeroBackground="hero.png";
-const HeroTitle= "Support Us hero.";
-const HeroContent = "Support Us content";
+const HeroBackground="cfd-8.jpg";
+const HeroTitle= "Want to Learn hero.";
+const HeroContent = "Want to Learn content";
 
 
-const SupportUs = () => (
+const WantToLearn = () => (
   <main>
     <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
     <Interested />
@@ -23,4 +23,4 @@ const SupportUs = () => (
   </main>
 );
 
-export default SupportUs;
+export default WantToLearn;
