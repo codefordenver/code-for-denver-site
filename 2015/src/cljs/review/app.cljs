@@ -10,9 +10,6 @@
 ;; -------------------------------
 ;; define app state & app-state utils
 
-(def colors {:primary   "white"
-             :secondary "rgba(100,100,100, 1.00)"})
-
 (def app-state (r/atom {:banner-title "is proud to present"
                         :banner-style "banner-dark"
                         :logo-url     "cfdlogo.png"}))
@@ -34,6 +31,8 @@
                              :highlightStroke "black"
                              :data            [4 5 114 216 105 135 199]}]})
 
+(def circle-scale-atom (r/atom 0))
+
 
 (defn refresh! [title style & [logo-url]]
       (swap! app-state assoc :banner-title title)
@@ -52,7 +51,9 @@
 
                  (and (>= y 1200) (< y 1750)) (refresh! "our contributors spent a total of:" "banner-dark")
 
-                 (and (>= y 1750) (< y 2370)) (refresh! "organized a total of:" "banner-light")
+                 (and (>= y 1750) (< y 2370)) (do
+                                                (reset! circle-scale-atom 5)
+                                                (refresh! "organized a total of:" "banner-light"))
 
                  (and (>= y 2370) (< y 3240)) (refresh! "wrote a ton of documentation & design specs:" "banner-light")
 
@@ -67,7 +68,8 @@
                       [:span.doc-type "DOC"]]))
 
 (defn main-component []
-      (let [circle-scale (anim/spring anim/scroll)
+      (let [circle-scale (anim/spring circle-scale-atom {:mass 200})
+            meetup-circle-scale (anim/spring anim/scroll)
             scroll-y (anim/interpolate-to anim/scroll)
             contributors (r/atom [])
             scroll-to (r/atom 0)]
@@ -161,9 +163,9 @@
                        results.  The final product was both beautiful and functional.
                        I can’t express highly enough my gratitude for Code for Denver."]
                        ]
-                       [:p [:cite "Harrison Topp"]]
-                       [:p [:cite "Membership Director"]]
-                       [:p [:cite "Rocky Mountain Farmers Union"]]
+                      [:p [:cite "Harrison Topp"]]
+                      [:p [:cite "Membership Director"]]
+                      [:p [:cite "Rocky Mountain Farmers Union"]]
                       [:h5.text-right [:a {:href "http://www.codefordenver.org"} "See more at codefordenver.org"]]
                       [:hr]]
                      ]]
@@ -183,7 +185,7 @@
 
                    [:div.container-fluid
                     [:div.row.circle-row
-                     [:div#circle {:style {:transform (str "scale(" (/ @circle-scale 150) ")")}}]]
+                     [:div#circle {:style {:transform (str "scale(" @circle-scale ")")}}]]
                     [:div.row.part-four
                      [:div.col-lg-12
                       [:h3.super.text-center "47"]
@@ -266,7 +268,7 @@
                           :style {:color "white"}}
                       [:img.text-center.text-center
                        {:src   "images/meetup-icon.png"
-                        :style {:transform (str "scale(" (/ @circle-scale 5000) ")")}}]]]]
+                        :style {:transform (str "scale(" (/ @meetup-circle-scale 5000) ")")}}]]]]
 
                    [:div.container-fluid
                     [:div.row.text-center {:style {:background "#fff"}}
