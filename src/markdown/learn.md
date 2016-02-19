@@ -9,6 +9,7 @@ Luckily, there are numerous resources to choose from. Heres a list of a few onli
 | ------------------------------------------------ | --------- | ------------------------ | -------------------------------------------- |
 | [Codecademy](http://www.codecademy.com)          | Free      | Various                  |                                              |
 | [The Odin Project](http://www.theodinproject.com)| Free      | Various                  |                                              |
+| [FreeCodeCamp](http://www.freecodecamp.com)      | Free      | JavaScript/CSS/HTML      | Community oriented, self paced.              |
 | [Ruby Monk](http://www.rubymonk.com)             | Free      | Ruby                     | Interactive tutorials                        |
 | [Ruby Koans](http://www.rubykoans.com)           | Free      | Ruby                     | The path to Ruby enlightenment               |
 | [CodeWars](http://www.codewars.com)              | Free      | Various                  | Coding exercises or 'katas'                  |
