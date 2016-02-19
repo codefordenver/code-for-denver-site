@@ -12,10 +12,4 @@ Yes! Many of our members have been beginning programmers who have found the envi
 
 #### What languages / frameworks do you typically use?
 
-We don't use one particular language or framework all of the time. What we use depends on the nature of the project and the groups that we serve.
-
-Members have expressed a long term interest in Clojure, React.js, and Rails.
-
-If your stack is different, contributing is still possible!   
-
->member saying something cool about how we work
+We don't use one particular language or framework all of the time. While we have strong interests in ReactJS, Clojure, and Rails, what we use depends on the nature of the project and the groups that we serve.

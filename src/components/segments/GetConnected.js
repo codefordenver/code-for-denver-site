@@ -4,7 +4,7 @@ const GetConnected = () => (
   <section className="standard getconnected">
     <div className="flexgrid-row">
       <div className="getconnected-links">
-        <h1>Get Connected!</h1>
+        <h3>Get Connected!</h3>
         <p>We work in groups, together and we work online.
           Get connected, get involved  and lend us your passion,
           your voice and your skills.</p>
