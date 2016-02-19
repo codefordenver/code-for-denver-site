@@ -9,7 +9,7 @@ const TheCommunity = () => (
     <h3 id="meeting-management">Meeting management</h3>
     <p>We complete a stand-up each week, and share what was done last week, what will be done in the coming week and surface any blockers. We also use the Pomodoro time management technique to focus our work during project nights.</p>
     <h3 id="tools">Tools</h3>
-    <p>We utilize Github as our code repository with a kanban board inside the application “Waffle” that sits on top of the repo.  Within the waffleboard, we plan our project tasks using the familiar “backlog”, “ready”, “in progress” and “done” states fir each task.  </p>
+    <p>We utilize Github as our code repository with a kanban board inside the application “Waffle” that sits on top of the repo.  Within the waffleboard, we plan our project tasks using the familiar “backlog”, “ready”, “in progress” and “done” states for each task.  </p>
     <p>Our current workflow includes:</p>
     <ul>
        <li>General/team communication and chat: <a href="http://www.flowdoc.com">Flowdock</a></li>

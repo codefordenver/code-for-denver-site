@@ -1,5 +1,10 @@
 # Can We Help You?
 ## Become a Partner
+> Technology can provide tools for:
+ - easier access to critical information
+ - better data --> better decisions
+ - improving organizing capacity of groups to make a bigger impact
+
 ### What kind of projects does Code for Denver work on?
 Code for Denver provides technology, design, organizational and coding expertise. Our primary goal is to provide support to those who usually do not enjoy the kinds of services we provide. This could be due to size or budget. Our ideal project involves:
 A small to medium-sized nonprofit or public institution
