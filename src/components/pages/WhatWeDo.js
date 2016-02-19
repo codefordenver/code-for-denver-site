@@ -17,17 +17,18 @@ const MainText = () => (
 
 const HeroBackground="hero.png";
 const HeroTitle= "What we do hero.";
-const HeroContent = <p>What we do hero content</p>;
+const HeroContent = "What we do hero content";
 
 const WhatWeDo = () => (
   <main>
     <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <Interested />
-    <SkillsAndLanguages />
     <HowItWorks />
     <Projects />
+    <SkillsAndLanguages />
+    <TheCommunity />
+    <Interested />
   	<Statistics />
-  	<TheCommunity />
+
   { /* Commenting out this element, not sure it's needed for anything.
     <MainText />
   */ }

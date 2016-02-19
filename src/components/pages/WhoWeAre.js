@@ -9,7 +9,7 @@ import Dashboard from '../segments/Dashboard';
 
 const MainText = () => (
     <section className="standard primary">
-      <h1>Who We Are</h1>
+      <h3>Who We Are</h3>
       <p><a href="#">Code for Denver</a> is a dedicated, cooperative and diverse group of volunteers.
         We are dedicated to the creation of civic technology aimed squarely at solving
         the problems of the world around us.</p>

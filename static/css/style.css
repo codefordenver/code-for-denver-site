@@ -16,16 +16,30 @@ body
 
 h1
 {
+    font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #196daa;
+  font-size: 1.999rem
+}
+
+h3
+{
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.414rem;
   color: #232121;
 }
 
+h4
+{
+  font-family: "Enriqueta", serif;
+  font-weight: bold;
+}
 p
 {
   font-family: "Enriqueta", serif;
-  font-size: .8rem;
+  font-size: 1rem;
+  line-height: 1.414rem;
 }
 
 a
@@ -53,6 +67,18 @@ a:hover
   flex-direction: column;
 }
 
+blockquote
+{
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+  border-left: .5rem solid #154466;
+  background-color: rgba(114, 144, 170, 0.18);
+  padding: 1rem;
+  margin: 1.414rem;
+  color: #154466;
+  font-weight: lighter;
+  font-size: 1.3rem;
+}
 
 /* Top Header */
 .mainheader
@@ -83,6 +109,13 @@ a:hover
   display: flex;
 }
 
+@media (max-width:700px) {
+  .mainnav ul {
+    flex-direction: column;
+    font-size: 1.999em;
+  }
+}
+
 .mainnav-link
 {
   flex-grow: 1;
@@ -92,7 +125,7 @@ a:hover
 {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: .75em;
+  font-size: 1em;
   width:100%;
   background-color: #fff;
   transition: color 1s, background-color 1s;
@@ -194,10 +227,26 @@ a:hover
   flex-grow:2;
 }
 
+@media (max-width:625px) {
+  .interested-title h1
+  {
+    text-align: center;
+  }
+  .interested-title h2
+  {
+    text-align: center;
+  }
+  .interested-calendar div
+  {
+    justify-content:center;
+    /*align-items:center;*/
+  }
+}
+
 .calendar-date
 {
-    /*height: 5rem;
-    width: 5rem;*/
+  margin-right: 1rem;
+  padding-bottom: .5rem;
 }
 
 .calendar-date .month
@@ -227,8 +276,7 @@ a:hover
 
 .calendar-text
 {
-    margin-left: 1rem;
-    flex-grow:
+
 }
 
 .meetup-btn {
@@ -305,10 +353,6 @@ a:hover
   margin: auto;
   box-sizing: border-box;
 }
-.dashboard .flexgrid-row
-{
-  background-color: #000;
-}
 
 .dashboard-item
 {
@@ -380,9 +424,90 @@ a:hover
 
 .dashboard-item.sparktime
 {
-  height: 5.5rem;
-  background: #48b9b5 url("../img/dashboard-sparktime.png") top left / auto 100% no-repeat;
+  /*height: 5.5rem;*/
+  /*background: #48b9b5 url("../img/dashboard-sparktime.png") top left / auto 100% no-repeat;*/
+  background-color: #48b9b5;
+
 }
+
+.dashboard-item.sparktime img
+{
+  /*height: 100%;*/
+  /*max-height: none;*/
+  height: 6rem;
+  width: auto;
+  float: left;
+}
+
+.dashboard-item.sparktime .flexgrid-row
+{
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
+.sparktime-content
+{
+  padding-left: 1rem;
+}
+
+.sparktime-stats h1
+{
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  color: #fff;
+  text-align: left;
+  line-height: 1.1em;
+  padding-right: .5rem;
+}
+
+.sparktime-checkin
+{
+  padding-bottom: .25rem;
+}
+
+.sparktime-checkin p
+{
+  text-align: left;
+  font-family: "Enriqueta", serif;
+  margin: 0;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.sparktime-trackedtime
+{
+  align-self: flex-end;
+}
+
+.sparktime-trackedtime p
+{
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  color: #116663;
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+@media (max-width:750px) {
+  .sparktime-stats h1
+  {
+    font-size: 3.5rem;
+  }
+
+@media (max-width:650px) {
+  .sparktime-stats h1
+  {
+    font-size: 3rem;
+  }
+
+}
+
+}
+
 
 /* Sponsors */
 .sponsors-sponsor
@@ -409,7 +534,7 @@ a:hover
     height: 4rem;
 }
 
-@media (max-width: 666px) {
+@media (max-width: 670px) {
   .sponsors > .flexgrid-row
   {
    flex-direction: column;
@@ -441,6 +566,12 @@ a:hover
     order: 2
   }
 
+  .sponsors-sponsor
+  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
 }
 
 /* footer-nav */
@@ -467,7 +598,7 @@ a:hover
 {
   color: #fff;
   list-style: none;
-  font-size: .5rem;
+  font-size: .707rem;
   text-align: left;
   line-height: 1rem;
   font-weight: 700;

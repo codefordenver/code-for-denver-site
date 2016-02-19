@@ -29,7 +29,24 @@ const Dashboard = () => (
           </div>
         </div>
       </div>
-      <div className="dashboard-item sparktime"></div>
+      <div className="dashboard-item sparktime">
+        <img src="static/img/dashboard-sparktime.png" />
+
+          <div className="flexgrid-column sparktime-content">
+            <div className="flexgrid-row">
+              <div className="sparktime-stats">
+                <h1>0y, 50w, 27h, 33m, 31s</h1>
+              </div>
+              <div className="sparktime-trackedtime">
+                <p>tracked volunteer time</p>
+              </div>
+            </div>
+            <div className="sparktime-checkin">
+              <p>To check in, text &quot;In with Code for Denver&quot; to 929-BIG-HELP (244-4357)</p>
+            </div>
+          </div>
+
+      </div>
     </div>
   </section>
 );
