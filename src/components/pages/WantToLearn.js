@@ -2,6 +2,7 @@ import React from 'react';
 
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
+import MarkdownRenderer from '../MarkdownRenderer';
 
 const MainText = () => (
     <section className="standard primary">
@@ -18,7 +19,9 @@ const HeroContent = "Want to Learn content";
 const WantToLearn = () => (
   <main>
     <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <MainText />
+    <section className="standard primary">
+    	<MarkdownRenderer fileName="learn" />
+    </section>
     <Interested />
   </main>
 );
