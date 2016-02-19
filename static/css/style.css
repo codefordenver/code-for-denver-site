@@ -16,16 +16,30 @@ body
 
 h1
 {
+    font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #196daa;
+  font-size: 1.999rem
+}
+
+h3
+{
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1.414rem;
   color: #232121;
 }
 
+h4
+{
+  font-family: "Enriqueta", serif;
+  font-weight: bold;
+}
 p
 {
   font-family: "Enriqueta", serif;
   font-size: 1rem;
+  line-height: 1.414rem;
 }
 
 a
@@ -53,6 +67,18 @@ a:hover
   flex-direction: column;
 }
 
+blockquote
+{
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+  border-left: .5rem solid #154466;
+  background-color: rgba(114, 144, 170, 0.18);
+  padding: 1rem;
+  margin: 1.414rem;
+  color: #154466;
+  font-weight: lighter;
+  font-size: 1.3rem;
+}
 
 /* Top Header */
 .mainheader
