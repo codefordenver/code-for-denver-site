@@ -2,6 +2,8 @@ import React from 'react';
 
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
+import GetInvolved from '../segments/GetInvolved';
+
 import MarkdownRenderer from '../MarkdownRenderer';
 
 const MainText = () => (
@@ -12,13 +14,15 @@ const MainText = () => (
 );
 
 const HeroBackground="cfd-10.jpg";
-const HeroTitle= "Want to help hero.";
-const HeroContent = "Want to Help hero content";
+const HeroTitle= "";
+const HeroContent = "";
 
 
 const WantToHelp = () => (
   <main>
-    <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
+    <Hero page="wantToHelp" background={HeroBackground} title={HeroTitle} content={HeroContent}>
+      <GetInvolved />
+    </Hero>
     <Interested />
     <section className="standard primary">
       <MarkdownRenderer fileName="volunteer" />

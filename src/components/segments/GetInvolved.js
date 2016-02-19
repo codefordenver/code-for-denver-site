@@ -40,7 +40,7 @@ export default class GetInvolved extends React.Component {
 
   // Once component mounts, initiate a timer.
   componentDidMount() {
-    this.updateTimer = setInterval(this.changePeopleTypeIndex, 2000)
+    this.updateTimer = setInterval(this.changePeopleTypeIndex, 4000)
   }
   // When unmounts, clean up the timer.
   componentWillUnmount() {
@@ -51,23 +51,17 @@ export default class GetInvolved extends React.Component {
   render() {
     return (
       <section id="get-involved" className="container content-section">
-        <h1>Get Involved</h1>
-
         <div className="row">
           <div className="container">
+            <h1>Get Involved</h1>
+            <h1>Are you</h1>
             <h1 className="sliding-thing">
-              <span>Are you </span>
-              <div id="pt-main" className="pt-perspective">
-                <ReactCSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={1}>
-                  <span key={this.state.peopleTypesIndex}>
-                    { this.peopleTypes[this.state.peopleTypesIndex] }
-                  </span>
-                </ReactCSSTransitionGroup>
-              </div>
+              <ReactCSSTransitionGroup transitionName="example" component="div" transitionEnterTimeout={1000} transitionLeaveTimeout={1000}>
+                <span key={this.state.peopleTypesIndex}>
+                  { this.peopleTypes[this.state.peopleTypesIndex] }
+                </span>
+              </ReactCSSTransitionGroup>
             </h1>
-
-            <p>Contact <a href="mailto:codefordenver@gmail.com">codefordenver@gmail.com</a> about how you can get involved</p>
-            <p>Follow us on <a href="https://github.com/codefordenver">Github</a></p>
           </div>
         </div>
       </section>

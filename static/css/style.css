@@ -646,19 +646,40 @@ blockquote
 /* GetInvolved component animation CSS from ReactCSSTransitions */
 
 .example-enter {
-  opacity: 0;
+  text-align: center;
+  left: -10%;
+  position: absolute;
 }
 
 .example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+  left: 0px;
+  position: absolute;
+  transition-duration: 1000ms;
+  transition-property: left;
+  transition-timing-function: ease-in-out;
 }
 
 .example-leave {
-  opacity: 0.01;
+  left: 0px;
+  position: absolute;
 }
 
 .example-leave.example-leave-active {
-  opacity: 0;
-  transition: opacity 1ms ease-in;
+  left: 150%;
+  transition-duration: 1000ms;
+  transition-property: left;
+  transition-timing-function: ease-in-out;
+}
+
+.sliding-thing {
+  overflow: hidden;
+}
+
+.intro {
+  overflow: hidden;
+}
+
+.wantToHelp {
+  height: 200px;
+  width: 60%;
 }
