@@ -15,7 +15,7 @@ const MainText = () => (
     </section>
 );
 
-const HeroBackground="hero.png";
+const HeroBackground="cfd-1.jpg";
 const HeroTitle= "What we do hero.";
 const HeroContent = "What we do hero content";
 

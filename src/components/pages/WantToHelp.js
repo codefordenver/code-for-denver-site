@@ -10,7 +10,7 @@ const MainText = () => (
     </section>
 );
 
-const HeroBackground="hero.png";
+const HeroBackground="cfd-10.jpg";
 const HeroTitle= "Want to help hero.";
 const HeroContent = "Want to Help hero content";
 

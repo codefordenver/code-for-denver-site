@@ -19,7 +19,7 @@ const links = {
 'Want To Help?': '/WantToHelp',
 'Can We Help You?': '/CanWeHelpYou',
 'Our Voice': '/OurVoice',
-'Support Us': '/SupportUs'
+'Want to Learn': '/WantToLearn'
 
 };
 
