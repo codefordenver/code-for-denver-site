@@ -3,6 +3,7 @@
 /* global styles */
 body
 {
+  font-family: "Enriqueta", serif;
   background-color: #eee;
 }
 
@@ -14,20 +15,32 @@ body
   box-sizing: border-box;
 }
 
-h1
+
+h1, h2, h3
 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+}
+
+h1
+{
   color: #196daa;
-  font-size: 1.999rem
+  font-size: 1.999rem;
+}
+
+h2, h3
+{
+  color: #232121;
+}
+
+h2
+{
+  font-size: 1.5rem;
 }
 
 h3
 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
   font-size: 1.414rem;
-  color: #232121;
 }
 
 h4
