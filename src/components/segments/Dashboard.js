@@ -32,6 +32,15 @@ const Dashboard = () => (
       <div className="dashboard-item sparktime">
         <img src="static/img/dashboard-sparktime.png" />
 
+
+        <div className="flexgrid-column sparktime-content" style={{alignItems: "center"}}>
+          <iframe src="http://sparktime.org/w/11/timer-only" style={{border:"none", height:"4rem"}}></iframe>
+
+          <div className="sparktime-checkin">
+            <p>To check in, text &quot;In with Code for Denver&quot; to 929-BIG-HELP (244-4357)</p>
+          </div>
+        </div>
+{/*
           <div className="flexgrid-column sparktime-content">
             <div className="flexgrid-row">
               <div className="sparktime-stats">
@@ -45,7 +54,7 @@ const Dashboard = () => (
               <p>To check in, text &quot;In with Code for Denver&quot; to 929-BIG-HELP (244-4357)</p>
             </div>
           </div>
-
+*/}
       </div>
     </div>
   </section>
