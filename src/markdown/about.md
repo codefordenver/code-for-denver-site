@@ -8,7 +8,7 @@ We tap into the potential of technology to tackle issues like food systems, food
 
 We recognize that we are a part of a much larger movement to address some of the challenges that face our planet. In order to collectively have the biggest impact, we work in partnership and collaboration with both local government, and the international network of Code for America brigades of which we are a part.
 
-We also team up with local nonprofits and other active community members to make sure we understand the issues, to brainstorm technology-based solutions, and to actualize our ideas in ways that aim for measurable community benefit.
+We also team up with local non-profit organizations and other active community members to make sure we understand the issues, to brainstorm technology-based solutions, and to actualize our ideas in ways that aim for measurable community benefit.
 
 # What We Do
 
