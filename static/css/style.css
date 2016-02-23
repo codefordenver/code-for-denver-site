@@ -550,7 +550,7 @@ blockquote
 
 .sponsors-sponsor img
 {
-  height: 3.5rem;
+  width: 10rem;
 }
 
 .sponsors-codefordenver
@@ -565,7 +565,7 @@ blockquote
     height: 4rem;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 750px) {
   .sponsors > .flexgrid-row
   {
    flex-direction: column;

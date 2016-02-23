@@ -4,8 +4,10 @@ const Sponsors = () => (
   <section className="standard sponsors">
     <div className="flexgrid-row">
       <div className="sponsors-sponsor">
-        <div className="sponsor-img">
-          <img src="static/img/sponsor-placeholder.png" />
+        <div className="sponsor-garycommunity">
+          <a href="http://www.garycommunity.org/" target="_blank">
+            <img src="static/img/sponsor-gary_community_investments.png" />
+          </a>
         </div>
       </div>
 
@@ -15,8 +17,10 @@ const Sponsors = () => (
       </div>
 
       <div className="sponsors-sponsor">
-        <div className="sponsor-img">
-          <img src="static/img/sponsor-placeholder.png" />
+        <div className="sponsor-ca">
+          <a href="http://www.ca.com/" target="_blank">
+            <img src="static/img/sponsor-ca_technologies.png" />
+          </a>
         </div>
       </div>
     </div>
