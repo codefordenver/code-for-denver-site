@@ -22,12 +22,12 @@ const App = (props) => {
 
   return (
 
-  <div>
-    <Header path={props.location.pathname} />
-    { children }
-    <Footer />
-  </div>
-);
+    <div>
+      <Header path={props.location.pathname} />
+      { children }
+      <Footer />
+    </div>
+  );
 }
 
 const notFound = () => (
