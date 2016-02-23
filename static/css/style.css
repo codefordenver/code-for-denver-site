@@ -452,6 +452,18 @@ blockquote
 }
 
 @media (max-width:500px) {
+
+  .dashboard-item.sparktime
+  {
+    background: #48b9b5 url("../img/dashboard-sparktime-background.png") top left / auto 100% no-repeat;
+  }
+
+  .dashboard-item.sparktime img
+  {
+    display: none;
+  }
+
+  /*
   .dashboard-item.sparktime
   {
     position: relative;
@@ -465,7 +477,7 @@ blockquote
     top:0;
     left:0;
   }
-
+*/
 }
 
 
