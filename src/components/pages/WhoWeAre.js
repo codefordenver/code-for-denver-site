@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
 
+import CodeAcrossLink from '../segments/CodeAcrossLink';
 import TwitterFeed from '../segments/TwitterFeed';
 import SocialMediaLinks from '../segments/SocialMediaLinks';
 import Dashboard from '../segments/Dashboard';
@@ -31,7 +32,9 @@ const HeroContent = <a href="#">We meet almost every Monday. Join us, everyone i
 const WhoWeAre = () => (
   <main>
     <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <Interested />
+    <Interested>
+      <CodeAcrossLink />
+    </Interested>
     <MainText />
     <section className="standard getconnected">
       <div className="flexgrid-row">
