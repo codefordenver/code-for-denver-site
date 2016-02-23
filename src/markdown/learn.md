@@ -15,7 +15,7 @@ Luckily, there are numerous resources to choose from. Heres a list of a few onli
 | [CodeWars](http://www.codewars.com)              | Free      | Various                  | Coding exercises or 'katas'                  |
 | [CoderByte](http://www.coderbyte.com)            | Free      | Ruby                     | Challenges and competitions                  |
 | [Gibbon](http://www.gibbon.co)                   | Free      | Various                  | User-created learning paths                  |
-| [Project Euler](http://www.projecteuler.net)     | Free      | Content Cell             | [Practice coding via math problems] (http://www.theatlantic.com/technology/archive/2011/06/how-i-failed-failed-and-finally-succeeded-at-learning-how-to-code/239855/)  |
+| [Project Euler](http://www.projecteuler.net)     | Free      | Content Cell             | [Practice coding via math problems](http://www.theatlantic.com/technology/archive/2011/06/how-i-failed-failed-and-finally-succeeded-at-learning-how-to-code/239855/)  |
 | [Learn Ruby the Hard Way](http://ruby.learncodethehardway.org/book/)| Free | Ruby| Book   |
 | [CodeSchool](http://www.codeschool.com)          | Free/$25+ | Various                  | Video tutorials and in-browser practice      |
 | [Treehouse](http://www.teamtreehouse.com)        | $25+      | Various                  | Video tutorials and in-browser practice      |
