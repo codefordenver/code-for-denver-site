@@ -65,9 +65,6 @@ export default class GetInvolved extends React.Component {
                 </ReactCSSTransitionGroup>
               </div>
             </h1>
-
-            <p>Contact <a href="mailto:codefordenver@gmail.com">codefordenver@gmail.com</a> about how you can get involved</p>
-            <p>Follow us on <a href="https://github.com/codefordenver">Github</a></p>
           </div>
         </div>
       </section>
