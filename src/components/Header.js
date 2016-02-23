@@ -5,21 +5,12 @@ var classNames = require('classnames');
 // TODO: move this to separate css / scss / whatevs file
 
 const links = {
-  /*
-  'Who We Are': '/',
-  'What We Do': '/about',
-  'Want to Help?': '/volunteer',
-  'Can We Help You?' : '/partner',
-  'Blog' : '/#',
-  'Support Us' : '/#'
-*/
-
 'Who We Are': '/',
 'What We Do': '/WhatWeDo',
 'Want To Help?': '/WantToHelp',
 'Can We Help You?': '/CanWeHelpYou',
-'Our Voice': '/OurVoice',
-'Want to Learn': '/WantToLearn'
+//'Our Voice': '/OurVoice',
+'Want to Learn?': '/WantToLearn'
 
 };
 
