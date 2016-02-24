@@ -227,12 +227,48 @@ blockquote
   flex-grow:2;
 }
 
+.interested-codeacross
+{
+  padding: 1rem;
+  flex-grow:1;
+}
+
+.interested-codeacross h1
+{
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: bolder;
+  color: #154466;
+  font-size: 1.6rem;
+}
+
+.interested-codeacross h2
+{
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.interested-codeacross a
+{
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 @media (max-width:625px) {
   .interested-title h1
   {
     text-align: center;
   }
   .interested-title h2
+  {
+    text-align: center;
+  }
+  .interested-codeacross
   {
     text-align: center;
   }
