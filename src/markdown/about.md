@@ -10,6 +10,7 @@ We recognize that we are a part of a much larger movement to address some of the
 
 We also team up with local non-profit organizations and other active community members to make sure we understand the issues, to brainstorm technology-based solutions, and to actualize our ideas in ways that aim for measurable community benefit.
 
+[Remove all below]
 # What We Do
 
 ## Table of Contents
