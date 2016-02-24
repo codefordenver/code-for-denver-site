@@ -54,7 +54,7 @@ we use to communicate, collaborate and self-organize.
 	engage with other members, share progress, ask questions.
 	It's cross platform so you can use it anywhere, you'll love it.
 
- 	**Get you account by emailing codefordenver@gmail.com or by
+ 	**Get your account by emailing codefordenver@gmail.com or by
  attending one of our meetups.**
 
 - ### Google Drive
@@ -73,7 +73,7 @@ we use to communicate, collaborate and self-organize.
 	A simple Kanban not unlike Trello with very nice github integration.
 
  	**Once you have a github account, you should have
- 	access the waffle boards over at [waffle.io](https://waffle.io/).**
+ 	access to the waffle boards over at [waffle.io](https://waffle.io/).**
 
  	**Do let us know if you run into any trouble.**
 
@@ -82,3 +82,4 @@ we use to communicate, collaborate and self-organize.
   Get in touch with our organizers via our [Meetup site](http://www.meetup.com/CodeForDenver/) or drop us a line at codefordenver[at]gmail.com.
 
 ## Your Skills and Interests
+[need content]
