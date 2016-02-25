@@ -1,7 +1,7 @@
 
-## Learning Resources
+# Want To Learn?
 
-#### Where can I learn to program?
+### Where can I learn to program?
 
 Luckily, there are numerous resources to choose from. Heres a list of a few online educational sites and resources, sorted by general cost:
 
@@ -28,7 +28,7 @@ Luckily, there are numerous resources to choose from. Heres a list of a few onli
 | [Course Report](http://www.coursereport.com)     | $10k+     | Various                  | Multi-month, intensive development bootcamps |
 
 
-#### Ugh! There are too many languages and resources to choose from! Where is the best place to start?
+### Ugh! There are too many languages and resources to choose from! Where is the best place to start?
 
 We suggest Codecademy or CodeSchool. Both start with the basics, have plenty of free courses, and can be completed entirely in your browser.
 
