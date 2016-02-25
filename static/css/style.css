@@ -3,6 +3,7 @@
 /* global styles */
 body
 {
+  font-family: "Enriqueta", serif;
   background-color: #eee;
 }
 
@@ -14,20 +15,32 @@ body
   box-sizing: border-box;
 }
 
-h1
+
+h1, h2, h3
 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+}
+
+h1
+{
   color: #196daa;
-  font-size: 1.999rem
+  font-size: 1.999rem;
+}
+
+h2, h3
+{
+  color: #232121;
+}
+
+h2
+{
+  font-size: 1.5rem;
 }
 
 h3
 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
   font-size: 1.414rem;
-  color: #232121;
 }
 
 h4
@@ -142,7 +155,7 @@ blockquote
 
 /* Hero Image Section */
 .hero {
-  height: 16.5rem;
+  height: 36.5rem;
   position: relative;
 }
 
@@ -227,12 +240,48 @@ blockquote
   flex-grow:2;
 }
 
+.interested-codeacross
+{
+  padding: 1rem;
+  flex-grow:1;
+}
+
+.interested-codeacross h1
+{
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: bolder;
+  color: #154466;
+  font-size: 1.6rem;
+}
+
+.interested-codeacross h2
+{
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.interested-codeacross a
+{
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 @media (max-width:625px) {
   .interested-title h1
   {
     text-align: center;
   }
   .interested-title h2
+  {
+    text-align: center;
+  }
+  .interested-codeacross
   {
     text-align: center;
   }
@@ -306,7 +355,6 @@ blockquote
   margin-bottom: 0;
   margin-top: .3rem;
 }
-
 
 
 /* Get connected */
