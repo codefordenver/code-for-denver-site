@@ -4,7 +4,7 @@ import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
 import CodeAcrossLink from '../segments/CodeAcrossLink';
 import LearningResources from '../segments/LearningResources';
-import MarkdownRenderer from '../MarkdownRenderer';
+import Dashboard from '../segments/Dashboard';
 
 const HeroBackground="cfd-8.jpg";
 const HeroTitle= "Want to Learn hero.";
@@ -16,6 +16,7 @@ const WantToLearn = () => (
       <CodeAcrossLink />
     </Interested>
     <LearningResources />
+    <Dashboard />
   </main>
 );
 
