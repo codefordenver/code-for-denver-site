@@ -7,11 +7,11 @@
 
 ### What kind of projects does Code for Denver work on?
 Code for Denver provides technology, design, organizational and coding expertise. Our primary goal is to provide support to those who usually do not enjoy the kinds of services we provide. This could be due to size or budget. Our ideal project involves:
-A small to medium-sized nonprofit or public institution
-A product that is open-source and reusable on other projects
-Use of flexible, open-source technology
-A need for at least one of our areas of expertise
-We focus our energies on small to medium-sized nonprofits and public institutions. For a more detailed, but not comprehensive, list of project types we seek and avoid, [click here](https://docs.google.com/drawings/d/1k5xG6qdqwC0XFu2U5T2DhJtyXk13lh1hdsiIMUFVNNg/edit).
+a small to medium-sized non-profit or public institution;
+a product that is open-source and reusable on other projects;
+use of flexible, open-source technology; 
+and a need for at least one of our areas of expertise.
+We focus our energies on small to medium-sized non-profits and public institutions. For a more detailed, but not comprehensive, list of project types we seek and avoid, [click here](https://docs.google.com/drawings/d/1k5xG6qdqwC0XFu2U5T2DhJtyXk13lh1hdsiIMUFVNNg/edit).
 ### What is Code for Denver's project proposal process?
 There are several steps to getting a project accepted for work with Code for Denver.
 1. A potential partner completes an application.
