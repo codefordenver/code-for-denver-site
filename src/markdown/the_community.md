@@ -1,4 +1,6 @@
-### How we use Agile
+# The Community
+
+## How we use Agile
 
 Code For Denver utilizes many Agile practices and tools in our distributed development environment to help us deliver the most value, at the earliest possible time to our partners.  
 

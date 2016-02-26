@@ -77,7 +77,7 @@ we use to communicate, collaborate and self-organize.
 
  	**Do let us know if you run into any trouble.**
 
-  ####Who can I contact for additional questions?
+  #### Who can I contact for additional questions?
 
   Get in touch with our organizers via our [Meetup site](http://www.meetup.com/CodeForDenver/) or drop us a line at codefordenver[at]gmail.com.
 
