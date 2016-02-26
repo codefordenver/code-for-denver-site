@@ -14,18 +14,20 @@ const HeroTitle= "We Are Code For Denver.";
 const HeroContent = <a href="#">We meet almost every Monday. Join us, everyone is welcome!</a>;
 const WhoWeAre = () => (
   <main>
-    <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
+    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
     <Interested>
       <CodeAcrossLink />
     </Interested>
-    <WhoWeAreContent />
-    <GetConnectedContent />
-    <section className="standard getconnected">
-      <div className="flexgrid-row">
-        <SocialMediaLinks />
-        <TwitterFeed />
-      </div>
-    </section>
+    <div className='body-content'>
+      <WhoWeAreContent />
+      <GetConnectedContent />
+      <section className="standard getconnected">
+        <div className="flexgrid-row">
+          <SocialMediaLinks />
+          <TwitterFeed />
+        </div>
+      </section>
+    </div>
     <Dashboard />
   </main>
 );
