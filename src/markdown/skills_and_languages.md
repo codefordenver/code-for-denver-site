@@ -2,7 +2,7 @@
 
 #### I'm not a programmer or I'm not interested in programming. Can I still get involved?
 
-Yes! As long as you are willing to collaborate and engage there are numerous ways in which to be involved. As you can tell from our name, coding is a big part of what we do. But helping solve challenges in the community takes more than software expertise. Our brigade volunteers also have backgrounds in marketing, design, sales, facilitation, nonprofits, project management, and more. Additional perspectives and experiences are always valued and welcome, so come on down!
+Yes! As long as you are willing to collaborate and engage there are numerous ways in which to be involved. As you can tell from our name, coding is a big part of what we do. But helping solve challenges in the community takes more than software expertise. Our brigade volunteers also have backgrounds in marketing, design, sales, facilitation, non-profits, project management, and more. Additional perspectives and experiences are always valued and welcome, so come on down!
 
 
 #### I'm a beginner programmer. Can I still get involved?

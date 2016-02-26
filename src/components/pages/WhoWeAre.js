@@ -10,8 +10,8 @@ import SocialMediaLinks from '../segments/SocialMediaLinks';
 import Dashboard from '../segments/Dashboard';
 
 const HeroBackground="hero.png";
-const HeroTitle= "We Are Code For Denver.";
-const HeroContent = <a href="#">We meet almost every Monday. Join us, everyone is welcome!</a>;
+const HeroTitle= "We Are Code For Denver";
+const HeroContent = "We meet almost every Monday. Join us, everyone is welcome!"
 const WhoWeAre = () => (
   <main>
     <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />

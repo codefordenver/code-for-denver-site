@@ -218,15 +218,16 @@ blockquote
 /* Interested? */
 .interested
 {
+  display: flex;
   background-color: #7290aa;
   border-left: .5rem solid #154466;
   padding: 0;
+  justify-content: space-around;
 }
 
 .interested-title
 {
   padding: 1rem;
-  flex-grow:1;
 }
 
 .interested-title h1
@@ -250,13 +251,11 @@ blockquote
 .interested-calendar
 {
   padding: 1rem;
-  flex-grow:2;
 }
 
 .interested-codeacross
 {
   padding: 1rem;
-  flex-grow:1;
 }
 
 .interested-codeacross h1
@@ -753,4 +752,16 @@ blockquote
 .example-leave.example-leave-active {
   opacity: 0;
   transition: opacity 1ms ease-in;
+}
+
+.markdown-edit {
+  display: none;
+  float: right;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.markown-renderer:hover > .markdown-edit {
+  display: block;
 }
