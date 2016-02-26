@@ -17,9 +17,9 @@ else
     render() {
 
       return (
-        <section className="standard interested">
+        <section className="standard">
         {console.log(nextMeeting)}
-          <div className="flexgrid-row">
+          <div className="flexgrid-row interested">
             <div className="interested-title">
               <h1>Are You Interested?</h1>
               <h2>Good! We can use your help.</h2>

@@ -205,15 +205,16 @@ blockquote
 /* Interested? */
 .interested
 {
+  display: flex;
   background-color: #7290aa;
   border-left: .5rem solid #154466;
   padding: 0;
+  justify-content: space-around;
 }
 
 .interested-title
 {
   padding: 1rem;
-  flex-grow:1;
 }
 
 .interested-title h1
@@ -237,13 +238,11 @@ blockquote
 .interested-calendar
 {
   padding: 1rem;
-  flex-grow:2;
 }
 
 .interested-codeacross
 {
   padding: 1rem;
-  flex-grow:1;
 }
 
 .interested-codeacross h1
