@@ -14,14 +14,16 @@ const HeroTitle= "What we do hero.";
 const HeroContent = "What we do hero content";
 const WhatWeDo = () => (
   <main>
-    <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
+    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
     <Interested>
       <CodeAcrossLink />
     </Interested>
-    <HowItWorks />
-    <Projects />
-    <SkillsAndLanguages />
-    <TheCommunity />
+    <div className='body-content'>
+      <HowItWorks />
+      <Projects />
+      <SkillsAndLanguages />
+      <TheCommunity />
+    </div>
     <Dashboard />
   </main>
 );
