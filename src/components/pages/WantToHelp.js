@@ -2,27 +2,21 @@ import React from 'react';
 
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
-import MarkdownRenderer from '../MarkdownRenderer';
-
-const MainText = () => (
-    <section className="standard primary">
-      <h1>Want to Help?</h1>
-      <p><strong>volunteer.md</strong> goes here.... Cras quis molestie enim, ac maximus mauris. Sed cursus sapien eu ligula rhoncus, sed dignissim massa ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque rutrum sem a nulla pretium varius. Cras cursus aliquet lectus lacinia hendrerit. Sed consequat sollicitudin vestibulum. Nunc quam diam, vulputate ullamcorper ornare ac, pulvinar at ipsum. Integer vitae neque enim. Nulla facilisi. Cras eget lorem id quam laoreet vulputate. Fusce sit amet mollis felis, at placerat arcu. Duis in varius urna. Vivamus finibus commodo mauris, pellentesque viverra elit scelerisque sit amet.</p>
-    </section>
-);
+import CodeAcrossLink from '../segments/CodeAcrossLink';
+import Volunteer from '../segments/Volunteer';
+import Dashboard from '../segments/Dashboard';
 
 const HeroBackground="cfd-10.jpg";
 const HeroTitle= "Want to help hero.";
 const HeroContent = "Want to Help hero content";
-
-
 const WantToHelp = () => (
   <main>
     <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <Interested />
-    <section className="standard primary">
-      <MarkdownRenderer fileName="volunteer" />
-    </section>
+    <Interested>
+      <CodeAcrossLink />
+    </Interested>
+    <Volunteer />
+    <Dashboard />
   </main>
 );
 

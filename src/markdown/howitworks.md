@@ -1,4 +1,4 @@
-# Background Information
+# What We Do
 
 #### What does Code for Denver typically do?
 
