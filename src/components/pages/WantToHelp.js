@@ -11,11 +11,13 @@ const HeroTitle= "Want to help hero.";
 const HeroContent = "Want to Help hero content";
 const WantToHelp = () => (
   <main>
-    <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
+    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
     <Interested>
       <CodeAcrossLink />
     </Interested>
-    <Volunteer />
+    <div className='body-content'>
+    	<Volunteer />
+    </div>
     <Dashboard />
   </main>
 );
