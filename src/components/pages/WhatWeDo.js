@@ -10,8 +10,8 @@ import TheCommunity from '../segments/TheCommunity';
 import Dashboard from '../segments/Dashboard';
 
 const HeroBackground="cfd-1.jpg";
-const HeroTitle= "What we do hero.";
-const HeroContent = "What we do hero content";
+const HeroTitle= "Technology For The Community";
+const HeroContent = "We apply the power of modern technology to community challenges in Denver.";
 const WhatWeDo = () => (
   <main>
     <Hero background={HeroBackground} title={HeroTitle} content={HeroContent} />
