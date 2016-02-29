@@ -1,11 +1,11 @@
 # What We Do
 
-#### What does Code for Denver typically do?
+#### So What does Code for Denver basically do?
 
-We work with non-profits or local government to building apps or websites that serve their needs. Who we work with and what issues we address are determined during first Monday pitch nights.  To stay on top of projects throughout the year, we host weekly meetups to manage things and work on current projects.
+We build apps and websites for non-profits, local government, and the community that serve their needs. Who we work with and what we work on are determined on project pitch nights, the first Monday of each month. To stay on top of projects throughout the year, we host weekly meet-ups to manage things and work on current projects.
 
+#### What is your relationship with Code for America?
 
-#### To what degree is your work influenced by Code for America?
-Code for America connects us to the wider civic technology movement. We are a brigade of Code for America Brigade, through them, we are able to learn from other brigades. Our projects are member-driven. We seek inspiration from other brigades and adopt many of the working practices and values of Code for America.
+Code for America connects our organization to the wider civic technology movement. As a brigade of Code for America, we are able to connect with, learn, and seek inspiration from other CfA brigades. We also receive support in the form of some [cool tools](http://www.codeforamerica.org/brigade/tools/).
 
 >"We design. We architect. We explore. We teach. We empathize."
