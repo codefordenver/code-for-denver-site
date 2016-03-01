@@ -131,18 +131,6 @@ blockquote
   display: flex;
 }
 
-@media (max-width:700px) {
-  .body-content
-  {
-    width: 100%;
-  }
-
-  .mainnav ul {
-    flex-direction: column;
-    font-size: 1.999em;
-  }
-}
-
 .mainnav-link
 {
   flex-grow: 1;
@@ -152,7 +140,7 @@ blockquote
 {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   width:100%;
   background-color: #eee;
   transition: color .5s, background-color .5s;
@@ -165,6 +153,21 @@ blockquote
 {
   color: #fff;
   background-color: #e24e54;
+}
+
+@media (max-width:700px) {
+  .body-content
+  {
+    width: 100%;
+  }
+
+  .mainnav ul {
+    flex-direction: column;
+  }
+
+  .mainnav-link a {
+    font-size: 1.5rem;
+  }
 }
 
 /* Hero Image Section */
@@ -285,26 +288,6 @@ blockquote
   font-size: 1rem;
 }
 
-@media (max-width:625px) {
-  .interested-title h1
-  {
-    text-align: center;
-  }
-  .interested-title h2
-  {
-    text-align: center;
-  }
-  .interested-codeacross
-  {
-    text-align: center;
-  }
-  .interested-calendar div
-  {
-    justify-content:center;
-    /*align-items:center;*/
-  }
-}
-
 .calendar-date
 {
   margin-right: 1rem;
@@ -336,11 +319,6 @@ blockquote
   line-height: 3.5rem;
 }
 
-.calendar-text
-{
-
-}
-
 .meetup-btn {
   display: inline-block;
   font-family: "Enriqueta", serif;
@@ -367,6 +345,34 @@ blockquote
   color: #fff;
   margin-bottom: 0;
   margin-top: .3rem;
+}
+
+
+@media (max-width:625px) {
+  .interested
+  {
+    border:none;
+  }
+  .interested-title h1
+  {
+    text-align: center;
+  }
+  .interested-title h2
+  {
+    text-align: center;
+  }
+  .interested-codeacross
+  {
+    text-align: center;
+  }
+  .interested-calendar div
+  {
+    justify-content:center;
+  }
+  .calendar-text
+  {
+    text-align: center;
+  }
 }
 
 
