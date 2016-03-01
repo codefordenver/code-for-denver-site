@@ -7,6 +7,7 @@ const MarkdownRenderer = ({fileName}) => {
       <a className="markdown-edit" href={`https://github.com/codefordenver/code-for-denver-site/edit/master/src/markdown/${fileName}.md`}>
         suggest edit
       </a>
+      
       <div dangerouslySetInnerHTML={{__html: markdownFile}} />
     </div>
   );

@@ -40,3 +40,5 @@ There is a heroku app set up to automatically deploy [review apps](https://devce
 When a pull request is opened, heroku uses the [app.json](app.json) file to set up the configuration for the review app, and after installing npm dependencies runs the command specified in the [Procfile](Procfile).
 
 > NOTE: The heroku `NPM_CONFIG_PRODUCTION` environment variable must be set to `false` (as seen in app.json) so that all the npm dependencies (including devDependencies) are installed before the app is started
+
+
