@@ -14,14 +14,14 @@ const HeroContent = "We apply the power of modern technology to community challe
 const WhatWeDo = () => (
   <main>
     <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <Interested>
-      <CodeAcrossLink />
-    </Interested>
     <div className='body-content'>
       <HowItWorks />
       <Projects />
       <TheCommunity />
     </div>
+    <Interested>
+      <CodeAcrossLink />
+    </Interested>
     <Dashboard />
   </main>
 );

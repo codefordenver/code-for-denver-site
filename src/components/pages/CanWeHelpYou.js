@@ -12,12 +12,12 @@ const HeroContent = "We're interested in projects that have direct community imp
 const CanWeHelpYou = () => (
   <main>
     <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <Interested>
-      <CodeAcrossLink />
-    </Interested>
     <div className='body-content'>
     	<Partner />
     </div>
+    <Interested>
+      <CodeAcrossLink />
+    </Interested>
     <Dashboard />
   </main>
 );
