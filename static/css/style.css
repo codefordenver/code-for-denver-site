@@ -155,7 +155,7 @@ blockquote
   font-size: 1em;
   width:100%;
   background-color: #eee;
-  transition: color 1s, background-color 1s;
+  transition: color .5s, background-color .5s;
   text-decoration: none;
   color: #707070;
   padding: .25rem 0;

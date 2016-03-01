@@ -20,7 +20,9 @@ class Header extends React.Component {
 render (){
 return (
   <header className="mainheader">
-    <img className="mainlogo" src="static/img/logo-bw.png" />
+    <a href="/">
+      <img className="mainlogo" src="static/img/logo-bw.png"/>
+    </a>
     <nav className="mainnav">
       <ul>
         {
