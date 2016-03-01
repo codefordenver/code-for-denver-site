@@ -20,7 +20,7 @@ const WhoWeAre = () => (
     <div className='body-content'>
       <WhoWeAreContent />
       <section className="standard getconnected">
-        <div className="flexgrid-row">
+        <div className="flexgrid-column">
           <SocialMediaLinks />
           <TwitterFeed />
         </div>

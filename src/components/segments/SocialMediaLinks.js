@@ -13,7 +13,10 @@ const socialLinks = [
 
 const SocialMediaLinks = () => (
 
-  <div className="getconnected-links">
+  <div className="social-links">
+    <h2>
+      Find us on social media
+    </h2>
     <p>
       {
         socialLinks.map( (slink, index) => {
