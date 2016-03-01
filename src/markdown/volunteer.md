@@ -4,19 +4,18 @@
 * [Background Information](#background-information)
 * [Current Projects](#current-projects)
 * [Contributing](#contributing)
-* [Your Skills and Interests](#your-skills-and-interests)
+* [Tools](#tools)
+* [Additional Questions](#additional-questions)
 
 ## Background Information
 
 **WE ARE SO EXCITED YOU ARE HERE!**
 
-You are on your way to some serious
-civic hacking.
-
+You are on your way to some serious civic hacking.
 
 #### So how do I get involved?
 
-Start by joining our Meetup.com group at www.meetup.com/CodeForDenver. This is where we list all of our upcoming meetings and events. We meet weekly to work on projects. RSVP or just drop by and say hello.
+Start by joining our Meetup.com group at [www.meetup.com/CodeForDenver](www.meetup.com/CodeForDenver). This is where we list all of our upcoming meetings and events. We meet weekly to work on projects. RSVP or just drop by and say hello.
 
 #### How many people are working on a project at any given time?
 
@@ -24,62 +23,62 @@ This varies according the circumstances and there are no hard and fast rules tha
 
 #### Is there any one person who is typically in charge of projects?
 
-Each project has a scrum master, product owner, and tech lead. Organizers listed at our [Meetup site](http://www.meetup.com/CodeForDenver/) work to make sure that the roles are filled. [[Section in can_we_help_you has more information about this]]
+Each project has a scrum master, product owner, and tech lead. Organizers listed at our [Meetup site](http://www.meetup.com/CodeForDenver/) work to make sure that the roles are filled.
+
+#### I'm not a programmer or I'm not interested in programming. Can I still get involved?
+
+Yes! As long as you are willing to collaborate and engage there are numerous ways in which to be involved. As you can tell from our name, coding is a big part of what we do. But helping solve challenges in the community takes more than software expertise. Our brigade volunteers also have backgrounds in marketing, design, sales, facilitation, non-profits, project management, and more. Additional perspectives and experiences are always valued and welcome, so come on down!
+
+#### I'm a beginner programmer. Can I still get involved?
+
+Yes! Many of our members have been beginning programmers who have found the environment helpful to improve their abilities while providing something of value.
+
+#### What languages / frameworks do you typically use?
+
+We don't use one particular language or framework all of the time. While we have strong backgrounds in open source, what we use depends on the nature of the project and the groups that we serve.
+
 
 ## Current Projects
 
-[Waffle Board with Current Projects](https://waffle.io/codefordenver/projects)
+Check out our [Waffle Board](https://waffle.io/codefordenver/projects) for a current list of projects. Mmmm, waffles.
+
 
 ## Contributing
 
-A good place to start is by reading our
-[Code of Conduct](https://github.com/codefordenver/codeofconduct),
-if you haven't already.
+A good place to start is by reading our [Code of Conduct](https://github.com/codefordenver/codeofconduct).
 
-When you are done with
-that come back here and let's talk about some of the tools
-we use to communicate, collaborate and self-organize.
+Once you're done with that, see below for the tools we use to communicate, collaborate, and organize.
 
-## Getting Started with the tools
+
+## Tools
 
 - ### Meetup.com
-	is our event organizing tool.
+
+	Our event organizing tool.
 
 	**[You can sign up for upcoming civic-hack nights and other important events](http://www.meetup.com/codefordenver/).**
 
-
 - ### Flowdock.com
 
-	Flowdock hosts our [chat room](https://www.flowdock.com/app/cfa-brigades/code-for-denver). We use it to
-	engage with other members, share progress, ask questions.
-	It's cross platform so you can use it anywhere, you'll love it.
+	Our [chat room](https://www.flowdock.com/app/cfa-brigades/code-for-denver). We use it to engage with other members, share progress, ask questions, and discuss technology. It's cross platform so you can use it anywhere.
 
- 	**Get your account by emailing codefordenver@gmail.com or by
- attending one of our meetups.**
+	**Get your account by emailing codefordenver@gmail.com or by attending one of our meetups.**
 
 - ### Google Drive
 
-    Google drive hosts our group's [shared documents](https://drive.google.com/folderview?id=0B15HLk4_JV3nWjkyOGtFUmhKZDQ&usp=sharing_eid). You will need to request access to the folder.
+  Google drive hosts our group's [shared documents](https://drive.google.com/folderview?id=0B15HLk4_JV3nWjkyOGtFUmhKZDQ&usp=sharing_eid). You will need to request access to the folder.
 
 - ### Github.com
-	is our source control solution and hosts our [code repositories](https://github.com/codefordenver). This is how we
-	share code between members and other brigades around the world.
+
+	Our source control solution that hosts our [code repositories](https://github.com/codefordenver). This is how we share code between members and other brigades around the world.
 
 	**[Get an account here](https://github.com/).**
 
-
 - ### Waffle.io
-	is our light-weight project management solution.
-	A simple Kanban not unlike Trello with very nice github integration.
 
- 	**Once you have a github account, you should have
- 	access to the waffle boards over at [waffle.io](https://waffle.io/).**
+	Our light-weight project management solution. A simple Kanban not unlike Trello with very nice github integration. Once you have a github account, you should have access to the waffle boards over at [waffle.io](https://waffle.io/). Do let us know if you run into any trouble! 
 
- 	**Do let us know if you run into any trouble.**
 
-  #### Who can I contact for additional questions?
+## Additional Questions
 
-  Get in touch with our organizers via our [Meetup site](http://www.meetup.com/CodeForDenver/) or drop us a line at codefordenver[at]gmail.com.
-
-## Your Skills and Interests
-[need content]
+You can get in touch with our organizers via our [Meetup site](http://www.meetup.com/CodeForDenver/) or drop us a line at codefordenver[at]gmail.com.

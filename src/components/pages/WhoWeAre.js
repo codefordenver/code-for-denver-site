@@ -3,7 +3,6 @@ import React from 'react';
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
 import WhoWeAreContent from '../segments/WhoWeAre';
-import GetConnectedContent from '../segments/GetConnected';
 import CodeAcrossLink from '../segments/CodeAcrossLink';
 import TwitterFeed from '../segments/TwitterFeed';
 import SocialMediaLinks from '../segments/SocialMediaLinks';
@@ -20,7 +19,6 @@ const WhoWeAre = () => (
     </Interested>
     <div className='body-content'>
       <WhoWeAreContent />
-      <GetConnectedContent />
       <section className="standard getconnected">
         <div className="flexgrid-row">
           <SocialMediaLinks />
