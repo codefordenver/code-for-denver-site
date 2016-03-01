@@ -10,11 +10,11 @@ We sign up for the agile roles of Scrum Master and Product Owner for each projec
 
 ## Meeting management
 
-We complete a stand-up each week, and share what was done last week, what will be done in the coming week and surface any blockers. We also use the Pomodoro time management technique to focus our work during project nights.
+In the stand-up each week we share what was done last week, what will be done in the coming week and surface any blockers. We also use the Pomodoro time management technique to focus our work during project nights.
 
 ## Tools
 
-We utilize Github as our code repository with a kanban board inside the application “Waffle” that sits on top of the repo.  Within the waffleboard, we plan our project tasks using the familiar “backlog”, “ready”, “in progress” and “done” states for each task.
+We utilize Github as our code repository with a kanban board inside the application Waffle.io that sits on top of the repo. Within the waffle board, we plan our project tasks using the familiar “backlog”, “ready”, “in progress” and “done” states for each task.
 
 Our current workflow includes:
 
