@@ -1,14 +1,6 @@
 import React from 'react';
 import sugardate from 'sugar-date';
 
-const tonightStyle = {
-  color: "white",
-  padding: ".2rem",
-  background: "#2c5577",
-  borderRadius:"5px",
-  marginLeft: ".25rem"
-}
-
   class Interested extends React.Component {
     constructor() {
       super();
