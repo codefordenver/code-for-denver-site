@@ -13,12 +13,15 @@ const socialLinks = [
 
 const SocialMediaLinks = () => (
 
-  <div className="getconnected-links">
+  <div className="social-links">
+    <h2>
+      Find us on social media
+    </h2>
     <p>
       {
-        socialLinks.map( slink => {
+        socialLinks.map( (slink, index) => {
           return (
-            <a className="social-link" href={slink.link} target="_blank"><i className={slink.icon}></i></a>
+            <a className="social-link" key={index} href={slink.link} target="_blank"><i className={slink.icon}></i></a>
           );
         })
       }

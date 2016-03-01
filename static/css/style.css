@@ -371,14 +371,14 @@ blockquote
 
 
 /* Get connected */
-.getconnected > .flexgrid-row
+.getconnected > .flexgrid-column
 {
-  justify-content: space-around;
+  text-align: center;
 }
 
-.getconnected-links
+.social-links
 {
-  flex-basis: 30rem;
+  text-align: center;
 }
 
 .social-link
