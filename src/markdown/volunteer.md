@@ -19,7 +19,7 @@ Start by joining our Meetup.com group at [www.meetup.com/CodeForDenver](www.meet
 
 #### How many people are working on a project at any given time?
 
-This varies according the circumstances and there are no hard and fast rules that set a minimum or maximum number of volunteers per project. For the sake of efficiency, we aim to focus our efforts by limiting the number of projects in active development.
+This varies according to the circumstances and there are no hard and fast rules that set a minimum or maximum number of volunteers per project. For the sake of efficiency, we aim to focus our efforts by limiting the number of projects in active development at any given time.
 
 #### Is there any one person who is typically in charge of projects?
 
@@ -27,7 +27,7 @@ Each project has a scrum master, product owner, and tech lead. Organizers listed
 
 #### I'm not a programmer or I'm not interested in programming. Can I still get involved?
 
-Yes! As long as you are willing to collaborate and engage there are numerous ways in which to be involved. As you can tell from our name, coding is a big part of what we do. But helping solve challenges in the community takes more than software expertise. Our brigade volunteers also have backgrounds in marketing, design, sales, facilitation, non-profits, project management, and more. Additional perspectives and experiences are always valued and welcome, so come on down!
+Yes! As long as you are willing to collaborate and engage there are numerous ways in which to be involved. As you can tell from our name, coding is a big part of what we do, but helping solve challenges in the community takes more than software expertise. Our brigade volunteers also have backgrounds in marketing, design, sales, facilitation, non-profits, project management, and more. Additional perspectives and experiences are always valued and welcome, so come on down!
 
 #### I'm a beginner programmer. Can I still get involved?
 
