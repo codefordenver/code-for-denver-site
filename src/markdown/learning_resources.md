@@ -32,7 +32,7 @@ Luckily, there are numerous resources to choose from. Heres a list of a few onli
 
 We suggest Codecademy or CodeSchool. Both start with the basics, have plenty of free courses, and can be completed entirely in your browser.
 
-As far as languages are concerned, HTML/CSS, Ruby, JavaScript, and Python great languages to start with. All are in widespread use, cross-platform (used on/in multiple devices and environments), and are supported by plenty of documentation.
+As far as languages are concerned, HTML/CSS, Ruby, JavaScript, and Python are great languages to start with. All are in widespread use, cross-platform (used on/in multiple devices and environments), and are supported by plenty of documentation.
 
 Still up in the air? Get your feet wet in fifteen minutes at [www.tryruby.org](http://tryruby.org).
 
