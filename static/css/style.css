@@ -285,26 +285,6 @@ blockquote
   font-size: 1rem;
 }
 
-@media (max-width:625px) {
-  .interested-title h1
-  {
-    text-align: center;
-  }
-  .interested-title h2
-  {
-    text-align: center;
-  }
-  .interested-codeacross
-  {
-    text-align: center;
-  }
-  .interested-calendar div
-  {
-    justify-content:center;
-    /*align-items:center;*/
-  }
-}
-
 .calendar-date
 {
   margin-right: 1rem;
@@ -336,11 +316,6 @@ blockquote
   line-height: 3.5rem;
 }
 
-.calendar-text
-{
-
-}
-
 .meetup-btn {
   display: inline-block;
   font-family: "Enriqueta", serif;
@@ -367,6 +342,34 @@ blockquote
   color: #fff;
   margin-bottom: 0;
   margin-top: .3rem;
+}
+
+
+@media (max-width:625px) {
+  .interested
+  {
+    border:none;
+  }
+  .interested-title h1
+  {
+    text-align: center;
+  }
+  .interested-title h2
+  {
+    text-align: center;
+  }
+  .interested-codeacross
+  {
+    text-align: center;
+  }
+  .interested-calendar div
+  {
+    justify-content:center;
+  }
+  .calendar-text
+  {
+    text-align: center;
+  }
 }
 
 
