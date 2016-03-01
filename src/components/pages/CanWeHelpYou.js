@@ -15,8 +15,10 @@ const CanWeHelpYou = () => (
     <Interested>
       <CodeAcrossLink />
     </Interested>
-    <div className='body-content'>
-    	<Partner />
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+      	<Partner />
+      </div>
     </div>
     <Dashboard />
   </main>

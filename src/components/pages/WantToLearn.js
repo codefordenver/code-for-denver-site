@@ -15,8 +15,10 @@ const WantToLearn = () => (
     <Interested>
       <CodeAcrossLink />
     </Interested>
-    <div className='body-content'>
-    	<LearningResources />
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+      	<LearningResources />
+      </div>
     </div>
     <Dashboard />
   </main>
