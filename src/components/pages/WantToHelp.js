@@ -12,12 +12,19 @@ const HeroContent = "Great applications aren't just built by developers.";
 const WantToHelp = () => (
   <main>
     <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <div className='body-content'>
-    	<Volunteer />
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+      	<Volunteer />
+      </div>
     </div>
     <Interested>
       <CodeAcrossLink />
     </Interested>
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+      	<Volunteer />
+      </div>
+    </div>
     <Dashboard />
   </main>
 );

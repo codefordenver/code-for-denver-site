@@ -17,14 +17,16 @@ const WhoWeAre = () => (
     <Interested>
       <CodeAcrossLink />
     </Interested>
-    <div className='body-content'>
-      <WhoWeAreContent />
-      <section className="standard getconnected">
-        <div className="flexgrid-column">
-          <SocialMediaLinks />
-          <TwitterFeed />
-        </div>
-      </section>
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+        <WhoWeAreContent />
+        <section className="standard getconnected">
+          <div className="flexgrid-column">
+            <SocialMediaLinks />
+            <TwitterFeed />
+          </div>
+        </section>
+      </div>
     </div>
     <Dashboard />
   </main>

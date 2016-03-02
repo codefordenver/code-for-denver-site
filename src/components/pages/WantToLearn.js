@@ -12,12 +12,19 @@ const HeroContent = "Learning to code is tough. We get it. We're here to help.";
 const WantToLearn = () => (
   <main>
     <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <div className='body-content'>
-    	<LearningResources />
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+      	<LearningResources />
+      </div>
     </div>
     <Interested>
       <CodeAcrossLink />
     </Interested>
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+      	<LearningResources />
+      </div>
+    </div>
     <Dashboard />
   </main>
 );
