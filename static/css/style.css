@@ -13,6 +13,10 @@ body
   width: 70%;
 }
 
+.body-content-wrapper
+{
+  background-color: #fff;
+}
 
 
 .standard

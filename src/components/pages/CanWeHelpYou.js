@@ -12,8 +12,10 @@ const HeroContent = "We're interested in projects that have direct community imp
 const CanWeHelpYou = () => (
   <main>
     <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
-    <div className='body-content'>
-    	<Partner />
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+      	<Partner />
+      </div>
     </div>
     <Interested>
       <CodeAcrossLink />
