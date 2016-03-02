@@ -24,6 +24,13 @@ const WhatWeDo = () => (
     <Interested>
       <CodeAcrossLink />
     </Interested>
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+        <HowItWorks />
+        <Projects />
+        <TheCommunity />
+      </div>
+    </div>
     <Dashboard />
   </main>
 );
