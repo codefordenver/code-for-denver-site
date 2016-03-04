@@ -11,6 +11,7 @@ class Projects extends React.Component {
     return (
 
       <section className="standard projects">
+        <h1 id="projects">Projects</h1>
         <DemoCarousel/>
         <MarkdownRenderer fileName="projects" />
       </section>

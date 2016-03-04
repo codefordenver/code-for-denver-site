@@ -1,4 +1,3 @@
-# Projects
 Code for Denver partnered with organizations on these projects last year:
 - [Colorado Anti Violence Program](http://coavp.org/)
 Responsive tool that streamlines internal reporting and external intake forms.
