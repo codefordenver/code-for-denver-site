@@ -775,3 +775,8 @@ blockquote
 .markown-renderer:hover > .markdown-edit {
   display: block;
 }
+
+.project-carousel-wrapper {
+  max-width: 50rem;
+  margin: auto;
+}
