@@ -13,7 +13,7 @@ const HeroTitle= "We Are Code For Denver";
 const HeroContent = "We meet almost every Monday. Join us, everyone is welcome!"
 const WhoWeAre = () => (
   <main>
-    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
+    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} position="top" />
     <Interested>
       <CodeAcrossLink />
     </Interested>
