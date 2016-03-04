@@ -13,7 +13,7 @@ const HeroTitle= "Technology For The Community";
 const HeroContent = "We apply the power of modern technology to community challenges in Denver.";
 const WhatWeDo = () => (
   <main>
-    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} />
+    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} position="top" />
     <div className='body-content-wrapper'>
       <div className='body-content'>
         <HowItWorks />

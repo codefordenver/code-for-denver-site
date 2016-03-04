@@ -1,14 +1,22 @@
 import React from 'react';
 
 class Hero extends React.Component {
-  render (){
+  static defaultProps = {
+    position: 'center'
+  };
+
+  render() {
+    const heroStyle = {
+      background: 'url("../static/img/' + this.props.background + '") no-repeat center center',
+      backgroundSize: 'cover',
+      backgroundPosition: this.props.position
+    };
 
     return (
-      <section className="hero" style = {{background: 'url("../static/img/' + this.props.background + '") no-repeat center center', backgroundSize: 'cover'}} >
-        {console.log(this.props)}
+      <section className="hero" style={heroStyle}>
         <div className="intro">
-          <h1>{this.props.title}</h1>
-          <p>{this.props.content}</p>
+          <h1>{ this.props.title }</h1>
+          <p>{ this.props.content }</p>
         </div>
       </section>
     );
