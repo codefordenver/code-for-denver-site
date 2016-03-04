@@ -20,11 +20,6 @@ const WantToHelp = () => (
     <Interested>
       <CodeAcrossLink />
     </Interested>
-    <div className='body-content-wrapper'>
-      <div className='body-content'>
-      	<Volunteer />
-      </div>
-    </div>
     <Dashboard />
   </main>
 );
