@@ -3,7 +3,7 @@
 
 ### Where can I learn to program?
 
-Luckily, there are numerous resources to choose from. Heres a list of a few online educational sites and resources, sorted by general cost:
+Luckily, there are numerous resources to choose from. Here's a list of a few online educational sites and resources, sorted by general cost:
 
 |                  Site                            |    Cost   |   Languages/Frameworks   |             Additional Info                  |
 | ------------------------------------------------ | --------- | ------------------------ | -------------------------------------------- |
