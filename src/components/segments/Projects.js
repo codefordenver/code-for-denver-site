@@ -5,40 +5,12 @@ import MarkdownRenderer from '../MarkdownRenderer';
 import ReactDom from 'react-dom';
 import Carousel from 'nuka-carousel';
 
-class Projects extends React.Component {
-
+class ProjectsCarousel extends React.Component {
   render() {
     return (
-
-      <section className="standard projects">
-        <h1 id="projects">Projects</h1>
-        <DemoCarousel/>
-        <MarkdownRenderer fileName="projects" />
-      </section>
-
-    );
-  }
-}
-
-class DemoCarousel extends React.Component {
-
-  mixins: [Carousel.ControllerMixin]
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      slideIndex: 0
-    };
-  }
-
-  render() {
-    return (
-
-      <div style={{width: '50%', margin: 'auto'}}>
+      <div className="project-carousel-wrapper">
         <Carousel
-          ref="carousel"
           data={this.setCarouselData}
-          slideIndex={this.state.slideIndex}
           afterSlide={newSlideIndex => this.setState({ slideIndex: newSlideIndex })}>
           <img src="static/img/screenshot-feed.png"/>
           <img src="static/img/screenshot-freshfoodconnect.png"/>
@@ -47,12 +19,23 @@ class DemoCarousel extends React.Component {
           <img src="static/img/screenshot-rmmfi.png"/>
         </Carousel>
       </div>
-
     )
   }
 }
 
-// Don't forget to include the css in your page
-<link rel="stylesheet" href="style.css"/>
+class Projects extends React.Component {
+
+  render() {
+    return (
+
+      <section className="standard projects">
+        <h1 id="projects">Projects</h1>
+        <ProjectsCarousel/>
+        <MarkdownRenderer fileName="projects" />
+      </section>
+
+    );
+  }
+}
 
 export default Projects;
