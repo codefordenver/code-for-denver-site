@@ -14,7 +14,6 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.use(favicon(__dirname + '/favicon.ico'));
 
 app.use(express.static(__dirname));
 

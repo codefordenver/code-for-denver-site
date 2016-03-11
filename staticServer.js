@@ -13,7 +13,6 @@ compiler.run(function(err, stats) {
   }
 });
 
-app.use(favicon(__dirname + '/favicon.ico'));
 
 app.use(express.static(__dirname));
 
