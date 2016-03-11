@@ -1,4 +1,5 @@
 import React from 'react';
+import Promo2015 from './Promo2015';
 import sugardate from 'sugar-date';
 
 class Interested extends React.Component {
@@ -30,7 +31,7 @@ class Interested extends React.Component {
             <h1>Are You Interested?</h1>
             <h2>Good! We can use your help.</h2>
           </div>
-          { this.props.children }
+          <Promo2015 />
           <div className="interested-calendar">
             <div className="flexgrid-row">
               <div className="calendar-date">

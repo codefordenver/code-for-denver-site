@@ -2,7 +2,6 @@ import React from 'react';
 
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
-import CodeAcrossLink from '../segments/CodeAcrossLink';
 import LearningResources from '../segments/LearningResources';
 import Dashboard from '../segments/Dashboard';
 
@@ -18,9 +17,7 @@ const WantToLearn = () => (
       	<LearningResources />
       </div>
     </div>
-    <Interested>
-      <CodeAcrossLink />
-    </Interested>
+    <Interested />
     <Dashboard />
   </main>
 );
