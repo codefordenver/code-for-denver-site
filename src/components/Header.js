@@ -1,15 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
-var classNames = require('classnames');
+import { Link, IndexLink } from 'react-router';
 
-const links = {
-'Who We Are': '/',
-'What We Do': '/WhatWeDo',
-'Want To Help?': '/WantToHelp',
-'Can We Help You?': '/CanWeHelpYou',
-//'Our Voice': '/OurVoice',
-'Want to Learn?': '/WantToLearn'
-};
 
 class Header extends React.Component {
   render (){
@@ -20,14 +11,21 @@ class Header extends React.Component {
         </a>
         <nav className="mainnav">
           <ul>
-            {
-              Object.keys(links).map(link => {
-                const classes = classNames('mainnav-link', { 'current' : this.props.path === links[link] });
-                return(
-                  <li className={classes} key={link}><Link to={links[link]}>{ link }</Link></li>
-                );
-              })
-            }
+            <li className='mainnav-link'>
+              <IndexLink to="/" activeClassName="current">Who We Are</IndexLink>
+            </li>
+            <li className='mainnav-link'>
+              <Link to="/WhatWeDo" activeClassName="current">What We Do</Link>
+            </li>
+            <li className='mainnav-link'>
+              <Link to="/WantToHelp" activeClassName="current">Want To Help?</Link>
+            </li>
+            <li className='mainnav-link'>
+              <Link to="/CanWeHelpYou" activeClassName="current">Can We Help You?</Link>
+            </li>
+            <li className='mainnav-link'>
+              <Link to="/WantToLearn" activeClassName="current">Want To Learn?</Link>
+            </li>
           </ul>
         </nav>
       </header>
