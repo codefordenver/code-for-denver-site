@@ -16,12 +16,9 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.use(favicon(__dirname + '/favicon.ico'));
 
-app.use('/static', express.static('static'));
-app.use('/libs', express.static('libs'));
+app.use(express.static(__dirname));
 
-app.use('/CodeAcross', function(req, res) {
-  res.sendFile(path.join(__dirname, 'CodeAcross/index.html'));
-});
+
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));

@@ -2,7 +2,6 @@ import React from 'react';
 
 import Hero from '../segments/Hero';
 import Interested from '../segments/Interested';
-import CodeAcrossLink from '../segments/CodeAcrossLink';
 import Partner from '../segments/Partner';
 import Dashboard from '../segments/Dashboard';
 
@@ -17,9 +16,7 @@ const CanWeHelpYou = () => (
       	<Partner />
       </div>
     </div>
-    <Interested>
-      <CodeAcrossLink />
-    </Interested>
+    <Interested />
     <Dashboard />
   </main>
 );
