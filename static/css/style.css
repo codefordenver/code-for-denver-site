@@ -153,7 +153,7 @@ blockquote
   padding: .25rem 0;
 }
 
-.mainnav-link.current a, .mainnav-link a:hover
+.mainnav-link .current, .mainnav-link a:hover
 {
   color: #fff;
   background-color: #e24e54;
