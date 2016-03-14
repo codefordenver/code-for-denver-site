@@ -6,9 +6,9 @@ class Header extends React.Component {
   render (){
     return (
       <header className="mainheader">
-        <a href="/">
+        <IndexLink to="/">
           <img className="mainlogo" src="static/img/logo-bw.png"/>
-        </a>
+        </IndexLink>
         <nav className="mainnav">
           <ul>
             <li className='mainnav-link'>

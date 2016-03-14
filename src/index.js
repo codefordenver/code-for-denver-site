@@ -7,5 +7,5 @@ import routes from './routes';
 
 
 ReactDOM.render(
-  <Router history={browserHistory} routes={routes} />
+  <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0,0)} />
   , document.getElementById('site'));
