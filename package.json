@@ -42,7 +42,6 @@
     "react-dom": "^0.14.0",
     "react-embedded-twitter-timeline": "0.0.8",
     "react-router": "^2.0.x",
-    "serve-favicon": "^2.3.0",
     "sugar-date": "^1.5.1"
   },
   "devDependencies": {
