@@ -2,7 +2,6 @@ var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
 var config = require('./webpack.config.prod');
-var favicon = require('serve-favicon');
 
 var app = express();
 var compiler = webpack(config);
@@ -13,7 +12,6 @@ compiler.run(function(err, stats) {
   }
 });
 
-app.use(favicon(__dirname + '/favicon.ico'));
 
 app.use(express.static(__dirname));
 
