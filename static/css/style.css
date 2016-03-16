@@ -256,11 +256,6 @@ blockquote
   font-size: 1rem;
 }
 
-.interested-calendar
-{
-  padding: 1rem;
-}
-
 .interested-codeacross
 {
   padding: 1rem;
@@ -290,6 +285,15 @@ blockquote
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 1rem;
+}
+
+.interested-calendar
+{
+  padding: 1rem;
+}
+
+.interested a {
+  text-decoration: none;
 }
 
 .calendar-date
@@ -324,6 +328,7 @@ blockquote
 }
 
 .meetup-btn {
+  margin: auto;
   display: inline-block;
   font-family: "Enriqueta", serif;
   font-size: .9rem;
@@ -334,10 +339,10 @@ blockquote
   background: #2c5577;
   padding: .3rem .6rem;
   text-decoration: none;
-  transition: background-color 1s;
+  transition: background-color .3s;
 }
 
-.meetup-btn:hover {
+.interested-calendar:hover .meetup-btn {
   background: #fff;
   text-decoration: none;
 }
@@ -369,8 +374,9 @@ blockquote
   {
     text-align: center;
   }
-  .interested-calendar div
+  .interested-calendar .calendar-container
   {
+    display: flex;
     justify-content:center;
   }
   .calendar-text
