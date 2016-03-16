@@ -16,7 +16,7 @@ class MeetupsContainer extends React.Component {
 
 
   componentWillMount() {
-    const url = "http://codeforamerica.org/api/organizations/Code-for-Denver/upcoming_events?per_page=50";
+    const url = "https://codeforamerica.org/api/organizations/Code-for-Denver/upcoming_events?per_page=50";
     const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = () => {
