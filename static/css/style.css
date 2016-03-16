@@ -375,26 +375,21 @@ blockquote
   {
     border:none;
   }
-  .interested-title h1
+  .interested *
   {
     text-align: center;
+    margin: auto;
   }
-  .interested-title h2
+
+  .interested-calendar > .flexgrid-row
   {
-    text-align: center;
+    flex-direction: column;
   }
-  .interested-codeacross
+
+  .calendar-date
   {
-    text-align: center;
-  }
-  .interested-calendar .calendar-container
-  {
-    display: flex;
-    justify-content:center;
-  }
-  .calendar-text
-  {
-    text-align: center;
+    margin-top: .5rem;
+    width:50%
   }
 }
 
