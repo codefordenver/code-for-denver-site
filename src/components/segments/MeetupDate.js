@@ -4,6 +4,20 @@ import moment from 'moment';
 
 class MeetupDate extends React.Component {
 
+  static propTypes = {
+    date: React.PropTypes.object.isRequired,
+    rsvps: React.PropTypes.number.isRequired,
+    name: React.PropTypes.string.isRequired,
+    url: React.PropTypes.string.isRequired
+  }
+
+  static defaultProps = {
+  date: moment.unix(0),
+    rsvps: 0,
+    name: '',
+    url: '#'
+  }
+
   render() {
 
     return (
@@ -18,7 +32,7 @@ class MeetupDate extends React.Component {
             <p className="date">{this.props.name}</p>
             <p className="date">
               {this.props.date.format('dddd, MMMM Do, YYYY')}
-              <br />6:00 PM to 9:00PM
+              <br />{this.props.date.format('h:mm A')}
             </p>
           </div>
         </div>
@@ -26,19 +40,5 @@ class MeetupDate extends React.Component {
     )
   }
 }
-
-MeetupDate.propTypes = {
-  date: React.PropTypes.object.isRequired,
-  rsvps: React.PropTypes.number.isRequired,
-  name: React.PropTypes.string.isRequired,
-  url: React.PropTypes.string.isRequired
-};
-
-MeetupDate.defaultProps = {
-  date: moment.unix(0),
-  rsvps: 0,
-  name: '',
-  url: '#'
-};
 
 export default MeetupDate;
