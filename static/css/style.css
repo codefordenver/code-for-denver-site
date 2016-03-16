@@ -350,7 +350,7 @@ blockquote
   transition: background-color .3s;
 }
 
-.calendar-text .meetup-btn:hover {
+.calendar-text .meetup-btn:hover, .calendar-text .meetup-btn:active {
   background: #fff;
   text-decoration: none;
 }
