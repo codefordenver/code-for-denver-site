@@ -9,26 +9,27 @@ class MeetupsContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      loading: true,
-      meetups: []
+      meetupProps: {}
     }
   }
 
 
   componentWillMount() {
-    const url = "https://codeforamerica.org/api/organizations/Code-for-Denver/upcoming_events?per_page=50";
+    const url = "https://codeforamerica.org/api/organizations/Code-for-Denver";
     const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = () => {
       if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-        var data = JSON.parse(xmlhttp.responseText);
-        var meetupData = data.objects;
-        _.forEach(meetupData, (value, key, collection) => {
-          value.start_time = moment(value.start_time);
-        });
+        const data = JSON.parse(xmlhttp.responseText);
+        const meetup = data.current_events[0]
+        const meetupProps = {
+          date: moment(meetup.start_time),
+          rsvps: meetup.rsvps,
+          name: meetup.name,
+          url: meetup.event_url
+        }
 
-        var meetupDataSorted = _.sortBy(meetupData, 'start_time');
-        this.setState({meetups:meetupDataSorted, loading: false});
+        this.setState({meetupProps: meetupProps});
       }
     }
 
@@ -38,8 +39,8 @@ class MeetupsContainer extends React.Component {
 
 	render() {
 		return (
-      <MeetupDate meetup={this.state.meetups[0]} loading={this.state.loading} />
-    )
+      <MeetupDate {...this.state.meetupProps} />
+    ) 
 	}
 }
 
