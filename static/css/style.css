@@ -339,7 +339,7 @@ blockquote
   background: #2c5577;
   padding: .3rem .6rem;
   text-decoration: none;
-  transition: background-color 1s;
+  transition: background-color .3s;
 }
 
 .interested-calendar:hover .meetup-btn {
