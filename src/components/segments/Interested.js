@@ -1,29 +1,11 @@
 import React from 'react';
+
 import Promo2015 from './Promo2015';
-import sugardate from 'sugar-date';
+import MeetupsContainer from './MeetupsContainer';
 
 class Interested extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      nextMeeting:'',
-      meetingToday:false
-    }
-  }
-
-  componentDidMount() {
-    this.setState({meetingToday: Date.create('today').isMonday() },
-    function() {
-      if (this.state.meetingToday) {
-        this.setState({nextMeeting: 'today'});
-      }
-      else {
-        this.setState({nextMeeting: 'next monday'});
-      }
-    });
-  }
-
-  render() {
+  
+    render() {
     return (
       <section className="standard">
         <div className="flexgrid-row interested">
@@ -32,28 +14,7 @@ class Interested extends React.Component {
             <h2>Good! We can use your help.</h2>
           </div>
           <Promo2015 />
-          <div className="interested-calendar">
-            <div className="flexgrid-row">
-              <div className="calendar-date">
-                <div className="month">{Date.create(this.state.nextMeeting).format('{Month}')}</div>
-                <div className="day">{Date.create(this.state.nextMeeting).format('{d}')}</div>
-              </div>
-              <div className="calendar-text">
-                <a href="http://www.meetup.com/CodeForDenver/" target="_blank" className="meetup-btn">Join Us for our next Project Night</a>
-                <p className="date">
-                  {(() => {
-                    if (this.state.meetingToday) {
-                      return 'Tonight!';
-                    }
-                    else {
-                      return Date.create(this.state.nextMeeting).format('{Weekday}, {Month} {d}, {yyyy}');
-                    }
-                  })()}
-                  <br />6:00 PM to 9:00PM
-                </p>
-              </div>
-            </div>
-          </div>
+          <MeetupsContainer />
         </div>
       </section>
     );
