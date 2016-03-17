@@ -80,6 +80,11 @@ a:hover
   text-decoration: underline;
 }
 
+.bluetext
+{
+  color: #154466;
+}
+
 .flexgrid-row
 {
   display: flex;
@@ -327,24 +332,33 @@ blockquote
   line-height: 3.5rem;
 }
 
-.meetup-btn {
+.calendar-text .meetup-btn {
+  box-sizing: border-box;
+  width: 100%;
   margin: auto;
   display: inline-block;
   font-family: "Enriqueta", serif;
   font-size: .9rem;
   font-weight: bold;
   background: #3498db;
-  border-radius: 8px;
+  border-radius: 3px;
   color: #81b2cc;
   background: #2c5577;
-  padding: .3rem .6rem;
+  padding: .2rem;
+  text-align: center;
   text-decoration: none;
   transition: background-color .3s;
 }
 
-.interested-calendar:hover .meetup-btn {
+.calendar-text .meetup-btn:hover, .calendar-text .meetup-btn:active {
   background: #fff;
   text-decoration: none;
+}
+
+.calendar-text p
+{
+  padding:0;
+  margin: 0;
 }
 
 .calendar-text .date
@@ -353,7 +367,6 @@ blockquote
   font-size: 1rem;
   color: #fff;
   margin-bottom: 0;
-  margin-top: .3rem;
 }
 
 
@@ -362,26 +375,21 @@ blockquote
   {
     border:none;
   }
-  .interested-title h1
+  .interested *
   {
     text-align: center;
+    margin: auto;
   }
-  .interested-title h2
+
+  .interested-calendar > .flexgrid-row
   {
-    text-align: center;
+    flex-direction: column;
   }
-  .interested-codeacross
+
+  .calendar-date
   {
-    text-align: center;
-  }
-  .interested-calendar .calendar-container
-  {
-    display: flex;
-    justify-content:center;
-  }
-  .calendar-text
-  {
-    text-align: center;
+    margin-top: .5rem;
+    width:50%
   }
 }
 
