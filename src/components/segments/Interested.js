@@ -9,10 +9,12 @@ class Interested extends React.Component {
     return (
       <section className="standard">
         <div className="flexgrid-row interested">
-          <div className="interested-title">
-            <h1>Are You Interested?</h1>
-            <h2>Good! We can use your help.</h2>
-          </div>
+          <a href="http://www.meetup.com/codefordenver/" target="_blank">  
+            <div className="interested-title">
+              <h1>Are You Interested?</h1>
+              <h2>Good! We can use your help.</h2>
+            </div>
+          </a>  
           <Promo2015 />
           <MeetupsContainer />
         </div>
