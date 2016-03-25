@@ -4,9 +4,14 @@ const BlogPost = (props) => {
   const title = props.params.title
   const post = require(`../../blog/${title}.md`)
   return (
-    <div>
-      {props.params.title}
-      <div dangerouslySetInnerHTML={{__html: post}} />
+    
+    <div className="body-content-wrapper">
+      <div className="body-content">
+        <section className="standard blog-post">
+          {props.params.title}
+          <div dangerouslySetInnerHTML={{__html: post}} />
+        </section>
+      </div>
     </div>
   )
 }

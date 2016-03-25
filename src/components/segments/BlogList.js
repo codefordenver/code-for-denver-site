@@ -17,9 +17,16 @@ class BlogList extends React.Component {
       );
     })
     return (
-      <ul>
-        {list}
-      </ul>
+      <div className="body-content-wrapper">
+        <div className="body-content">
+          <section className="standard blog-post">
+            <h1>List of blog posts!</h1>
+            <ul>
+              {list}
+            </ul>
+          </section>
+        </div>
+      </div>
     );
   }
 }
