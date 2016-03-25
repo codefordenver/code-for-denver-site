@@ -8,7 +8,6 @@ const BlogPost = (props) => {
     <div className="body-content-wrapper">
       <div className="body-content">
         <section className="standard blog-post">
-          {props.params.title}
           <div dangerouslySetInnerHTML={{__html: post}} />
         </section>
       </div>
