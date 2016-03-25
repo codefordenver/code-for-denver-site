@@ -10,11 +10,11 @@ class ProjectsCarousel extends React.Component {
         <Carousel
           data={this.setCarouselData}
           afterSlide={newSlideIndex => this.setState({ slideIndex: newSlideIndex })}>
-          <img src="static/img/screenshot-feed.png"/>
-          <img src="static/img/screenshot-freshfoodconnect.png"/>
-          <img src="static/img/screenshot-denverenergyefficiency.png"/>
-          <img src="static/img/screenshot-sol.png"/>
-          <img src="static/img/screenshot-rmmfi.png"/>
+          <img src="/static/img/screenshot-feed.png"/>
+          <img src="/static/img/screenshot-freshfoodconnect.png"/>
+          <img src="/static/img/screenshot-denverenergyefficiency.png"/>
+          <img src="/static/img/screenshot-sol.png"/>
+          <img src="/static/img/screenshot-rmmfi.png"/>
         </Carousel>
       </div>
     )
