@@ -6,7 +6,7 @@ import NonprofitPartnership from './NonprofitPartnership';
 const projectsData = [
   {
     active: true,
-    imgUrl: 'static/img/CutePetsDenver.png',
+    imgUrl: '/static/img/CutePetsDenver.png',
     name: 'CutePetsDenver',
     description: 'Twitter bot that posts adoptable pets in your city',
     partner: 'Denver Code for America Fellows',
@@ -15,7 +15,7 @@ const projectsData = [
     sourceLink: 'https://github.com/codeforamerica/cutepets'
   },
   {
-    imgUrl: 'static/img/streetsweeping.png',
+    imgUrl: '/static/img/streetsweeping.png',
     name: 'Denver Street Sweeping',
     description: 'Find street sweeping information for an address in Denver',
     partner: 'Denver Code for America Fellows',
@@ -24,7 +24,7 @@ const projectsData = [
     sourceLink: 'https://github.com/codeforamerica/denver-schedules'
   },
   {
-    imgUrl: 'static/img/sparkhelp.png',
+    imgUrl: '/static/img/sparkhelp.png',
     name: 'SparkHelp',
     description: 'disaster relief made simple for people and groups',
     partner: 'Spark',
@@ -32,7 +32,7 @@ const projectsData = [
     projectUrl: 'https://sparkhelp.org'
   },
   {
-    imgUrl: 'static/img/sparktime.png',
+    imgUrl: '/static/img/sparktime.png',
     name: 'SparkTime',
     description: 'people and groups record volunteer time by text message',
     partner: 'Spark',
@@ -40,7 +40,7 @@ const projectsData = [
     projectUrl: 'http://sparktime.org'
   },
   {
-    imgUrl: 'static/img/sparkfund.png',
+    imgUrl: '/static/img/sparkfund.png',
     name: 'SparkFund',
     description: 'a unified system for funding and reporting disaster recovery',
     partner: 'Spark',

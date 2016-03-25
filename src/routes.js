@@ -11,6 +11,8 @@ import CanWeHelpYou from './components/pages/CanWeHelpYou';
 import OurVoice from './components/pages/OurVoice';
 import WantToLearn from './components/pages/WantToLearn';
 
+import BlogList from './components/segments/BlogList';
+import BlogPost from './components/segments/BlogPost';
 
 const routes = (
   <Route path="/" component={App}>
@@ -20,6 +22,11 @@ const routes = (
     <Route path="CanWeHelpYou" component={CanWeHelpYou}/>
     <Route path="OurVoice" component={OurVoice}/>
     <Route path="WantToLearn" component={WantToLearn}/>
+    <Route path="OurVoice" component={OurVoice} >
+      {/* I can't figure out why this route won't work as an IndexRoute */}
+      <Route path="list" component={BlogList}/>
+      <Route path=":title" component={BlogPost}/>
+    </Route>
     <Route path="*" component={NotFound} />
   </Route>
 );

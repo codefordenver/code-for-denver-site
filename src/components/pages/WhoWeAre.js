@@ -10,6 +10,8 @@ import Dashboard from '../segments/Dashboard';
 const HeroBackground='cfd-1.jpg';
 const HeroTitle= 'We Are Code For Denver';
 const HeroContent = 'We meet almost every Monday. Join us, everyone is welcome!'
+
+
 const WhoWeAre = () => (
   <main>
     <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} position="top" />
