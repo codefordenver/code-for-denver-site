@@ -24,10 +24,10 @@ class Header extends React.Component {
               <Link to="/CanWeHelpYou" activeClassName="current">Can We Help You?</Link>
             </li>
             <li className='mainnav-link'>
-              <Link to="/Blog/" activeClassName="current">Blog</Link>
+              <Link to="/WantToLearn" activeClassName="current">Want To Learn?</Link>
             </li>
             <li className='mainnav-link'>
-              <Link to="/WantToLearn" activeClassName="current">Want To Learn?</Link>
+              <Link to="/Blog/" activeClassName="current">Blog</Link>
             </li>
           </ul>
         </nav>
