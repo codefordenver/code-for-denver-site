@@ -12,7 +12,7 @@ class BlogList extends React.Component {
     const list = this.context.container.map(item => {
       return (
           <li key={item.index}>
-            <a href={ "/OurVoice/" + item.title }>{item.title}</a>
+            <a href={ "/Blog/" + item.title }>{item.title}</a>
           </li>
       );
     })

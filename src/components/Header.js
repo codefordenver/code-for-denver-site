@@ -24,7 +24,7 @@ class Header extends React.Component {
               <Link to="/CanWeHelpYou" activeClassName="current">Can We Help You?</Link>
             </li>
             <li className='mainnav-link'>
-              <Link to="/OurVoice/list" activeClassName="current">Our Voice</Link>
+              <Link to="/Blog/" activeClassName="current">Blog</Link>
             </li>
             <li className='mainnav-link'>
               <Link to="/WantToLearn" activeClassName="current">Want To Learn?</Link>

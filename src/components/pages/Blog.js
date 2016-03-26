@@ -24,7 +24,7 @@ const container = postContext.keys().map((key, index) => {
   }
 })
 
-class OurVoice extends React.Component {
+class Blog extends React.Component {
   
   constructor(props) {
     super(props),
@@ -52,4 +52,4 @@ class OurVoice extends React.Component {
   }
 }
 
-export default OurVoice;
+export default Blog;
