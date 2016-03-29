@@ -22,7 +22,6 @@ const routes = (
     <Route path="CanWeHelpYou" component={CanWeHelpYou}/>
     <Route path="WantToLearn" component={WantToLearn}/>
     <Route path="Blog" component={Blog} >
-      {/* I can't figure out why this route won't work as an IndexRoute */}
       <IndexRoute component={BlogList}/>
       <Route path=":title" component={BlogPost}/>
     </Route>
