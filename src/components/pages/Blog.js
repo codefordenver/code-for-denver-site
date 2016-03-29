@@ -17,10 +17,20 @@ function requireAll(context) {
 
 const posts = requireAll(postContext);
 const container = postContext.keys().map((key, index) => {
+  const content = posts[index];
+  const leadLine = content.match(/<p>.*<\/p>/)[0];
+  const fileName = key.slice(2, key.length - 3);
+  // const date = new Date(fileName.split('_')[0]);
+  const date = fileName.split('_')[0];
+  const titleStr = fileName.split('_')[1].split('-').join(' ');
+
   return {
     index: index,
-    title: key.slice(2, key.length - 3),
-    content: posts[index]
+    fileName: fileName,
+    title: titleStr,
+    date: date,
+    content: content,
+    leadLine: leadLine
   }
 })
 
