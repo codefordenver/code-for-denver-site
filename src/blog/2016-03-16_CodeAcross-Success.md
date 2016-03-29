@@ -1,4 +1,6 @@
-# Blog post 3
+# Meeting Recap: March 16th, 2016
+
+A recap of some things that we've accomplished at our meeting tonight.
 
 - Things done
 - More list
