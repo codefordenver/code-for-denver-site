@@ -16,7 +16,7 @@ class BlogList extends React.Component {
             <div className="blog-post-list">
               <Link className="blog-link" to={ "/Blog/" + item.fileName }>{item.title}</Link>
               <p className="blog-date">Published on: {item.date}</p>
-              <div className="blog-leadline" dangerouslySetInnerHTML={{__html: item.leadLine}} />
+              {/*<div className="blog-leadline" dangerouslySetInnerHTML={{__html: item.leadLine}} />*/}
             </div>
           </li>
       );
