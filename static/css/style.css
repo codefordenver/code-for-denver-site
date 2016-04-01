@@ -393,6 +393,10 @@ blockquote
   }
 }
 
+.vimeo-video
+{
+  text-align: center;
+}
 
 /* Get connected */
 .getconnected > .flexgrid-column
@@ -563,6 +567,10 @@ blockquote
     left:0;
   }
 */
+  .vimeo-video
+  {
+    display: none;
+  }
 }
 
 
