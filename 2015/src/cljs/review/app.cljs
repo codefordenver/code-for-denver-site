@@ -143,6 +143,15 @@
                       [:h2.subtitles.text-center "END OF YEAR SUMMARY"]]]]
 
                    [:div.container-fluid
+                    [:div.row.codeacross
+                     [:div.col-lg-12
+                      ; Responsive iframe based on: http://jsfiddle.net/masau/7wrhm/
+                      [:img.ratio {:src "http://placehold.it/16x9"}]
+                      [:iframe {:src "https://player.vimeo.com/video/126984194?color=ffffff&title=0&byline=0&portrait=0&badge=0"
+                                :frameborder "0"
+                                :allow-full-screen true}]]]]
+
+                   [:div.container-fluid
                     [:div.row.part-two
                      [:div.col-lg-6.jumbotron
                       [:h4.subtitles.text-center "Projects"]
