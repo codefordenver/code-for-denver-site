@@ -41,23 +41,34 @@
 
 (def positions [200 201 1200 1750 2370 3420 4150])
 
+(defn get-el-offset
+  [el]
+  (let [offset (.offset (js/$ el))]
+    (if offset
+      (.-top offset))
+      2000))
+
+(.log js/console (get-el-offset ".part-six"))
+
 (add-watch anim/scroll :y-scroll-watcher
            (fn [_ _ _ y]
                (cond
 
                  (< y 200) (refresh! "is proud to present" "banner-dark" "cfdlogo.png")
 
-                 (and (> y 201) (<= y 1200)) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
+                 (<= y 1200) (refresh! "the story of how we embarked on 7 major projects.." "banner-light")
 
-                 (and (>= y 1200) (< y 1750)) (refresh! "our contributors spent a total of:" "banner-dark")
+                 (< y (get-el-offset ".codeacross")) (refresh! "we started with our kick off CodeAcross" "banner-light")
 
-                 (and (>= y 1750) (< y 2370)) (do
+                 (< y 1750) (refresh! "our contributors spent a total of:" "banner-dark")
+
+                 (< y 2370) (do
                                                 (reset! circle-scale-atom 5)
                                                 (refresh! "organized a total of:" "banner-light"))
 
-                 (and (>= y 2370) (< y 3240)) (refresh! "wrote a ton of documentation & design specs:" "banner-light")
+                 (< y 3240) (refresh! "wrote a ton of documentation & design specs:" "banner-light")
 
-                 (and (>= y 3420) (< y 4110)) (refresh! "ate a lot of pizza..." "banner-dark")
+                 (< y 4110) (refresh! "ate a lot of pizza..." "banner-dark")
 
                  (> y 4150) (refresh! "Thank you!" "banner-light"))))
 
@@ -143,15 +154,6 @@
                       [:h2.subtitles.text-center "END OF YEAR SUMMARY"]]]]
 
                    [:div.container-fluid
-                    [:div.row.codeacross
-                     [:div.col-lg-12
-                      ; Responsive iframe based on: http://jsfiddle.net/masau/7wrhm/
-                      [:img.ratio {:src "http://placehold.it/16x9"}]
-                      [:iframe {:src "https://player.vimeo.com/video/126984194?color=ffffff&title=0&byline=0&portrait=0&badge=0"
-                                :frameborder "0"
-                                :allow-full-screen true}]]]]
-
-                   [:div.container-fluid
                     [:div.row.part-two
                      [:div.col-lg-6.jumbotron
                       [:h4.subtitles.text-center "Projects"]
@@ -178,6 +180,15 @@
                       [:h5.text-right [:a {:href "http://www.codefordenver.org"} "See more at codefordenver.org"]]
                       [:hr]]
                      ]]
+
+                   [:div.container-fluid
+                    [:div.row.codeacross
+                     [:div.col-lg-12
+                      ; Responsive iframe based on: http://jsfiddle.net/masau/7wrhm/
+                      [:img.ratio {:src "http://placehold.it/16x9"}]
+                      [:iframe {:src "https://player.vimeo.com/video/126984194?color=ffffff&title=0&byline=0&portrait=0&badge=0"
+                                :frame-border "0"
+                                :allow-full-screen true}]]]]
 
                    [:div.container-fluid
                     [:div.row.part-three
