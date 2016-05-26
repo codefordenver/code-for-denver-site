@@ -7,7 +7,7 @@ class Header extends React.Component {
     return (
       <header className="mainheader">
         <a href="/">
-          <img className="mainlogo" src="static/img/logo-bw.png"/>
+          <img className="mainlogo" src="/static/img/logo-bw.png"/>
         </a>
         <nav className="mainnav">
           <ul>
@@ -25,6 +25,9 @@ class Header extends React.Component {
             </li>
             <li className='mainnav-link'>
               <Link to="/WantToLearn" activeClassName="current">Want To Learn?</Link>
+            </li>
+            <li className='mainnav-link'>
+              <Link to="/Blog/" activeClassName="current">Blog</Link>
             </li>
           </ul>
         </nav>
