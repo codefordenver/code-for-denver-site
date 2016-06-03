@@ -17,6 +17,13 @@ const WhoWeAre = () => (
     <Interested />
     <div className='body-content-wrapper'>
       <div className='body-content'>
+        <div className="temp-resource-link">
+          <h3>
+            <a href="/NDoCH_2016">
+              National Day of Civic Hacking Resources
+            </a>
+          </h3>
+        </div>
         <WhoWeAreContent />
         <VimeoVideo />
         <section className="standard getconnected">
