@@ -12,26 +12,35 @@
 | 9:30         | 		  Hacking: Break into groups according to challenges
 | 12:00        | 		  Lunch and check in
 | 12:45        | 		  More hacking
-| 4:00         | 		   Report out
-| 4:30         | 		   Next steps toward implementation
-| 5:00         | 		   Adjourn
-| 5:00 - 10:00 | After event hack-a-thon. More hacking for those who just can't stop!!!!
+| 4:00         | 		  Report out
+| 4:30         | 		  Next steps toward implementation
+| 5:00         | 		  Adjourn
+| 5:00 - 10:00 |      After event hack-a-thon. More hacking for those who just can't stop!!!!
 
 ___
 
 ## Links
-- Slide Decks
-  - [Intro](https://docs.google.com/presentation/d/1pzOxyGq3yunT4cq7aESPD-X39545lq3SdqfRRuk7KP4)
-  - [Hackshop](https://drive.google.com/open?id=1TxiN2OGW47Tr3Q6s6L6uJbVk0jwpo72ae_94YyMTD0E)
-  - [Closing](https://drive.google.com/open?id=1DhwsBiq9eQFQ36-HyZliEzaAMur7DCNUKL1e6ne0sbI)
-- CfA challenges:
-  - [Apply for Affordable Housing](https://www.codeforamerica.org/events/national-day-2016/challenge-applying-for-subsidized-housing)
-    - [Citizen Onboarding](https://www.codeforamerica.org/events/national-day-2016/user-experience-teardowns)
-    - [Digital Service Census](https://www.codeforamerica.org/events/national-day-2016/digital-service-census)
-    - [Journey Maps](https://www.codeforamerica.org/events/national-day-2016/journey-maps)
-- Creating a new project
-  - [Hackshop: Create a new project here](http://hackshop.waffle.io/) (Choose attendee)
-  - [Data Visualization Template](https://github.com/codefordenver/viz-template)
+
+**Slide Decks**
+
+- [Intro](https://docs.google.com/presentation/d/1pzOxyGq3yunT4cq7aESPD-X39545lq3SdqfRRuk7KP4)
+- [Hackshop](https://drive.google.com/open?id=1TxiN2OGW47Tr3Q6s6L6uJbVk0jwpo72ae_94YyMTD0E)
+- [Closing](https://drive.google.com/open?id=1DhwsBiq9eQFQ36-HyZliEzaAMur7DCNUKL1e6ne0sbI)
+
+**2016 NdoCH challenge**
+
+- [Apply for Affordable Housing](https://www.codeforamerica.org/events/national-day-2016/challenge-applying-for-subsidized-housing)
+
+**Non-programming hacking**
+
+- [Citizen Onboarding](https://www.codeforamerica.org/events/national-day-2016/user-experience-teardowns)
+- [Digital Service Census](https://www.codeforamerica.org/events/national-day-2016/digital-service-census)
+- [Journey Maps](https://www.codeforamerica.org/events/national-day-2016/journey-maps)
+
+**Getting Started with a Project**
+
+- [Hackshop: Create a new project here](http://hackshop.waffle.io/) (Choose attendee)
+- [Data Visualization Template](https://github.com/codefordenver/viz-template)
 
 ___
 
