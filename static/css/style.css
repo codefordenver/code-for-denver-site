@@ -799,15 +799,22 @@ blockquote
   transition: opacity 1ms ease-in;
 }
 
+.markdown-renderer {
+  position: relative;
+}
+
 .markdown-edit {
   display: none;
-  float: right;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  background-color: white;
   box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
   padding: 3px;
   border-radius: 3px;
 }
 
-.markown-renderer:hover > .markdown-edit {
+.markdown-renderer:hover > .markdown-edit {
   display: block;
 }
 

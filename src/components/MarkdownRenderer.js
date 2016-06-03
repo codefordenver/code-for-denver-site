@@ -3,7 +3,7 @@ import React from 'react';
 const MarkdownRenderer = ({fileName}) => {
   const markdownFile = require(`../markdown/${fileName}.md`);
   return (
-    <div className="markown-renderer">
+    <div className="markdown-renderer">
       <a className="markdown-edit" href={`https://github.com/codefordenver/code-for-denver-site/edit/master/src/markdown/${fileName}.md`}>
         suggest edit
       </a>
