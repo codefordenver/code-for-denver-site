@@ -10,6 +10,7 @@ import WantToHelp from './components/pages/WantToHelp';
 import CanWeHelpYou from './components/pages/CanWeHelpYou';
 import OurVoice from './components/pages/OurVoice';
 import WantToLearn from './components/pages/WantToLearn';
+import NDoCH_2016 from './components/pages/NDoCH_2016';
 
 
 const routes = (
@@ -20,6 +21,7 @@ const routes = (
     <Route path="CanWeHelpYou" component={CanWeHelpYou}/>
     <Route path="OurVoice" component={OurVoice}/>
     <Route path="WantToLearn" component={WantToLearn}/>
+    <Route path="NDoCH_2016" component={NDoCH_2016}/>
     <Route path="*" component={NotFound} />
   </Route>
 );
