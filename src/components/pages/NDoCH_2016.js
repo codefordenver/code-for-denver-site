@@ -9,9 +9,13 @@ const HeroContent = 'Our voice hero content';
 const NDoCH_2016 = () => (
   <main>
     <Hero background={HeroBackground} title={HeroTitle} />
-    <section className="standard partner">
-      <MarkdownRenderer fileName="ndoch_2016" />
-    </section>
+    <div className='body-content-wrapper'>
+      <div className='body-content'>
+        <section className="standard ndoch-2016">
+          <MarkdownRenderer fileName="ndoch_2016" />
+        </section>
+      </div>
+    </div>
   </main>
 );
 

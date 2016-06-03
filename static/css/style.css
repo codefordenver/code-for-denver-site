@@ -822,3 +822,14 @@ blockquote
   max-width: 50rem;
   margin: auto;
 }
+
+.ndoch-2016 img {
+  max-width: 100%;
+}
+
+.ndoch-2016 hr {
+  background: #EEE;
+  border: 0px;
+  height: 1px;
+  margin-top: 40px;
+}
