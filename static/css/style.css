@@ -833,3 +833,12 @@ blockquote
   height: 1px;
   margin-top: 40px;
 }
+
+.temp-resource-link {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.temp-resource-link h3 {
+  margin: 0;
+}

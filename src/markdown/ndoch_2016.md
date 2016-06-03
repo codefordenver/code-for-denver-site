@@ -30,9 +30,6 @@ ___
 **2016 NdoCH challenge**
 
 - [Apply for Affordable Housing](https://www.codeforamerica.org/events/national-day-2016/challenge-applying-for-subsidized-housing)
-
-**Non-programming hacking**
-
 - [Citizen Onboarding](https://www.codeforamerica.org/events/national-day-2016/user-experience-teardowns)
 - [Digital Service Census](https://www.codeforamerica.org/events/national-day-2016/digital-service-census)
 - [Journey Maps](https://www.codeforamerica.org/events/national-day-2016/journey-maps)
