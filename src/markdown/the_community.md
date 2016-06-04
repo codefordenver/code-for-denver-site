@@ -2,7 +2,7 @@
 
 ## How we use Agile
 
-Code For Denver utilizes many Agile practices and tools in our distributed development environment to help us deliver the most value, at the earliest possible time to our partners.  
+Code For Denver utilizes many Agile practices and tools in our distributed development environment to help us deliver the most value, at the earliest possible time to our partners.
 
 ## Roles
 
@@ -18,7 +18,7 @@ We utilize Github as our code repository with a kanban board inside the applicat
 
 Our current workflow includes:
 
-- General/team communication and chat: [Flowdock](http://www.flowdoc.com)
+- General/team communication and chat: [Flowdock](http://www.flowdock.com)
 - Version Control: [Git](http://git-scm.com/), [Github](https://github.com/codefordenver)
 - Story management: [Waffle.io](https://waffle.io/)
 - Documentation/Technical writing: [Google Docs](https://drive.google.com/folderview?id=0B15HLk4_JV3nWjkyOGtFUmhKZDQ&amp;usp=sharing_eid)
