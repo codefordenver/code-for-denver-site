@@ -5,11 +5,11 @@
 ## Agenda
 |              |  
 | ------------ | ---------
-| 8:00         |  		Breakfast
-| 8:15         |  		Welcome
-| 8:30         | 		  Education on the issue and challenge spaces
-| 9:00         | 		  Q & A
-| 9:30         | 		  Hacking: Break into groups according to challenges
+| 8:15           |  		Breakfast
+| 9:00         |  		Welcome
+| 9:30         | 		  Education on the issue and challenge spaces
+| 9:45         | 		  Q & A
+| 10:00        | 		  Hacking: Break into groups according to challenges
 | 12:00        | 		  Lunch and check in
 | 12:45        | 		  More hacking
 | 4:00         | 		  Report out
