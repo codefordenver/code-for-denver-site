@@ -2,7 +2,7 @@
 
 ## How we use Agile
 
-Code For Denver utilizes many Agile practices and tools in our distributed development environment to help us deliver the most value, at the earliest possible time to our partners.  
+Code For Denver utilizes many Agile practices and tools in our distributed development environment to help us deliver the most value, at the earliest possible time to our partners.
 
 ## Roles
 
@@ -10,7 +10,7 @@ We sign up for the agile roles of Scrum Master and Product Owner for each projec
 
 ## Meeting management
 
-We complete a stand-up each week, and share what was done last week, what will be done in the coming week and surface any blockers. We also use the Pomodoro time management technique to focus our work during project nights.
+We complete a stand-up each week, and share what was done last week, what will be done in the coming week and surface any blockers. We also use the [Pomodoro time management technique](http://pomodorotechnique.com/) to focus our work during project nights.
 
 ## Tools
 
