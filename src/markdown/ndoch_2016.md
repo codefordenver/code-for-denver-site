@@ -17,6 +17,8 @@
 | 5:00         | 		  Adjourn                     |
 | 5:00 - 10:00 |      After event hack-a-thon. More hacking for those who just can't stop!!!! |
 
+[Updated Detailed Agenda](https://docs.google.com/document/d/1eQxpxV7rwyaatls42PAC_nVXQT9SB9BwXwWeAIQnfgo)
+
 ___
 
 ## Links
