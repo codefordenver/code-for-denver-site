@@ -47,6 +47,17 @@ ___
 - [Open Colorado](http://opencolorado.org/)
 - [data.gov](https://catalog.data.gov)
 
+**Relevent Datasets**
+
+| Link | Description | DataEngine ID | Unit of Analysis
+| ------------ | ---------------------- | ------------- | -----------
+| [2006-2010](http://codataengine.org/find/2006-2010-acs-5-year-colorado-gross-rent-percentage-household-income-past-12-months-census-0), [2009-2013](http://codataengine.org/find/2009-2013-acs-5-year-colorado-gross-rent-percentage-household-income-past-12-months-census), [2010-2014](http://codataengine.org/find/2010-2014acs-5-year-colorado-gross-rent-percentage-household-income-past-12-months-census-block) | How much people spend on rent relative to their income | 1488, 222052, 222099 | Block Group
+| [2013](http://codataengine.org/find/transportation-cost-burdens-percent-income-2013-within-half-mile-transit-zone-around-transit) | How much people spend on rent + transportation relative to their income | 1508 | Station Name
+|  [2010](http://codataengine.org/find/2010-metro-denver-federally-subsidized-affordable-housing), [2014](http://codataengine.org/find/2014-metro-denver-federally-subsidized-affordable-housing) | Denver Metro Federally Subsidized Affordable Housing | 222088, 222089 | Block
+| [2006-2010](http://codataengine.org/find/2006-2010-acs-5-year-colorado-number-housing-units-year-built-census-block-group) | Number of housing units built by decade | 1455 | Block Group
+| [2006-2010](http://codataengine.org/find/2006-2010-acs-5-year-colorado-unweighted-sample-count-population-and-housing-units-census-block) | Population size and number of available housing units | 216 | Block Group
+| [2010](http://codataengine.org/find/2010-census-block-housing-occupancy-status-and-tenure) | Housing Occupancy Status and Tenure | 87 | Block
+
 ___
 
 ![Hackshop](https://cloud.githubusercontent.com/assets/100216/9774168/b86355c8-5714-11e5-993e-395f1fb8c43c.png)
