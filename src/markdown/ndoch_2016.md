@@ -3,19 +3,19 @@
 > Welcome to Code for Denver's 2016 National Day of Civic Hacking. This page aims to provide you with resources to help you have a successful and enjoyable event.
 
 ## Agenda
-|              |  
-| ------------ | ---------
-| 8:15         |  		Breakfast
-| 9:00         |  		Welcome
-| 9:30         | 		  Education on the issue and challenge spaces
-| 9:45         | 		  Q & A
-| 10:00        | 		  Hacking: Break into groups according to challenges
-| 12:00        | 		  Lunch and check in
-| 12:45        | 		  More hacking
-| 4:00         | 		  Report out
-| 4:30         | 		  Next steps toward implementation
-| 5:00         | 		  Adjourn
-| 5:00 - 10:00 |      After event hack-a-thon. More hacking for those who just can't stop!!!!
+|              |                                  |
+| ------------ | -------------------------------- |
+| 8:15         |  		Breakfast                   |
+| 9:00         |  		Welcome                     |
+| 9:30         | 		  Education on the issue and challenge spaces |
+| 9:45         | 		  Q & A                       |
+| 10:00        | 		  Hacking: Break into groups according to challenges |
+| 12:00        | 		  Lunch and check in          |
+| 12:45        | 		  More hacking                |
+| 4:00         | 		  Report out                  |
+| 4:30         | 		  Next steps toward implementation |
+| 5:00         | 		  Adjourn                     |
+| 5:00 - 10:00 |      After event hack-a-thon. More hacking for those who just can't stop!!!! |
 
 ___
 
