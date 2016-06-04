@@ -5,7 +5,7 @@
 ## Agenda
 |              |  
 | ------------ | ---------
-| 8:15           |  		Breakfast
+| 8:15         |  		Breakfast
 | 9:00         |  		Welcome
 | 9:30         | 		  Education on the issue and challenge spaces
 | 9:45         | 		  Q & A
@@ -47,7 +47,7 @@ ___
 - [Open Colorado](http://opencolorado.org/)
 - [data.gov](https://catalog.data.gov)
 
-**Relevent Datasets**
+**Relevant Datasets**
 
 | Link | Description | DataEngine ID | Unit of Analysis
 | ------------ | ---------------------- | ------------- | -----------
