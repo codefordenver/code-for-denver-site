@@ -31,7 +31,6 @@ const FooterNav = () => (
         <ul>
           <li>Can We Help You?</li>
           <li><a href="/CanWeHelpYou">Our pitch guidelines</a></li>
-          <li><a href="https://docs.google.com/forms/d/1OJM4j7vDuaJhNAsgmMvggJ5CBIqlZghdx2wY1fvp7L0/viewform">Pitch your project!</a></li>
         </ul>
 
 

@@ -1,42 +1,38 @@
-# Can We Help You?
-## Become a Partner
-> Technology can provide:
- - easier access to critical information
- - better decisions via better data
- - improved group organization for a bigger impact
+# So you're interested in pitching a project idea? Great!
 
-### What kind of projects do we work on?
-CfD provides technology, design, organizational, and coding expertise. Our primary goal is to support to those who do not have access to the kind of services we provide. This could be due to size or budget. Our ideal project involves:
-- a small to medium-sized non-profit or public institution
-- a product that is open-source, shareable, and reusable on other projects
-- a need for at least one of our areas of expertise
+Here is what you need to know:
 
-For a more detailed, but not comprehensive, list of project types we seek and avoid, [click here](https://docs.google.com/drawings/d/1k5xG6qdqwC0XFu2U5T2DhJtyXk13lh1hdsiIMUFVNNg/edit).
 
-### What kind of projects do we not work on?
-- Politics and elections
-- Watchdog groups
-- Media organizations
+### What Sorts of projects does Code for Denver work on?
+- Focused on helping the community
+- We work **"with"** not **"for"**
+- Projects that are reusable
+- Make use of the expertise in the room
+- Projects that the Code for Denver members can help shape and direct
+
+### Projects that we don't take
 - Anything illegal
+- Promoting a particular political or relegious group
+- Antagonistic to government
+- "Free Work"
 
-### What is the project proposal process?
-There are several steps to getting a project accepted for work with Code for Denver.
-1. A potential partner completes an application.
-2. A Code for Denver leader screens the application to make sure it fits the basic guidelines from above.
-3. On the first Monday of each month the group considers each project according to two criteria:
-    - Is the project appropriate for work by Code for Denver?
-    - Is there a brigade member interested in following up/being the initial champion?
-4. If the answer to both questions is yes, the project moves into the defined idea stage. If either answer is no a member follows up with the proposer to inform them we will not move forward with it.
-The need for a champion is the most critical aspect of this process. Without a champion the project is leaderless within Code for Denver. Attending the meeting and connecting with members is key to us accepting your proposal.
-Look at some of our *previously completed projects*(link this text) to get a sense of the work we do.
+If you want to see some examples of types of projects we will take on you can see that [here](https://docs.google.com/drawings/d/1k5xG6qdqwC0XFu2U5T2DhJtyXk13lh1hdsiIMUFVNNg)
 
-### What is the project development process?
-Accepted projects have the following stages:
-- Vague ideas
-- Defined ideas
-- Validation
-- Active Development
-- Support
+___
+## Steps to Present Your Idea
 
-### Taking Your First Step
-Fill out our Prospective Partner Interest form, [located here](https://docs.google.com/forms/d/1OJM4j7vDuaJhNAsgmMvggJ5CBIqlZghdx2wY1fvp7L0/viewform). We can't wait to hear from you!
+1. [Create a new issue for this repository](https://github.com/codefordenver/projects/issues/new)
+2. Title the issue with a brief but descriptive title (e.g. Code for Denver Site)
+3. Note that the issue should be pre-populated with a project template (if it isn't you can copy and paste the template from [here](https://raw.githubusercontent.com/codefordenver/projects/master/ISSUE_TEMPLATE.md))
+4. Fill out what you know about the top section of this template.
+5. Go through the checklist under the [Idea Phase Section](ISSUE_TEMPLATE.md#idea-phase-pre-pitch)
+5. Once you are done with this checklist the issue can be moved into the 'pitching phase' on the [waffle board](https://waffle.io/codefordenver/projects)
+6. Present the idea in 3 or less minutes at the 'pitch night'
+7. Continue to move through the checklists for each phase before continuing on to the next, and make sure to ask the CfD leadership if you have any questions
+
+## What is expected from the 'pitch'?
+
+- Short
+- Focused primarily on why (the what may evolve with input from partners, the group, and in general as more information as learned)
+
+> We look forward to hearing your ideas on how to improve the community
