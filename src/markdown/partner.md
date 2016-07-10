@@ -12,7 +12,7 @@ Here is what you need to know:
 
 ### Projects that we don't take
 - Anything illegal
-- Promoting a particular political or relegious group
+- Promoting a particular political or religious group
 - Antagonistic to government
 - "Free Work"
 
