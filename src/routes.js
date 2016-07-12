@@ -7,7 +7,7 @@ import NotFound from './NotFound';
 import WhoWeAre from './components/pages/WhoWeAre';
 import WhatWeDo from './components/pages/WhatWeDo';
 import WantToHelp from './components/pages/WantToHelp';
-import CanWeHelpYou from './components/pages/CanWeHelpYou';
+import WorkWithUs from './components/pages/WorkWithUs';
 import OurVoice from './components/pages/OurVoice';
 import WantToLearn from './components/pages/WantToLearn';
 import NDoCH_2016 from './components/pages/NDoCH_2016';
@@ -18,7 +18,7 @@ const routes = (
     <IndexRoute component={WhoWeAre}/>
     <Route path="WhatWeDo" component={WhatWeDo}/>
     <Route path="WantToHelp" component={WantToHelp}/>
-    <Route path="CanWeHelpYou" component={CanWeHelpYou}/>
+    <Route path="WorkWithUs" component={WorkWithUs}/>
     <Route path="OurVoice" component={OurVoice}/>
     <Route path="WantToLearn" component={WantToLearn}/>
     <Route path="NDoCH_2016" component={NDoCH_2016}/>
