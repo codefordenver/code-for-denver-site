@@ -21,7 +21,7 @@ const FooterNav = () => (
 
       <div className="footer-nav-col">
         <ul>
-          <li>We need your help!</li>
+          <li>We Need Your Help!</li>
           <li><a href="/WantToHelp">Get Involved</a></li>
           <li><a href="http://www.meetup.com/codefordenver" target='blank'>MeetUp.com</a></li>
         </ul>
@@ -29,8 +29,8 @@ const FooterNav = () => (
 
       <div className="footer-nav-col">
         <ul>
-          <li>Can We Help You?</li>
-          <li><a href="/CanWeHelpYou">Our pitch guidelines</a></li>
+          <li>Work With Us</li>
+          <li><a href="/WorkWithUs">Our pitch guidelines</a></li>
         </ul>
 
 
