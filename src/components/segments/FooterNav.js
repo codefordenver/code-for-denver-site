@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const FooterNav = () => (
   <nav className="footer-nav">
@@ -13,8 +14,8 @@ const FooterNav = () => (
       <div className="footer-nav-col">
         <ul>
           <li>About CfD</li>
-          <li><a href="/">Who We Are</a></li>
-          <li><a href="/WhatWeDo">What We’re Doing</a></li>
+          <li><Link to="/">Who We Are</Link></li>
+          <li><Link to="/WhatWeDo">What We’re Doing</Link></li>
           <li><a href="http://www.codefordenver.org/2015/">2015 Review</a></li>
         </ul>
       </div>
@@ -22,21 +23,22 @@ const FooterNav = () => (
       <div className="footer-nav-col">
         <ul>
           <li>We Need Your Help!</li>
-          <li><a href="/WantToHelp">Get Involved</a></li>
+          <li><Link to="/WantToHelp">Get Involved</Link></li>
           <li><a href="http://www.meetup.com/codefordenver" target='blank'>MeetUp.com</a></li>
+          <li><Link to="/members">Members Resources</Link></li>
         </ul>
       </div>
 
       <div className="footer-nav-col">
         <ul>
           <li>Work With Us</li>
-          <li><a href="/WorkWithUs">Our pitch guidelines</a></li>
+          <li><Link to="/WorkWithUs">Our pitch guidelines</Link></li>
         </ul>
 
 
         <ul>
           <li>Our Partners</li>
-          <li><a href="/WhatWeDo#projects">Our projects portfolio</a></li>
+          <li><Link to="/WhatWeDo#projects">Our projects portfolio</Link></li>
         </ul>
       </div>
 
