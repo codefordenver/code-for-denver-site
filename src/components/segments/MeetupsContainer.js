@@ -15,7 +15,7 @@ class MeetupsContainer extends React.Component {
 
 
   componentWillMount() {
-    const url = "https://codeforamerica.org/api/organizations/Code-for-Denver";
+    const url = 'https://codeforamerica-api.herokuapp.com/api/organizations/Code-for-Denver';
     const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = () => {
@@ -33,14 +33,14 @@ class MeetupsContainer extends React.Component {
       }
     }
 
-    xmlhttp.open("GET", url, true);
+    xmlhttp.open('GET', url, true);
     xmlhttp.send();
   }
 
 	render() {
 		return (
       <MeetupDate {...this.state.meetupProps} />
-    ) 
+    )
 	}
 }
 
