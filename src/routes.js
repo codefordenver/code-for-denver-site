@@ -11,6 +11,7 @@ import WorkWithUs from './components/pages/WorkWithUs';
 import OurVoice from './components/pages/OurVoice';
 import WantToLearn from './components/pages/WantToLearn';
 import NDoCH_2016 from './components/pages/NDoCH_2016';
+import Members from './components/pages/Members';
 
 
 const routes = (
@@ -22,6 +23,7 @@ const routes = (
     <Route path="OurVoice" component={OurVoice}/>
     <Route path="WantToLearn" component={WantToLearn}/>
     <Route path="NDoCH_2016" component={NDoCH_2016}/>
+    <Route path="members" component={Members} />
     <Route path="*" component={NotFound} />
   </Route>
 );
