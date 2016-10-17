@@ -15,7 +15,7 @@ You are on your way to some serious civic hacking.
 
 #### So how do I get involved?
 
-Start by joining our Meetup.com group at [www.meetup.com/CodeForDenver](www.meetup.com/CodeForDenver). This is where we list all of our upcoming meetings and events. We meet weekly to work on projects. RSVP or just drop by and say hello.
+Start by joining our Meetup.com group at [www.meetup.com/CodeForDenver](http://www.meetup.com/CodeForDenver). This is where we list all of our upcoming meetings and events. We meet weekly to work on projects. RSVP or just drop by and say hello.
 
 #### How many people are working on a project at any given time?
 
