@@ -1,3 +1,6 @@
+/* eslint-env node */
+/* eslint-disable no-console */
+/* eslint no-unused-vars: ["error", { "args": "none" }] */
 var path = require('path');
 var express = require('express');
 var webpack = require('webpack');

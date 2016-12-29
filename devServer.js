@@ -1,3 +1,5 @@
+/* eslint-env node */
+/* eslint-disable no-console */
 var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
