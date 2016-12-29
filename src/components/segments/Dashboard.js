@@ -6,7 +6,7 @@ const Dashboard = () => (
       <div className="dashboard-toprow">
         <div className="flexgrid-row">
           <div className="dashboard-item members">
-            <img src = "static/img/dashboardtext-members.png" />
+            <img src="static/img/dashboardtext-members.png" />
           </div>
           <div className="dashboard-item meetings">
             <img src="static/img/dashboardtext-meetings.png" />
@@ -33,14 +33,14 @@ const Dashboard = () => (
         <img src="static/img/dashboard-sparktime.png" />
 
 
-        <div className="flexgrid-column sparktime-content" style={{alignItems: 'center'}}>
-          <iframe src="http://sparktime.org/w/11/timer-only" style={{border:'none', height:'4rem'}}></iframe>
+        <div className="flexgrid-column sparktime-content" style={{ alignItems: 'center' }}>
+          <iframe src="http://sparktime.org/w/11/timer-only" style={{ border: 'none', height: '4rem' }} />
 
           <div className="sparktime-checkin">
             <p>To check in, text &quot;In with Code for Denver&quot; to 929-BIG-HELP (244-4357)</p>
           </div>
         </div>
-{/*
+        {/*
           <div className="flexgrid-column sparktime-content">
             <div className="flexgrid-row">
               <div className="sparktime-stats">

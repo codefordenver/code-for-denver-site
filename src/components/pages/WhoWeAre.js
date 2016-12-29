@@ -8,15 +8,15 @@ import SocialMediaLinks from '../segments/SocialMediaLinks';
 import Dashboard from '../segments/Dashboard';
 import VimeoVideo from '../segments/VimeoVideo';
 
-const HeroBackground='cfd-1.jpg';
-const HeroTitle= 'We Are Code For Denver';
-const HeroContent = 'We meet almost every Monday. Join us, everyone is welcome!'
+const HeroBackground = 'cfd-1.jpg';
+const HeroTitle = 'We Are Code For Denver';
+const HeroContent = 'We meet almost every Monday. Join us, everyone is welcome!';
 const WhoWeAre = () => (
   <main>
-    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} position="top" />
+    <Hero className="hero" background={HeroBackground} title={HeroTitle} content={HeroContent} position="top" />
     <Interested />
-    <div className='body-content-wrapper'>
-      <div className='body-content'>
+    <div className="body-content-wrapper">
+      <div className="body-content">
         <WhoWeAreContent />
         <VimeoVideo />
         <section className="standard getconnected">

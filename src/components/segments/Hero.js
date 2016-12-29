@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 class Hero extends React.Component {
   static defaultProps = {
-    position: 'center'
+    position: 'center',
+  };
+
+  static propTypes = {
+    background: PropTypes.string.isRequired,
+    content: PropTypes.string,
+    position: PropTypes.string,
+    title: PropTypes.string,
   };
 
   render() {
     const heroStyle = {
-      background: 'url("../static/img/' + this.props.background + '") no-repeat center center',
+      background: `url("../static/img/${this.props.background}") no-repeat center center`,
       backgroundSize: 'cover',
-      backgroundPosition: this.props.position
+      backgroundPosition: this.props.position,
     };
 
     return (
@@ -20,7 +27,6 @@ class Hero extends React.Component {
         </div>
       </section>
     );
-
   }
 }
 

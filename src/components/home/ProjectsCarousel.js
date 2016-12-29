@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 function formatShorterUrl(url) {
-  const [protocol, shorterUrl] = url.split('//');
+  const [, shorterUrl] = url.split('//');
   return shorterUrl;
 }
 
@@ -23,6 +23,17 @@ const CarouselSlide = ({ active, imgUrl, name, description, partner, partnerUrl,
     </div>
   </div>
 );
+
+CarouselSlide.propTypes = {
+  active: PropTypes.bool,
+  description: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  partner: PropTypes.string,
+  partnerUrl: PropTypes.string,
+  projectUrl: PropTypes.string,
+  sourceLink: PropTypes.string,
+};
 
 const ProjectsCarousel = ({ projects }) => (
   <div>
@@ -81,19 +92,19 @@ ProjectsCarousel.propTypes = {
   projects: PropTypes.arrayOf(
     PropTypes.shape({
       active: PropTypes.bool,
+      description: PropTypes.string.isRequired,
       imgUrl: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
       partner: PropTypes.string,
       partnerUrl: PropTypes.string,
       projectUrl: PropTypes.string,
-      sourceLink: PropTypes.string
-    })
-  ).isRequired
+      sourceLink: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 ProjectsCarousel.defaultProps = {
-  projects: []
+  projects: [],
 };
 
 export default ProjectsCarousel;
