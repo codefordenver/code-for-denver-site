@@ -837,3 +837,56 @@ blockquote
   height: 1px;
   margin-top: 40px;
 }
+
+/* temp stuff*/
+body{
+  width: 900px;
+  margin: 0px auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#container, #container2{
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+#sections, #sections2{
+  width: 340px;
+  float: left;
+}
+#sections > div, #sections2 > div{
+  background: white;
+  opacity: .2;
+  margin-bottom:120px;
+}
+#sections > div.graph-scroll-active, #sections2 > div.graph-scroll-active{
+  opacity: 1;
+}
+#graph, #graph2{
+  float: left;
+  margin-left: 40px;
+}
+#graph.graph-scroll-fixed, #graph2.graph-scroll-fixed{
+  position: fixed;
+  top: 0px;
+  margin-left: 380px;
+}
+#graph.graph-scroll-below, #graph2.graph-scroll-below {
+  position: absolute;
+  bottom: 0px;
+  margin-left: 380px;
+}
+h1{
+  margin: 50px;
+}
+h1, h3{
+  text-align: center;
+}
+circle{
+  fill: steelblue;
+}
+.mono{
+  font-family: monospace;
+}
+svg{
+  background-color: #eee;
+}
