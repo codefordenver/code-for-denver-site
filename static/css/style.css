@@ -838,34 +838,29 @@ blockquote
   margin-top: 40px;
 }
 
-/* temp stuff*/
-body{
-  width: 900px;
-  margin: 0px auto;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-#container, #container2{
+/* 2016 report - TODO: move this somewhere and properly namespace - preferably with sass*/
+.container-2016 {
   position: relative;
-  width: 100%;
+  width: 90%;
   overflow: auto;
 }
-#sections, #sections2{
+.descriptions {
   width: 340px;
   float: left;
 }
-#sections > div, #sections2 > div{
+.descriptions > section {
   background: white;
   opacity: .2;
-  margin-bottom:120px;
+  margin-bottom: 250px;
 }
-#sections > div.graph-scroll-active, #sections2 > div.graph-scroll-active{
+.descriptions > section.graph-scroll-active {
   opacity: 1;
 }
-#graph, #graph2{
+#graph {
   float: left;
   margin-left: 40px;
 }
-#graph.graph-scroll-fixed, #graph2.graph-scroll-fixed{
+#graph.graph-scroll-fixed {
   position: fixed;
   top: 0px;
   margin-left: 380px;
