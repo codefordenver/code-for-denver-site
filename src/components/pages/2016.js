@@ -2,6 +2,8 @@ import React from 'react';
 import { graphScroll } from 'graph-scroll';
 import * as d3 from 'graph-scroll/d3v4+jetpack';
 
+import './2016.scss';
+
 export default class Report2016 extends React.Component {
   componentDidMount() {
     const width = 500;
