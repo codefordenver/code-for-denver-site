@@ -13,9 +13,9 @@ const HeroContent = 'We apply the power of modern technology to community challe
 
 const WhatWeDo = () => (
   <main>
-    <Hero className='hero' background={HeroBackground} title={HeroTitle} content={HeroContent} position="top" />
-    <div className='body-content-wrapper'>
-      <div className='body-content'>
+    <Hero className="hero" background={HeroBackground} title={HeroTitle} content={HeroContent} position="top" />
+    <div className="body-content-wrapper">
+      <div className="body-content">
         <HowItWorks />
         <Projects />
         <TheCommunity />

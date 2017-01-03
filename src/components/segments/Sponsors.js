@@ -5,7 +5,7 @@ const Sponsors = () => (
     <div className="flexgrid-row">
       <div className="sponsors-sponsor">
         <div className="sponsor-garycommunity">
-          <a href="http://www.garycommunity.org/" target="_blank">
+          <a href="http://www.garycommunity.org/" target="_blank" rel="noopener noreferrer">
             <img src="static/img/sponsor-gary_community_investments.png" />
           </a>
         </div>
@@ -18,7 +18,7 @@ const Sponsors = () => (
 
       <div className="sponsors-sponsor">
         <div className="sponsor-ca">
-          <a href="http://www.ca.com/" target="_blank">
+          <a href="http://www.ca.com/" target="_blank" rel="noopener noreferrer">
             <img src="static/img/sponsor-ca_technologies.png" />
           </a>
         </div>

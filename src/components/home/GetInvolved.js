@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 export default class GetInvolved extends React.Component {
@@ -7,9 +7,9 @@ export default class GetInvolved extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      peopleTypesIndex: 0
+      peopleTypesIndex: 0,
     };
-    this. changePeopleTypeIndex = this. changePeopleTypeIndex.bind(this);
+    this.changePeopleTypeIndex = this.changePeopleTypeIndex.bind(this);
   }
 
   peopleTypes = [
@@ -24,27 +24,27 @@ export default class GetInvolved extends React.Component {
     'a Government Representative?',
     'a Student?',
     'an Ally?',
-    'Curious about Code For Denver?'
+    'Curious about Code For Denver?',
   ];
 
   // Change state, causing a call to render() method
   changePeopleTypeIndex() {
     if (this.state.peopleTypesIndex < this.peopleTypes.length - 1) {
       this.setState({
-        peopleTypesIndex: this.state.peopleTypesIndex + 1
-      })
+        peopleTypesIndex: this.state.peopleTypesIndex + 1,
+      });
     } else {
-      this.setState({peopleTypesIndex: 0})
+      this.setState({ peopleTypesIndex: 0 });
     }
   }
 
   // Once component mounts, initiate a timer.
   componentDidMount() {
-    this.updateTimer = setInterval(this.changePeopleTypeIndex, 2000)
+    this.updateTimer = setInterval(this.changePeopleTypeIndex, 2000);
   }
   // When unmounts, clean up the timer.
   componentWillUnmount() {
-    clearInterval(this.updateTimer)
+    clearInterval(this.updateTimer);
   }
 
 
@@ -71,6 +71,6 @@ export default class GetInvolved extends React.Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }

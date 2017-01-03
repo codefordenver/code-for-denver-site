@@ -7,7 +7,7 @@ const FooterNav = () => (
       <div className="footer-nav-col">
         <ul>
           <li>Home</li>
-          <li><a href="mailto:codefordenver@gmail.com" target='blank'>Contact Us</a></li>
+          <li><a href="mailto:codefordenver@gmail.com" target="blank">Contact Us</a></li>
         </ul>
       </div>
 
@@ -24,7 +24,7 @@ const FooterNav = () => (
         <ul>
           <li>We Need Your Help!</li>
           <li><Link to="/WantToHelp">Get Involved</Link></li>
-          <li><a href="http://www.meetup.com/codefordenver" target='blank'>MeetUp.com</a></li>
+          <li><a href="http://www.meetup.com/codefordenver" target="blank">MeetUp.com</a></li>
           <li><Link to="/members">Members Resources</Link></li>
         </ul>
       </div>
@@ -46,7 +46,7 @@ const FooterNav = () => (
         <ul>
           <li>Our Supporters</li>
           { /* <li><a href="#">Become a Supporter</a></li> */ }
-          <li><a href="https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20For%20Denver" target='blank'>Donate to Code for Denver</a></li>
+          <li><a href="https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20For%20Denver" target="blank">Donate to Code for Denver</a></li>
           { /* <li><a href="#">Tell a Friend about CfD</a></li> */ }
         </ul>
       </div>
@@ -54,8 +54,8 @@ const FooterNav = () => (
       <div className="footer-nav-col">
         <ul>
           <li>Social</li>
-          <li><a href="http://www.twitter.com/codefordenver"><i className="fa fa-twitter-square"></i> Twitter</a></li>
-          <li><a href="http://www.github.com/codefordenver"><i className="fa fa-github-square"></i> GitHub</a></li>
+          <li><a href="http://www.twitter.com/codefordenver"><i className="fa fa-twitter-square" /> Twitter</a></li>
+          <li><a href="http://www.github.com/codefordenver"><i className="fa fa-github-square" /> GitHub</a></li>
         </ul>
       </div>
     </div>

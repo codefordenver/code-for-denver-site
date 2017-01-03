@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
+import { Router, browserHistory } from 'react-router';
 
 import routes from './routes';
 
 
-
 ReactDOM.render(
-  <Router history={browserHistory} routes={routes} />
-  , document.getElementById('site'));
+  <Router history={browserHistory} routes={routes} />,
+  document.getElementById('site'),
+);

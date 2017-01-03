@@ -7,6 +7,6 @@ export default class TwitterFeed extends React.Component {
       <Timeline username="CodeForDenver" widgetId="691806964364505088">
       Tweets by @CodeForDenver
       </Timeline>
-    )
+    );
   }
 }
