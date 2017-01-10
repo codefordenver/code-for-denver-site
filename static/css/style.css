@@ -820,11 +820,7 @@ blockquote
 
 .project-carousel-wrapper {
   max-width: 50rem;
-  margin: 0 auto 3rem;
-}
-.project-carousel-wrapper .slick-prev:before,
-.project-carousel-wrapper .slick-next:before {
-  color: #196daa;
+  margin: auto;
 }
 
 .ndoch-2016 img {
