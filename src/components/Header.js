@@ -9,6 +9,14 @@ class Header extends React.Component {
         <a href="/">
           <img alt="Code for Denver" className="mainlogo" src="static/img/logo-bw.png" />
         </a>
+        <a
+          className="donate-btn"
+          href="https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20Denver"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Donate
+        </a>
         <nav className="mainnav">
           <ul>
             <li className="mainnav-link">

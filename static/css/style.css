@@ -150,7 +150,7 @@ blockquote
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
-  width:100%;
+  width: 100%;
   background-color: #eee;
   transition: color .5s, background-color .5s;
   text-decoration: none;
@@ -671,6 +671,15 @@ blockquote
 }
 
 @media (max-width: 750px) {
+  .mainheader
+  {
+    text-align: left;
+  }
+  .mainheader .mainlogo
+  {
+    margin: 0 15px;
+  }
+
   .sponsors > .flexgrid-row
   {
    flex-direction: column;
@@ -832,4 +841,18 @@ blockquote
   border: 0px;
   height: 1px;
   margin-top: 40px;
+}
+
+.donate-btn {
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  color: #707070;
+  margin: 15px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
