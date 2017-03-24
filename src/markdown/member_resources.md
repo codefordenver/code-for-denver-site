@@ -4,6 +4,9 @@
 - [New Member Overview](/WantToHelp)
 
 ### Tools
+- SparkTime 
+  - Text _“In with Code for Denver”_ to **929-244-4357** to record your volunteer time
+  - Text _"out"_ at the end of your shift
 - [GitHub](https://github.com/codefordenver)
 - [Flowdock](https://www.flowdock.com/app/cfa-brigades/code-for-denver)
 
