@@ -12,6 +12,7 @@ import OurVoice from './components/pages/OurVoice';
 import WantToLearn from './components/pages/WantToLearn';
 import NDoCH2016 from './components/pages/NDoCH_2016';
 import Members from './components/pages/Members';
+import Report2016 from './components/pages/Report2016';
 
 const routes = (
   <Route path="/" component={App}>
@@ -23,6 +24,7 @@ const routes = (
     <Route path="WantToLearn" component={WantToLearn} />
     <Route path="NDoCH_2016" component={NDoCH2016} />
     <Route path="members" component={Members} />
+    <Route path="2016report" component={Report2016} />
     <Route path="*" component={NotFound} />
   </Route>
 );
