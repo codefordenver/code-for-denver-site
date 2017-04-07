@@ -21,18 +21,10 @@ If you want to see some examples of types of projects we will take on you can se
 ___
 ## Steps to Present Your Idea
 
-1. [Create a new issue for this repository](https://github.com/codefordenver/projects/issues/new)
-2. Title the issue with a brief but descriptive title (e.g. Code for Denver Site)
-3. Note that the issue should be pre-populated with a project template (if it isn't you can copy and paste the template from [here](https://raw.githubusercontent.com/codefordenver/projects/master/ISSUE_TEMPLATE.md))
-4. Fill out what you know about the top section of this template.
-5. Go through the checklist under the [Idea Phase Section](ISSUE_TEMPLATE.md#idea-phase-pre-pitch)
-5. Once you are done with this checklist the issue can be moved into the 'pitching phase' on the [waffle board](https://waffle.io/codefordenver/projects)
-6. Present the idea in 3 or less minutes at the 'pitch night'
-7. Continue to move through the checklists for each phase before continuing on to the next, and make sure to ask the CfD leadership if you have any questions
-
-## What is expected from the 'pitch'?
-
-- Short
-- Focused primarily on why (the what may evolve with input from partners, the group, and in general as more information as learned)
+1. [Create a new post here](https://github.com/codefordenver/projects/issues/new) (We're using the "Issues" feature on Github)
+2. Add a brief but descriptive title to the post (e.g. Code for Denver Site)
+3. Describe your idea in the body of the post
+4. Come to a [Code for Denver meeting](https://www.meetup.com/codefordenver/) and discuss your idea with the Org Team
+5. We'll work with you to determine next steps
 
 > We look forward to hearing your ideas on how to improve the community
