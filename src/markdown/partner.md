@@ -21,10 +21,10 @@ If you want to see some examples of types of projects we will take on you can se
 ___
 ## Steps to Present Your Idea
 
-1. [Create a new issue for this repository](https://github.com/codefordenver/projects/issues/new)
-2. Title the issue with a brief but descriptive title (e.g. Code for Denver Site)
-3. Describe your idea in the body of the issue
-4. Come to a [Code for Denver meeting](https://www.meetup.com/codefordenver/) and discuss the idea with the group focused on the organization (if it's not clear, whoever is facilitating the meeting should be able to help).
-5. The organization team will work with you to determine next steps
+1. [Create a new post for this repository](https://github.com/codefordenver/projects/issues/new) (We're using the "Issue" feature on Github)
+2. Add a brief but descriptive title the post (e.g. Code for Denver Site)
+3. Describe your idea in the body of the post
+4. Come to a [Code for Denver meeting](https://www.meetup.com/codefordenver/) and discuss your idea with the Org Team.
+5. We'll work with you to determine next steps
 
 > We look forward to hearing your ideas on how to improve the community
