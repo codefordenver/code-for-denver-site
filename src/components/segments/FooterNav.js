@@ -16,7 +16,8 @@ const FooterNav = () => (
           <li>About CfD</li>
           <li><Link to="/">Who We Are</Link></li>
           <li><Link to="/WhatWeDo">What We’re Doing</Link></li>
-          <li><a href="http://www.codefordenver.org/2015/">2015 Review</a></li>
+          <li><a href="/2016">2016 Report</a></li>
+          <li><a href="/2015/">2015 Report</a></li>
         </ul>
       </div>
 

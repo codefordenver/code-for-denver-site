@@ -24,7 +24,7 @@ const routes = (
     <Route path="WantToLearn" component={WantToLearn} />
     <Route path="NDoCH_2016" component={NDoCH2016} />
     <Route path="members" component={Members} />
-    <Route path="2016report" component={Report2016} />
+    <Route path="2016" component={Report2016} />
     <Route path="*" component={NotFound} />
   </Route>
 );
