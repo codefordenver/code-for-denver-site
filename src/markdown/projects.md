@@ -1,4 +1,4 @@
-Code for Denver partnered with organizations on these projects last year:</br>
+Code for Denver partnered with organizations on these projects last year:
 
 - **Owlet**
 A web based platform for middle schoolers and their teachers to explore coding and multimedia through
